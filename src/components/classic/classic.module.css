@@ -1,0 +1,5 @@
+.classic {
+    grid-area: n;
+    background-color: black;
+    border-radius: 10px;
+}
