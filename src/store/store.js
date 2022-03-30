@@ -1,9 +1,9 @@
 const store = {
-        fraction: ["Alliance", "Horde"],
+        faction: ["Alliance", "Horde"],
         race: {
-            Alliance: ["Dwarf", "Gnome", "Human", "Night Elf", "Dranei", "Worgen", "Pandaren",
+            "Alliance": ["Dwarf", "Gnome", "Human", "Night Elf", "Dranei", "Worgen", "Pandaren",
                 "Void Elf", "Lightforged Draenei", "Dark Iron Dwarf", "Kul Tiran", "Mechagnome", "Demon Hunter"],
-            Horde: ["Orc", "Troll", "Tauren", "Undead", "Blood Elf", "Goblin", "Pandaren",
+            "Horde": ["Orc", "Troll", "Tauren", "Undead", "Blood Elf", "Goblin", "Pandaren",
                 "Nightborne", "Highmountain Tauren", "Mag'har Orc", "Zandalari Troll", "Vulpera", "Demon Hunter"]
         },
         class: {
@@ -46,5 +46,6 @@ const store = {
             "Warrior": ["Arms", "Fury", "Protection"]
         }
 }
+
 
 export default store;
