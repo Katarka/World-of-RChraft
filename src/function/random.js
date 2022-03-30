@@ -6,7 +6,15 @@ let raceChar = ""
 const random = () => {
     fact = Math.floor(Math.random() * store.faction.length)
     console.log(store.faction[fact])
-    raceChar = fact ? store.race.Horde : store.race.Alliance
+    raceChar = () => {
+        if (fact === store.race.Horde){
+            (Math.floor(Math.random() * store.race.Horde.length))
+        }
+        if (fact == store.race.Alliance){
+            (Math.floor(Math.random() * store.race.Alliance.length))
+        }
+    }
+
     console.log(raceChar)
     return raceChar
 }
