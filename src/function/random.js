@@ -1,22 +1,32 @@
 import store from "../store/store";
 
-let fact = ""
-let raceChar = ""
-
 const random = () => {
-    fact = Math.floor(Math.random() * store.faction.length)
+    let fact = Math.floor(Math.random() * store.faction.length)
     console.log(store.faction[fact])
-    raceChar = () => {
-        if (fact === store.race.Horde){
-            (Math.floor(Math.random() * store.race.Horde.length))
-        }
-        if (fact == store.race.Alliance){
-            (Math.floor(Math.random() * store.race.Alliance.length))
-        }
-    }
-
+    let randomCharHorde = Math.floor(Math.random() * store.race.Horde.length)
+    //console.log(store.race.Horde[raceChar1])
+    let randomCharAlliance = Math.floor(Math.random() * store.race.Alliance.length)
+    //console.log(store.race.Alliance[raceChar2])
+    let raceChar = fact ? store.race.Horde[randomCharHorde]
+        : store.race.Alliance[randomCharAlliance]
     console.log(raceChar)
-    return raceChar
+
+    // for(let i = raceChar; i === store.class; i++){
+    //     classRandom = Math.floor(Math.random() * i)
+    //     console.log(i)
+    // }
+    // console.log(store.class[classRandom])
+    // classRandom = store.class[raceChar]
+    let randomClass = Math.floor(Math.random() * store.class[raceChar].length)
+    let classR = store.class[raceChar][randomClass]
+    console.log(classR)
+
+    let randomSpec = Math.floor(Math.random() * store.spec[classR].length)
+    let spec = store.spec[classR][randomSpec]
+    console.log(spec)
+    // classRandom = raceChar ? store.class[raceChar][classRandom1]
+    //     : store.class[raceChar][classRandom1]
+    debugger
 }
 
 // alert(store.race[random()])
