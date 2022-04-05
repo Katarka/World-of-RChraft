@@ -1,13 +1,13 @@
 import React from "react";
+import style from './classic.module.css'
 import random from "../../function/random";
-import s from './classic.module.css'
 
 const classic = () => {
     return(
-    <div className={s.classic}>
-        {random}
-    </div>
-    )
+        <div className={style.classic}>
+            {random}
+        </div>
+)
 }
 
 export default classic

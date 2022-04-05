@@ -1,36 +1,29 @@
 import store from "../store/store";
 
 const random = () => {
-    let fact = Math.floor(Math.random() * store.faction.length)
-    console.log(store.faction[fact])
-    let randomCharHorde = Math.floor(Math.random() * store.race.Horde.length)
+    //Рандом фракции 0 || 1
+    let randomFact = Math.floor(Math.random() * store.faction.length)
+    let fact = store.faction[randomFact]
+    // console.log(fact)
+    //Рандом расы по значению фракции
+    let randomCharHorde = Math.floor(Math.random() * store.race[fact].length)
     //console.log(store.race.Horde[raceChar1])
-    let randomCharAlliance = Math.floor(Math.random() * store.race.Alliance.length)
+    let randomCharAlliance = Math.floor(Math.random() * store.race[fact].length)
     //console.log(store.race.Alliance[raceChar2])
-    let raceChar = fact ? store.race.Horde[randomCharHorde]
-        : store.race.Alliance[randomCharAlliance]
-    console.log(raceChar)
-
-    // for(let i = raceChar; i === store.class; i++){
-    //     classRandom = Math.floor(Math.random() * i)
-    //     console.log(i)
-    // }
-    // console.log(store.class[classRandom])
-    // classRandom = store.class[raceChar]
+    let raceChar = randomFact ? store.race[fact][randomCharHorde]
+        : store.race[fact][randomCharAlliance]
+    // console.log(raceChar)
+    //Рандом класса по значению фракции
     let randomClass = Math.floor(Math.random() * store.class[raceChar].length)
     let classR = store.class[raceChar][randomClass]
-    console.log(classR)
-
+    // console.log(classR)
+    //Рандом спека по значению класса
     let randomSpec = Math.floor(Math.random() * store.spec[classR].length)
     let spec = store.spec[classR][randomSpec]
-    console.log(spec)
-    // classRandom = raceChar ? store.class[raceChar][classRandom1]
-    //     : store.class[raceChar][classRandom1]
-    debugger
+    // console.log(spec)
+    console.log(`${fact} | ${raceChar} | ${classR} | ${spec}`)
 }
 
-// alert(store.race[random()])
 random()
-// alert(raceChar)
 
 export default random
