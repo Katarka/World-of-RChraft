@@ -14,6 +14,7 @@ function App() {
           <div className="items">item 1</div>
           <div className="items">item 1</div>
       </div>
+        <Classic />
     </div>
   );
 }

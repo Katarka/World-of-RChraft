@@ -1,7 +1,18 @@
 .classic {
-    grid-area: n;
-    background-color: black;
+    display: grid;
+    grid-template-areas: "n n";
+    grid-template-columns: 5fr 5fr;
+    background-color: green;
     border-radius: 10px;
     width: 100%;
     height: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+.button {
+    border-bottom: aqua;
+    border-radius: 10px;
+    width: 150px;
+    height: 50px;
 }
