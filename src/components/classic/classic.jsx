@@ -1,6 +1,5 @@
 import React from "react";
 import style from './classic.module.css'
-import random from "../../function/random";
 import store from "../../store/storeClassic";
 
 const classic = (props) => {
@@ -25,24 +24,31 @@ const classic = (props) => {
         let randomSpec = Math.floor(Math.random() * store.spec[classR].length)
         let spec = store.spec[classR][randomSpec]
         // console.log(spec)
-        return(
+        return (
+            <div className={style.text}>
                 <div>
                     <h1>{fact}</h1>
+                </div>
+                <div>
                     <h1>{raceChar}</h1>
+                </div>
+                <div>
                     <h1>{classR}</h1>
+                </div>
+                <div>
                     <h1>{spec}</h1>
                 </div>
+            </div>
         )
     }
-    return(
+    return (
         <form className={style.classic}>
-        <div>
-            <button onClick={random}>Ready</button>
-            {random()}
-        </div>
+            <div>
+                {random()}
+                <button className={style.button} onClick={random}>Ready</button>
+            </div>
         </form>
-)
-
+    )
 }
 
 export default classic

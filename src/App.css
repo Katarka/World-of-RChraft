@@ -1,27 +1,34 @@
 .app-wrapper {
     margin: 0 auto;
     display: grid;
-    width: 1200px;
+    width: 1400px;
+    height: 900px;
     grid-template-areas:
     "h h"
     "n n"
     "c c";
-    grid-template-rows: 60px 1fr;
+    grid-template-rows: 70px 1fr;
     grid-template-columns: 2fr 10fr;
     grid-gap: 10px;
 }
 
 .app-wrapper-content {
-    grid-area: h;
-    background-color: grey;
+    grid-area: n;
     border-radius: 10px;
-    width: 100%;
+    background-color: grey;
 }
 
-.items {
+.items{
+    grid-area: h;
+    background-color: grey;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.items h2 {
     float: left;
     width: 100px;
     height: 100px;
     text-align: center;
-    padding: 10px;
 }

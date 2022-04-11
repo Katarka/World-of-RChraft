@@ -1,18 +1,33 @@
 .classic {
     display: grid;
-    grid-template-areas: "n n";
-    grid-template-columns: 5fr 5fr;
-    background-color: green;
+    grid-template-areas: "a" "b";
+    background-image: url("/src/assets/wow-character-creation.jpeg");
+    background-size: 100% 100%;
     border-radius: 10px;
     width: 100%;
     height: 100%;
     text-align: center;
-    padding: 20px;
 }
 
 .button {
+    grid-area: b;
     border-bottom: aqua;
-    border-radius: 10px;
+    border-radius: 30px;
     width: 150px;
     height: 50px;
+
+}
+
+.text {
+    grid-area: a;
+    text-align: center;
+    color: black;
+    font-family: LifeCraft;
+    padding-bottom: 100px;
+    padding-top: 400px;
+}
+
+@font-face {
+    font-family: "LifeCraft";
+    src: url("/src/assets/LifeCraft_Font.woff") format("woff");
 }
