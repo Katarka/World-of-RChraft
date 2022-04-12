@@ -4,36 +4,21 @@ import store from "../../store/storeClassic";
 
 const classic = (props) => {
     const random = () => {
-        //Рандом фракции 0 || 1
-        let randomFact = Math.floor(Math.random() * store.faction.length)
-        let fact = store.faction[randomFact]
-        // console.log(fact)
-        //Рандом расы по значению фракции
-        let randomCharHorde = Math.floor(Math.random() * store.race[fact].length)
-        //console.log(store.race.Horde[raceChar1])
-        let randomCharAlliance = Math.floor(Math.random() * store.race[fact].length)
-        //console.log(store.race.Alliance[raceChar2])
-        let raceChar = randomFact ? store.race[fact][randomCharHorde]
-            : store.race[fact][randomCharAlliance]
-        // console.log(raceChar)
-        //Рандом класса по значению фракции
-        let randomClass = Math.floor(Math.random() * store.class[raceChar].length)
-        let classR = store.class[raceChar][randomClass]
-        // console.log(classR)
-        //Рандом спека по значению класса
-        let randomSpec = Math.floor(Math.random() * store.spec[classR].length)
-        let spec = store.spec[classR][randomSpec]
-        // console.log(spec)
+        const getRandomValueFromArray = arr => arr[Math.floor(Math.random() * arr.length)]
+        const faction = getRandomValueFromArray(store.faction)
+        const race = getRandomValueFromArray(store.race[faction])
+        const classPers = getRandomValueFromArray(store.class[race])
+        const spec = getRandomValueFromArray(store.spec[classPers])
         return (
             <div className={style.text}>
                 <div>
-                    <h1>{fact}</h1>
+                    <h1>{faction}</h1>
                 </div>
                 <div>
-                    <h1>{raceChar}</h1>
+                    <h1>{race}</h1>
                 </div>
                 <div>
-                    <h1>{classR}</h1>
+                    <h1>{classPers}</h1>
                 </div>
                 <div>
                     <h1>{spec}</h1>
