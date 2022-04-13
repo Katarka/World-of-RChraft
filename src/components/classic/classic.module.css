@@ -1,6 +1,6 @@
 .classic {
     display: grid;
-    grid-template-areas: "a" "b";
+    grid-area: n;
     background-image: url("/src/assets/wow-character-creation.jpeg");
     background-size: 100% 100%;
     border-radius: 10px;
@@ -9,16 +9,29 @@
     text-align: center;
 }
 
+.button {background-image: linear-gradient(to right, #7b4397 0%, #dc2430  51%, #7b4397  100%)}
+
 .button {
-    grid-area: b;
-    border-bottom: aqua;
-    border-radius: 30px;
-    width: 150px;
-    height: 50px;
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    font-family: LifeCraft;
+    font-size: 20px;
+}
+
+.button:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
 }
 
 .text {
-    grid-area: a;
     text-align: center;
     color: black;
     font-family: LifeCraft;

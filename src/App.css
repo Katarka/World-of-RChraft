@@ -1,25 +1,22 @@
 .app-wrapper {
     margin: 0 auto;
     display: grid;
-    width: 1400px;
-    height: 900px;
     grid-template-areas:
     "h h"
-    "n n"
-    "c c";
+    "n n";
     grid-template-rows: 70px 1fr;
     grid-template-columns: 2fr 10fr;
     grid-gap: 10px;
+    width: 1400px;
 }
 
 .app-wrapper-content {
-    grid-area: n;
+    grid-area: h;
     border-radius: 10px;
     background-color: grey;
 }
 
 .items{
-    grid-area: h;
     background-color: grey;
     width: 100%;
     height: 100%;
