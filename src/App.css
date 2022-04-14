@@ -11,21 +11,7 @@
 }
 
 .app-wrapper-content {
-    grid-area: h;
+    grid-area: n;
     border-radius: 10px;
-    background-color: grey;
-}
-
-.items{
-    background-color: grey;
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-}
-
-.items h2 {
-    float: left;
-    width: 100px;
-    height: 100px;
-    text-align: center;
+    background: gray;
 }

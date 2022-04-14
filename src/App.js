@@ -1,17 +1,16 @@
 import React from "react";
 import './App.css';
 import Classic from "./components/classic/classic";
+import Navbar from "./components/navbar/navbar";
+import {Route} from "react-router-dom";
+import classic from "./components/classic/classic";
 
 function App() {
     return (
         <div className='app-wrapper'>
-            <Classic/>
+            <Navbar/>
             <div className='app-wrapper-content'>
-                <div className="items">
-                    <h2>item 2</h2>
-                    <h2>item 3</h2>
-                    <h2>item 4</h2>
-                </div>
+                <Classic/>
             </div>
         </div>
     );

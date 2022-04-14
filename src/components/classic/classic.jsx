@@ -3,12 +3,11 @@ import style from './classic.module.css'
 import store from "../../store/storeClassic";
 import {getRandomValueFromArray} from "../../function/random";
 
-const classic = () => {
+const classic = (props) => {
     const faction = getRandomValueFromArray(store.faction)
     const race = getRandomValueFromArray(store.race[faction])
     const classRace = getRandomValueFromArray(store.class[race])
     const spec = getRandomValueFromArray(store.spec[classRace])
-
     return (
         <form className={style.classic}>
             <div className={style.text}>
