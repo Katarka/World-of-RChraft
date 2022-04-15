@@ -1,7 +1,7 @@
-.classic {
+.bc {
     display: grid;
     grid-area: n;
-    background-image: url("/src/assets/wow-character-creation.jpeg");
+    background-image: url("/src/assets/bc.jpg");
     background-size: 100% 100%;
     border-radius: 10px;
     text-align: center;
@@ -31,7 +31,7 @@
 
 .text {
     text-align: center;
-    color: #25008f;
+    color: #FE5825;
     font-family: LifeCraft;
     padding-bottom: 100px;
     padding-top: 400px;

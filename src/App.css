@@ -7,11 +7,11 @@
     grid-template-rows: 70px 1fr;
     grid-template-columns: 2fr 10fr;
     grid-gap: 10px;
-    width: 1400px;
+    width: 1300px;
+
 }
 
 .app-wrapper-content {
     grid-area: n;
     border-radius: 10px;
-    background: gray;
 }

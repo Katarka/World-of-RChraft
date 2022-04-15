@@ -2,15 +2,18 @@ import React from "react";
 import './App.css';
 import Classic from "./components/classic/classic";
 import Navbar from "./components/navbar/navbar";
-import {Route} from "react-router-dom";
-import classic from "./components/classic/classic";
+import Bc from "./components/bc/bc";
+import {Route, Routes} from "react-router-dom";
 
 function App() {
     return (
         <div className='app-wrapper'>
             <Navbar/>
             <div className='app-wrapper-content'>
-                <Classic/>
+                <Routes>
+                    <Route exact path='/classic' element={<Classic/>}/>
+                    <Route path='/bc' element={<Bc/>}/>
+                </Routes>
             </div>
         </div>
     );

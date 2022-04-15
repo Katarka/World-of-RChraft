@@ -1,16 +1,18 @@
 import React from "react";
 import style from "./navbar.module.css"
 import {NavLink} from "react-router-dom";
+import bc from "../bc/bc";
+import classic from "../classic/classic";
 
 const navbar = () => {
     return (
         <nav className={style.nav}>
             <div className={style.item}>
                 <div>
-                    <NavLink to='/classic' activeClassName={style.active}>Classic</NavLink>
+                    <NavLink to='/classic' href={classic} activeClassName={style.active}>Classic</NavLink>
                 </div>
                 <div>
-                    <NavLink to='/bk' activeClassName={style.active}>Burning Crusader</NavLink>
+                    <NavLink to='/bc' href={bc} activeClassName={style.active}>Burning Crusader</NavLink>
                 </div>
                 <div>
                     <NavLink to='/lk' activeClassName={style.active}>Lich King</NavLink>

@@ -1,15 +1,15 @@
 import React from "react";
-import style from './classic.module.css'
-import store from "../../store/storeClassic";
+import style from './bc.module.css'
+import store from "../../store/storeBc";
 import getRandomValueFromArray from "../../function/random";
 
-const classic = () => {
+const bc = () => {
     const faction = getRandomValueFromArray(store.faction)
     const race = getRandomValueFromArray(store.race[faction])
     const classRace = getRandomValueFromArray(store.class[race])
     const spec = getRandomValueFromArray(store.spec[classRace])
     return (
-        <form className={style.classic}>
+        <form className={style.bc}>
             <div className={style.text}>
                 <div>
                     <h1>{faction}</h1>
@@ -23,4 +23,4 @@ const classic = () => {
     )
 }
 
-export default classic
+export default bc
