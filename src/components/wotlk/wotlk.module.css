@@ -1,7 +1,7 @@
-.classic {
+.wotlk {
     display: grid;
     grid-area: n;
-    background-image: url("/src/assets/classic.jpeg");
+    background-image: url("/src/assets/wotlk.jpg");
     background-size: 100% 100%;
     border-radius: 10px;
     text-align: center;

@@ -4,6 +4,7 @@ import Classic from "./components/classic/classic";
 import Navbar from "./components/navbar/navbar";
 import Bc from "./components/bc/bc";
 import {Route, Routes} from "react-router-dom";
+import Wotlk from "./components/wotlk/wotlk";
 
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
                 <Routes>
                     <Route exact path='/classic' element={<Classic/>}/>
                     <Route path='/bc' element={<Bc/>}/>
+                    <Route path='/wotlk' element={<Wotlk/>}/>
                 </Routes>
             </div>
         </div>
