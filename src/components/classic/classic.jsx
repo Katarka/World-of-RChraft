@@ -3,7 +3,7 @@ import style from './classic.module.css'
 import store from "../../store/storeClassic";
 import getRandomValueFromArray from "../../function/random";
 
-const classic = () => {
+const Classic = () => {
     const faction = getRandomValueFromArray(store.faction)
     const race = getRandomValueFromArray(store.race[faction])
     const classRace = getRandomValueFromArray(store.class[race])
@@ -11,16 +11,16 @@ const classic = () => {
     return (
         <form className={style.classic}>
             <div className={style.text}>
+                <h1>{faction}</h1>
+                <h1>{race}</h1>
+                <h1>{classRace}</h1>
+                <h1>{spec}</h1>
                 <div>
-                    <h1>{faction}</h1>
-                    <h1>{race}</h1>
-                    <h1>{classRace}</h1>
-                    <h1>{spec}</h1>
+                    <button className={style.button}>Go Go Go</button>
                 </div>
-                <button className={style.button}>Go Go Go</button>
             </div>
         </form>
     )
 }
 
-export default classic
+export default Classic
