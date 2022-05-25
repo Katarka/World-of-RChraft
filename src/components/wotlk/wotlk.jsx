@@ -26,9 +26,11 @@ const Wotlk = (faction, race, classRace, spec) => {
         <div className={style.wotlk}>
             <div className={style.text}>
                 <h1>{getState}</h1>
-                <button className={style.button} onClick={handleClick}>Go</button>
-                <button className={style.button} onClick={handleClickReset}>Reset</button>
             </div>
+        <div className={style.buttonPosition}>
+            <button className={style.button} onClick={handleClick}>Go</button>
+            <button className={style.button} onClick={handleClickReset}>Reset</button>
+        </div>
         </div>
     )
 }

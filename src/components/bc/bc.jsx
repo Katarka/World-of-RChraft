@@ -16,7 +16,7 @@ const Bc = () => {
             classRace,
             spec
         ]
-        let setNewRandom = newRandom.map((newRandom) => <h1>{newRandom}</h1>)
+        let setNewRandom = newRandom.map((newRandom) => <pre>{newRandom}</pre>)
         setState(setNewRandom)
     }
     const handleClickReset = () => {
@@ -26,6 +26,8 @@ const Bc = () => {
         <div className={style.bc}>
             <div className={style.text}>
                 <h1>{getState}</h1>
+            </div>
+            <div className={style.buttonPosition}>
                 <button className={style.button} onClick={handleClick}>Go</button>
                 <button className={style.button} onClick={handleClickReset}>Reset</button>
             </div>

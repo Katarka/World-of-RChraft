@@ -1,7 +1,7 @@
 .nav {
     grid-area: h;
     background-image: linear-gradient(to right, #3b6bee 0%, #574e55 50%, #dc2424 100%);
-    padding: 40px;
+    padding: 30px;
     text-align: center;
     border-radius: 10px;
 }
@@ -10,7 +10,7 @@
     color: white;
     text-decoration: none;
     float: right;
-    text-indent: 20px
+    text-indent: 20px;
 }
 
 .item a.active {

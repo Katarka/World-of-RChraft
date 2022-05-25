@@ -2,12 +2,14 @@
     margin: 0 auto;
     display: grid;
     grid-template-areas:
-    "h h"
-    "n n";
-    grid-template-rows: 70px 1fr;
-    grid-template-columns: 2fr 10fr;
-    grid-gap: 10px;
-    width: 70%;
+    "h"
+    "n"
+    "m";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 5fr 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 10px;
+    width: 65%;
 }
 
 .app-wrapper-content {
