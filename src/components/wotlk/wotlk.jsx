@@ -1,35 +1,33 @@
 import React, {useState} from "react";
 import style from './wotlk.module.css'
-import store, {getRandom} from "../../store/storeWotlk";
 import getRandomValueFromArray from "../../function/random";
+import store from "../../store/storeWotlk";
 
-
-const Wotlk = () => {
-    const faction = getRandomValueFromArray(store.faction)
-    const race = getRandomValueFromArray(store.race[faction])
-    const classRace = getRandomValueFromArray(store.class[race])
-    const spec = getRandomValueFromArray(store.spec[classRace])
-    const [getState, setState] = useState("getRandom")
-    console.log(getState)
+const Wotlk = (faction, race, classRace, spec) => {
+    faction = getRandomValueFromArray(store.faction)
+    race = getRandomValueFromArray(store.race[faction])
+    classRace = getRandomValueFromArray(store.class[race])
+    spec = getRandomValueFromArray(store.spec[classRace])
+    const [getState, setState] = useState("Let's start")
     const handleClick = () => {
-        // const newRandom = () => getRandom.map(getRandom => getRandom)
         const newRandom = [
             faction,
             race,
             classRace,
             spec
         ]
-        setState(newRandom)
+        let setNewRandom = newRandom.map((newRandom) => <pre>{newRandom}</pre>)
+        setState(setNewRandom)
     }
-    console.log(handleClick)
-    console.log(setState)
+    const handleClickReset = () => {
+        setState("Let's start")
+    }
     return (
         <div className={style.wotlk}>
             <div className={style.text}>
-
-                {getRandom.map((getState) => <h1>{getState}</h1>)}
-                {console.log(getState)}
+                <h1>{getState}</h1>
                 <button className={style.button} onClick={handleClick}>Go</button>
+                <button className={style.button} onClick={handleClickReset}>Reset</button>
             </div>
         </div>
     )

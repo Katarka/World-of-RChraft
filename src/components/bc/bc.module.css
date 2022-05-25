@@ -4,7 +4,6 @@
     background-image: url("/src/assets/bc.jpg");
     background-size: 100% 100%;
     border-radius: 10px;
-    text-align: center;
 }
 
 .button {background-image: linear-gradient(to right, #7b4397 0%, #dc2430  51%, #7b4397  100%)}
@@ -33,8 +32,9 @@
     text-align: center;
     color: #FE5825;
     font-family: LifeCraft;
-    padding-bottom: 100px;
-    padding-top: 400px;
+    padding-bottom: 500px;
+    padding-top: 300px;
+    font-size: medium;
 }
 
 @font-face {

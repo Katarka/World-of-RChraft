@@ -1,26 +1,36 @@
-import React from "react";
+import React, {useState} from "react";
 import style from './bc.module.css'
 import store from "../../store/storeBc";
 import getRandomValueFromArray from "../../function/random";
 
-const bc = () => {
+const Bc = () => {
     const faction = getRandomValueFromArray(store.faction)
     const race = getRandomValueFromArray(store.race[faction])
     const classRace = getRandomValueFromArray(store.class[race])
     const spec = getRandomValueFromArray(store.spec[classRace])
+    const [getState, setState] = useState("Let's start")
+    const handleClick = () => {
+        const newRandom = [
+            faction,
+            race,
+            classRace,
+            spec
+        ]
+        let setNewRandom = newRandom.map((newRandom) => <h1>{newRandom}</h1>)
+        setState(setNewRandom)
+    }
+    const handleClickReset = () => {
+        setState("Let's start")
+    }
     return (
-        <form className={style.bc}>
+        <div className={style.bc}>
             <div className={style.text}>
-                <div>
-                    <h1>{faction}</h1>
-                    <h1>{race}</h1>
-                    <h1>{classRace}</h1>
-                    <h1>{spec}</h1>
-                </div>
-                <button className={style.button}>Go Go Go</button>
+                <h1>{getState}</h1>
+                <button className={style.button} onClick={handleClick}>Go</button>
+                <button className={style.button} onClick={handleClickReset}>Reset</button>
             </div>
-        </form>
+        </div>
     )
 }
 
-export default bc
+export default Bc
