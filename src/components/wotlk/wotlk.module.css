@@ -5,14 +5,15 @@
     background-size: 100% 100%;
     border-radius: 10px;
     width: 100%;
-    height: 200%;
+    height: 210%;
     position: relative;
+    /*filter: grayscale(100%);*/
 }
 
 .buttonPosition {
-    position: fixed;
-    top: 50em;
-    left: 45em;
+    position: absolute;
+    top: 45em;
+    left: 35%;
 }
 
 .button {background-image: linear-gradient(to right, #7b4397 0%, #dc2430  51%, #7b4397  100%)}
@@ -32,6 +33,7 @@
     text-align: center;
     width: 7em;
     height: 2em;
+    cursor: pointer;
 }
 
 .button:hover {
@@ -46,6 +48,8 @@
     background-color: rgba(0, 120, 201, 0.5);
     width: 15em;
     border-radius: 10px;
+    user-select: none;
+    transform: rotateX(27deg) rotateY(32deg) rotateZ(0deg);
 }
 
 .text pre {

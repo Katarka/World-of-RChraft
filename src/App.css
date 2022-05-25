@@ -9,10 +9,9 @@
     grid-template-rows: 1fr 5fr 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 10px;
-    width: 65%;
+    width: 80%;
 }
 
 .app-wrapper-content {
     grid-area: n;
-    border-radius: 10px;
 }
