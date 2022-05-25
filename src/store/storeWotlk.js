@@ -29,13 +29,13 @@ const store = {
     }
 }
 
-let faction, race, classRace, spec
+// export let faction, race, classRace, spec
+//
+// export const getRandom = [
+//     faction = getRandomValueFromArray(store.faction),
+//     race = getRandomValueFromArray(store.race[faction]),
+//     classRace = getRandomValueFromArray(store.class[race]),
+//     spec = getRandomValueFromArray(store.spec[classRace])
+// ]
 
-export const getRandom = [
-    faction = getRandomValueFromArray(store.faction),
-    race = getRandomValueFromArray(store.race[faction]),
-    classRace = getRandomValueFromArray(store.class[race]),
-    spec = getRandomValueFromArray(store.spec[classRace])
-]
-
-export default store;
+export default store
