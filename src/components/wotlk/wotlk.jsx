@@ -3,11 +3,11 @@ import style from './wotlk.module.css'
 import getRandomValueFromArray from "../../function/random";
 import store from "../../store/storeWotlk";
 
-const Wotlk = (faction, race, classRace, spec) => {
-    faction = getRandomValueFromArray(store.faction)
-    race = getRandomValueFromArray(store.race[faction])
-    classRace = getRandomValueFromArray(store.class[race])
-    spec = getRandomValueFromArray(store.spec[classRace])
+const Wotlk = () => {
+    const faction = getRandomValueFromArray(store.faction)
+    const race = getRandomValueFromArray(store.race[faction])
+    const classRace = getRandomValueFromArray(store.class[race])
+    const spec = getRandomValueFromArray(store.spec[classRace])
     const [getState, setState] = useState("Let's start")
     const handleClick = () => {
         const newRandom = [
@@ -27,10 +27,10 @@ const Wotlk = (faction, race, classRace, spec) => {
             <div className={style.text}>
                 <h1>{getState}</h1>
             </div>
-        <div className={style.buttonPosition}>
-            <button className={style.button} onClick={handleClick}>Go</button>
-            <button className={style.button} onClick={handleClickReset}>Reset</button>
-        </div>
+            <div className={style.buttonPosition}>
+                <button className={style.button} onClick={handleClick}>Go</button>
+                <button className={style.button} onClick={handleClickReset}>Reset</button>
+            </div>
         </div>
     )
 }
