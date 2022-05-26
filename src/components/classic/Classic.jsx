@@ -1,9 +1,9 @@
 import React, {useState} from "react";
-import style from './wotlk.module.css'
+import style from './Classic.module.css'
+import store from "../../store/storeClassic";
 import getRandomValueFromArray from "../../function/random";
-import store from "../../store/storeWotlk";
 
-const Wotlk = () => {
+const Classic = () => {
     const faction = getRandomValueFromArray(store.faction)
     const race = getRandomValueFromArray(store.race[faction])
     const classRace = getRandomValueFromArray(store.class[race])
@@ -23,16 +23,16 @@ const Wotlk = () => {
         setState("Let's start")
     }
     return (
-        <div className={style.wotlk}>
-                <div className={style.text}>
-                    <h1>{getState}</h1>
+        <div className={style.classic}>
+            <div className={style.text}>
+                <h1>{getState}</h1>
             </div>
-                <div className={style.buttonPosition}>
-                    <button className={style.button} onClick={handleClick}>Go</button>
-                    <button className={style.button} onClick={handleClickReset}>Reset</button>
-                </div>
+            <div className={style.buttonPosition}>
+                <button className={style.button} onClick={handleClick}>Go</button>
+                <button className={style.button} onClick={handleClickReset}>Reset</button>
+            </div>
         </div>
     )
 }
 
-export default Wotlk
+export default Classic

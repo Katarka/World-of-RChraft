@@ -1,21 +1,29 @@
 .nav {
-    grid-area: h;
+    grid-area: n;
     background-image: linear-gradient(to right, #3b6bee 0%, #574e55 50%, #dc2424 100%);
     padding: 30px;
     border-radius: 10px;
     border: 1px white solid;
+    text-align: left;
 }
 
 .item a {
-    text-align: center;
     color: white;
     text-decoration: none;
-    float: left;
-    text-indent: 20px;
     font-family: "Arial", Georgia, Serif;
     text-shadow: 10px 14px 10px #000000;
+    line-height: 3;
+    user-select: none;
 }
 
 .item a.active {
     color: gold;
+}
+
+.classic {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }

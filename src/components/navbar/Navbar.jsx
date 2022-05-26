@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./navbar.module.css"
+import style from "./Navbar.module.css"
 import {NavLink} from "react-router-dom";
 
 const navbar = () => {
@@ -7,7 +7,7 @@ const navbar = () => {
         <nav className={style.nav}>
             <div className={style.item}>
                 <div>
-                    <NavLink to='/classic' activeClassName={style.classic}>Classic</NavLink>
+                    <NavLink to='/classic' activeClassName={style.active}>Classic</NavLink>
                 </div>
                 <div>
                     <NavLink to='/bc' activeClassName={style.active}>Burning Crusader</NavLink>

@@ -1,9 +1,9 @@
 import React, {useState} from "react";
-import style from './bc.module.css'
+import style from './BurningCrusade.module.css'
 import store from "../../store/storeBc";
 import getRandomValueFromArray from "../../function/random";
 
-const Bc = () => {
+const BurningCrusade = () => {
     const faction = getRandomValueFromArray(store.faction)
     const race = getRandomValueFromArray(store.race[faction])
     const classRace = getRandomValueFromArray(store.class[race])
@@ -35,4 +35,4 @@ const Bc = () => {
     )
 }
 
-export default Bc
+export default BurningCrusade

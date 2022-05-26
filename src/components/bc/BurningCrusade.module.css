@@ -1,11 +1,11 @@
-.wotlk {
+.bc {
     display: grid;
-    grid-area: n;
-    background-image: url("/src/assets/wotlk.jpg");
+    grid-area: a;
+    background-image: url("/src/assets/bc.jpg");
     background-size: 100% 100%;
     border-radius: 10px;
     width: 100%;
-    height: 200%;
+    height: 90vh;
     position: relative;
     justify-items: center;
     align-items: center;
@@ -13,14 +13,15 @@
 
 .buttonPosition {
     position: absolute;
-    top: 45em;
+    bottom: 0;
+    padding-bottom: 5%;
 }
 
 .button {background-image: linear-gradient(to right, #7b4397 0%, #dc2430  51%, #7b4397  100%)}
 
 .button {
     margin: 10px;
-    padding: 15px 45px;
+    /*padding: 15px 45px;*/
     text-align: center;
     text-transform: uppercase;
     transition: 0.5s;
@@ -30,6 +31,7 @@
     border-radius: 10px;
     font-family: LifeCraft;
     font-size: 30px;
+    text-align: center;
     width: 7em;
     height: 2em;
     cursor: pointer;
@@ -44,22 +46,21 @@
 .text {
     text-align: center;
     margin: auto;
-    background-color: rgba(0, 120, 201, 0.5);
+    background-color: rgba(23, 105, 16, 0.5);
     width: 15em;
     border-radius: 10px;
     user-select: none;
-    transform: rotateX(27deg) rotateY(32deg) rotateZ(0deg);
 }
 
 .text pre {
-    color: #bf690d;
+    color: #940909;
     text-shadow: 2px 2px 2px #000;
     font-family: LifeCraft;
     letter-spacing: 3px;
 }
 
 .text h1 {
-    color: #bf690d;
+    color: #940909;
     text-shadow: 2px 2px 2px #000;
     font-family: LifeCraft;
     letter-spacing: 3px;

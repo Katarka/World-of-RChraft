@@ -1,20 +1,22 @@
 import React from "react";
 import './App.css';
-import Classic from "./components/classic/classic";
-import Navbar from "./components/navbar/navbar";
-import Bc from "./components/bc/bc";
+import Classic from "./components/classic/Classic";
+import Navbar from "./components/navbar/Navbar";
+import BurningCrusade from "./components/bc/BurningCrusade";
 import {Route, Routes} from "react-router-dom";
-import Wotlk from "./components/wotlk/wotlk";
+import Wotlk from "./components/wotlk/Wotlk";
+import Header from "./components/Header/Header";
 
 
 function App() {
     return (
         <div className='app-wrapper'>
+            <Header/>
             <Navbar/>
             <div className='app-wrapper-content'>
                 <Routes>
                     <Route exact path='/classic' element={<Classic/>}/>
-                    <Route path='/bc' element={<Bc/>}/>
+                    <Route path='/bc' element={<BurningCrusade/>}/>
                     <Route path='/wotlk' element={<Wotlk/>}/>
                 </Routes>
             </div>

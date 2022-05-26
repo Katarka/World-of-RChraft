@@ -1,6 +1,6 @@
 // import React, {useState} from "react";
 // import {getRandom} from "../../store/storeWotlk";
-// import style from "./wotlk.module.css";
+// import style from "./Wotlk.module.css";
 // import Wotlk from "./wotlk";
 //
 // const WotlkComponent = () => {
