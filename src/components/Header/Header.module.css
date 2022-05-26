@@ -1,6 +1,6 @@
 .header {
     grid-area: h;
-    background-color: black;
+    background-color: white;
     border-radius: 10px;
     background-image: url("../../assets/azf.gif");
     background-size: 5%;

@@ -49,7 +49,7 @@
     width: 15em;
     border-radius: 10px;
     user-select: none;
-    transform: rotateX(27deg) rotateY(32deg) rotateZ(0deg);
+    /*transform: rotateX(27deg) rotateY(32deg) rotateZ(0deg);*/
 }
 
 .text pre {
