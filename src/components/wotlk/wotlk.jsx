@@ -24,13 +24,13 @@ const Wotlk = () => {
     }
     return (
         <div className={style.wotlk}>
-            <div className={style.text}>
-                <h1>{getState}</h1>
+                <div className={style.text}>
+                    <h1>{getState}</h1>
             </div>
-            <div className={style.buttonPosition}>
-                <button className={style.button} onClick={handleClick}>Go</button>
-                <button className={style.button} onClick={handleClickReset}>Reset</button>
-            </div>
+                <div className={style.buttonPosition}>
+                    <button className={style.button} onClick={handleClick}>Go</button>
+                    <button className={style.button} onClick={handleClickReset}>Reset</button>
+                </div>
         </div>
     )
 }

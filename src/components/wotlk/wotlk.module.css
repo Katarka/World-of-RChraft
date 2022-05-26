@@ -5,22 +5,22 @@
     background-size: 100% 100%;
     border-radius: 10px;
     width: 100%;
-    height: 210%;
+    height: 200%;
     position: relative;
-    /*filter: grayscale(100%);*/
+    justify-items: center;
+    align-items: center;
 }
 
 .buttonPosition {
     position: absolute;
     top: 45em;
-    left: 35%;
 }
 
 .button {background-image: linear-gradient(to right, #7b4397 0%, #dc2430  51%, #7b4397  100%)}
 
 .button {
     margin: 10px;
-    /*padding: 15px 45px;*/
+    padding: 15px 45px;
     text-align: center;
     text-transform: uppercase;
     transition: 0.5s;
@@ -30,7 +30,6 @@
     border-radius: 10px;
     font-family: LifeCraft;
     font-size: 30px;
-    text-align: center;
     width: 7em;
     height: 2em;
     cursor: pointer;

@@ -10,6 +10,7 @@
     grid-column-gap: 0px;
     grid-row-gap: 10px;
     width: 80%;
+    height: 100%;
 }
 
 .app-wrapper-content {

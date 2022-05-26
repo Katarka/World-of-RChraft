@@ -2,12 +2,12 @@
     grid-area: h;
     background-image: linear-gradient(to right, #3b6bee 0%, #574e55 50%, #dc2424 100%);
     padding: 30px;
-    text-align: center;
     border-radius: 10px;
     border: 1px white solid;
 }
 
 .item a {
+    text-align: center;
     color: white;
     text-decoration: none;
     float: left;
