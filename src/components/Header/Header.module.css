@@ -1,9 +1,10 @@
 .header {
-    grid-area: h;
+    grid-area: n;
     background-color: #3b6bee;
     border-radius: 10px;
     background-image: url("../../assets/azf.gif");
-    background-size: 5%;
-    margin-top: 5px;
-    background-repeat: repeat-x;
+    background-size: 50%;
+    background-repeat: repeat-y;
+    height: 100%;
+    width: 50%;
 }

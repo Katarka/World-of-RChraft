@@ -1,21 +1,34 @@
 .nav {
-    grid-area: n;
-    background: linear-gradient(to right, #3b6bee 0%, #574e55 50%, #dc2424 100%) no-repeat center center fixed;
+    grid-area: h;
+    background-color: black;
     height: 90vh;
-    border-radius: 10px;
     border: 1px white solid;
-    text-align: center;
+    height: 100%;
 }
 
-.item a {
+.item a{
     color: white;
+    background-size: 100px;
     text-decoration: none;
-    font-family: "Arial", Georgia, Serif;
     text-shadow: 10px 14px 10px #000000;
     line-height: 3;
-    user-select: none;
+    float: left;
+    margin-top: 5px;
+    margin-left: 10px;
+    font-size: 100%;
 }
 
 .item a.active {
-    color: gold;
+    color: #940909;
 }
+
+.item a:hover {
+    color: gold;
+    background: #3b6bee;
+    border-radius: 5px;
+    padding: 2px;
+    height: auto;
+}
+
+
+

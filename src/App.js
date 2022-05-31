@@ -11,7 +11,7 @@ import Header from "./components/Header/Header";
 function App() {
     return (
         <div className='app-wrapper'>
-            <Header/>
+            {/*<Header/>*/}
             <Navbar/>
             <div className='app-wrapper-content'>
                 <Routes>
