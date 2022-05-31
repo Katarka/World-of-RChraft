@@ -1,10 +1,10 @@
 .nav {
     grid-area: n;
-    background-image: linear-gradient(to right, #3b6bee 0%, #574e55 50%, #dc2424 100%);
-    padding: 30px;
+    background: linear-gradient(to right, #3b6bee 0%, #574e55 50%, #dc2424 100%) no-repeat center center fixed;
+    height: 90vh;
     border-radius: 10px;
     border: 1px white solid;
-    text-align: left;
+    text-align: center;
 }
 
 .item a {
@@ -18,12 +18,4 @@
 
 .item a.active {
     color: gold;
-}
-
-.classic {
-    /* Center the content */
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
 }
