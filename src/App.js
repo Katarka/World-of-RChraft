@@ -11,8 +11,12 @@ import Header from "./components/Header/Header";
 function App() {
     return (
         <div className='app-wrapper'>
-            {/*<Header/>*/}
-            <Navbar/>
+            {/*<div className='container__header'>*/}
+            {/*    <Header/>*/}
+            {/*</div>*/}
+            <div className='container__sidebar'>
+                <Navbar/>
+            </div>
             <div className='app-wrapper-content'>
                 <Routes>
                     <Route exact path='/classic' element={<Classic/>}/>

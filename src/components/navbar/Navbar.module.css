@@ -1,25 +1,23 @@
 .nav {
-    grid-area: h;
-    background-color: black;
-    height: 90vh;
-    border: 1px white solid;
-    height: 100%;
+    background: white;
+    height: 100vh;
+}
+
+.item{
+    line-height: 3;
+    text-align: center;
 }
 
 .item a{
-    color: white;
-    background-size: 100px;
-    text-decoration: none;
+    color: black;
     text-shadow: 10px 14px 10px #000000;
-    line-height: 3;
-    float: left;
-    margin-top: 5px;
-    margin-left: 10px;
-    font-size: 100%;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
 }
 
 .item a.active {
-    color: #940909;
+    color: white;
 }
 
 .item a:hover {
@@ -29,6 +27,7 @@
     padding: 2px;
     height: auto;
 }
+
 
 
 

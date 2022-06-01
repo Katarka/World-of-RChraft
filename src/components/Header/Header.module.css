@@ -1,10 +1,5 @@
 .header {
-    grid-area: n;
-    background-color: #3b6bee;
-    border-radius: 10px;
-    background-image: url("../../assets/azf.gif");
-    background-size: 50%;
-    background-repeat: repeat-y;
-    height: 100%;
-    width: 50%;
+    background: white;
+    border: 1px white solid;
+    box-shadow: -2px -13px 10px 1px #000 inset;
 }

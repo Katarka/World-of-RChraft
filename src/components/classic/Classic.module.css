@@ -3,12 +3,24 @@
     grid-area: a;
     background-image: url("/src/assets/classic.jpeg");
     background-size: 100% 100%;
-    border-radius: 10px;
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     position: relative;
     justify-items: center;
     align-items: center;
+    animation: classicAnim 1s ease 0s 1 normal forwards;
+}
+
+@keyframes classicAnim {
+    0% {
+        opacity: 0;
+        transform: translateX(-250px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .buttonPosition {

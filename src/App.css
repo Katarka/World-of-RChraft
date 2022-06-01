@@ -1,15 +1,15 @@
 .app-wrapper {
-    margin: 0 auto;
-    display: grid;
-    grid-template-areas:
-    "h h"
-    "n a";
-    grid-template-rows: 60px 1fr;
-    grid-template-columns: 2fr 10fr;
-    grid-gap: 5px;
+    /*margin: 0 auto;*/
+    display: flex;
 }
 
 .app-wrapper-content {
-    grid-area: a;
-    width: 80%;
+    flex: 1;
+    overflow: auto;
+    background: url("/src/assets/or.jpg");
+    background-size: cover;
+}
+
+.container__sidebar {
+    width: 10%;
 }
