@@ -1,33 +1,50 @@
 .nav {
-    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(252, 248, 248);
     height: 100vh;
 }
 
-.item{
-    line-height: 3;
+/*.item {*/
+/*    line-height: 3;*/
+/*    text-align: center;*/
+/*}*/
+
+/*.item a{*/
+/*    color: black;*/
+/*    text-shadow: 10px 14px 10px #000000;*/
+/*    text-decoration: none;*/
+/*    cursor: pointer;*/
+/*    user-select: none;*/
+/*}*/
+
+/*.item a.active {*/
+/*    color: white;*/
+/*}*/
+
+.button {background-image: linear-gradient(to left, #00cfff 0%, #fffd00 31%, #fcf8f8 100%)}
+
+.button {
+    margin: 10px;
+    /*padding: 10px 45px;*/
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: #000000;
+    box-shadow: 0 0 20px #fcf8f8;
+    font-family: LifeCraft;
+    width: 15vh;
+    height: 3em;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #000000;
+    text-decoration: none;
     text-align: center;
 }
-
-.item a{
-    color: black;
-    text-shadow: 10px 14px 10px #000000;
-    text-decoration: none;
-    cursor: pointer;
-    user-select: none;
-}
-
-.item a.active {
-    color: white;
-}
-
-.item a:hover {
-    color: gold;
-    background: #3b6bee;
-    border-radius: 5px;
-    padding: 2px;
-    height: auto;
-}
-
-
 
 

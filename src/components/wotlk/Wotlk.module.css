@@ -29,7 +29,7 @@
     padding-bottom: 5%;
 }
 
-.button {background-image: linear-gradient(to right, #7b4397 0%, #dc2430  51%, #7b4397  100%)}
+.button {background-image: linear-gradient(to left, #fcf8f8 0%, #9a0202 31%, #fcf8f8 100%)}
 
 .button {
     margin: 10px;
@@ -38,13 +38,13 @@
     text-transform: uppercase;
     transition: 0.5s;
     background-size: 200% auto;
-    color: white;
+    color: #9a0202;
     box-shadow: 0 0 20px #eee;
-    border-radius: 10px;
+    /*border-radius: 10px;*/
     font-family: LifeCraft;
-    font-size: 30px;
-    width: 7em;
-    height: 2em;
+    font-size: 3vh;
+    width: 15vh;
+    height: 5vh;
     cursor: pointer;
 }
 
