@@ -1,13 +1,13 @@
 .bc {
-    display: grid;
-    grid-area: a;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
     background-image: url("/src/assets/bc.jpg");
     background-size: 100% 100%;
     width: 100%;
     height: 100vh;
-    position: relative;
-    justify-items: center;
-    align-items: center;
     animation: bcAnim 1s ease 0s 1 normal forwards;
 }
 
@@ -29,7 +29,7 @@
     padding-bottom: 5%;
 }
 
-.button {background-image: linear-gradient(to left, #fcf8f8 0%, #9a0202 31%, #fcf8f8 100%)}
+.button {background-image: linear-gradient(to left, #fcf8f8 0%, #028d9a 31%, #fcf8f8 100%)}
 
 .button {
     margin: 10px;
@@ -43,8 +43,8 @@
     /*border-radius: 10px;*/
     font-family: LifeCraft;
     font-size: 3vh;
-    width: 15vh;
-    height: 5vh;
+    width: 20vh;
+    height: 7vh;
     cursor: pointer;
 }
 

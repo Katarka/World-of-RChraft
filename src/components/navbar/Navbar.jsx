@@ -6,12 +6,12 @@ const navbar = () => {
     return (
         <nav className={style.nav}>
                 <div className={style.item}>
-                    <NavLink to='/classic' activeClassName={style.active}>
+                    <NavLink to='/classic'>
                         <button className={style.button}>Classic</button>
                     </NavLink>
                 </div>
                 <div className={style.item}>
-                    <NavLink to='/bc' activeClassName={style.active}>
+                    <NavLink to='/bc'>
                         <button className={style.button}>Burning Crusader</button>
                     </NavLink>
                 </div>

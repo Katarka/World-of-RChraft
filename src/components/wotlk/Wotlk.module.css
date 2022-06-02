@@ -1,13 +1,13 @@
 .wotlk {
-    display: grid;
-    grid-area: a;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
     background: url("/src/assets/wotlk.jpg");
     background-size: 100% 100%;
     width: 100%;
     height: 100vh;
-    position: relative;
-    justify-items: center;
-    align-items: center;
     animation: wotlkAnim 1s ease 0s 1 normal forwards;
 }
 
@@ -29,22 +29,21 @@
     padding-bottom: 5%;
 }
 
-.button {background-image: linear-gradient(to left, #fcf8f8 0%, #9a0202 31%, #fcf8f8 100%)}
+.button {background-image: linear-gradient(to left, #fcf8f8 0%, #028d9a 31%, #fcf8f8 100%)}
 
 .button {
     margin: 10px;
-    padding: 15px 45px;
     text-align: center;
     text-transform: uppercase;
     transition: 0.5s;
     background-size: 200% auto;
-    color: #9a0202;
+    color: white;
     box-shadow: 0 0 20px #eee;
     /*border-radius: 10px;*/
     font-family: LifeCraft;
     font-size: 3vh;
-    width: 15vh;
-    height: 5vh;
+    width: 20vh;
+    height: 7vh;
     cursor: pointer;
 }
 
@@ -61,6 +60,7 @@
     width: 20%;
     border-radius: 10px;
     user-select: none;
+    font-size: 2vh;
     /*transform: rotateX(27deg) rotateY(32deg) rotateZ(0deg);*/
 }
 

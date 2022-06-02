@@ -11,9 +11,6 @@ import Header from "./components/Header/Header";
 function App() {
     return (
         <div className='app-wrapper'>
-            {/*<div className='container__header'>*/}
-            {/*    <Header/>*/}
-            {/*</div>*/}
             <div className='container__sidebar'>
                 <Navbar/>
             </div>
@@ -23,6 +20,9 @@ function App() {
                     <Route path='/bc' element={<BurningCrusade/>}/>
                     <Route path='/wotlk' element={<Wotlk/>}/>
                 </Routes>
+            </div>
+            <div className='container__header'>
+                <Header/>
             </div>
         </div>
     );

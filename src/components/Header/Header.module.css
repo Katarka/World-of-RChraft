@@ -1,5 +1,8 @@
 .header {
-    background: white;
-    border: 1px white solid;
-    box-shadow: -2px -13px 10px 1px #000 inset;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #f85656;
+    height: 100vh;
 }
