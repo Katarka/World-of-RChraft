@@ -1,7 +1,7 @@
 import React from "react";
-import style from "./Header.module.css"
+import style from "./Rightbar.module.css"
 
-const Header = () => {
+const Rightbar = () => {
     return(
         <div className={style.header}>
 
@@ -9,4 +9,4 @@ const Header = () => {
     )
 }
 
-export default Header
+export default Rightbar

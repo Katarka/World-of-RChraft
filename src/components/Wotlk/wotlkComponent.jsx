@@ -1,7 +1,7 @@
 // import React, {useState} from "react";
-// import {getRandom} from "../../store/storeWotlk";
+// import {getRandom} from "../../data/storeWotlk";
 // import style from "./Wotlk.module.css";
-// import Wotlk from "./wotlk";
+// import Wotlk from "./Wotlk";
 //
 // const WotlkComponent = () => {
 //     const [currentRandomValue, setCurrentRandomValue] = useState(getRandom);

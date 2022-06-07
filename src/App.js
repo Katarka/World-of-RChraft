@@ -1,11 +1,11 @@
 import React from "react";
 import './App.css';
-import Classic from "./components/classic/Classic";
-import Navbar from "./components/navbar/Navbar";
-import BurningCrusade from "./components/bc/BurningCrusade";
+import Classic from "./components/Classic/Classic";
+import Navbar from "./components/Leftbar/Leftbar";
+import BurningCrusade from "./components/BC/BurningCrusade";
 import {Route, Routes} from "react-router-dom";
-import Wotlk from "./components/wotlk/Wotlk";
-import Header from "./components/Header/Header";
+import Wotlk from "./components/Wotlk/Wotlk";
+import Rightbar from "./components/Rightbar/Rightbar";
 
 
 function App() {
@@ -22,7 +22,7 @@ function App() {
                 </Routes>
             </div>
             <div className='container__header'>
-                <Header/>
+                <Rightbar/>
             </div>
         </div>
     );

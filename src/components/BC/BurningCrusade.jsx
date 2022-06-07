@@ -1,9 +1,9 @@
 import React, {useState} from "react";
-import style from './Wotlk.module.css'
+import style from './BurningCrusade.module.css'
+import store from "../../data/dataBc";
 import getRandomValueFromArray from "../../function/random";
-import store from "../../store/storeWotlk";
 
-const Wotlk = () => {
+const BurningCrusade = () => {
     const faction = getRandomValueFromArray(store.faction)
     const race = getRandomValueFromArray(store.race[faction])
     const classRace = getRandomValueFromArray(store.class[race])
@@ -23,16 +23,16 @@ const Wotlk = () => {
         setState("Let's start")
     }
     return (
-        <div className={style.wotlk}>
-                <div className={style.text}>
-                    <h1>{getState}</h1>
+        <div className={style.bc}>
+            <div className={style.text}>
+                <h1>{getState}</h1>
             </div>
-                <div className={style.buttonPosition}>
-                    <button className={style.button} onClick={handleClick}>Go</button>
-                    <button className={style.button} onClick={handleClickReset}>Reset</button>
-                </div>
+            <div className={style.buttonPosition}>
+                <button className={style.button} onClick={handleClick}>Go</button>
+                <button className={style.button} onClick={handleClickReset}>Reset</button>
+            </div>
         </div>
     )
 }
 
-export default Wotlk
+export default BurningCrusade

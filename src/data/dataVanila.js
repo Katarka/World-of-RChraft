@@ -1,4 +1,4 @@
-const store = {
+const dataVanila = {
         faction: ["Alliance", "Horde"],
         race: {
             "Alliance": ["Dwarf", "Gnome", "Human", "Night Elf", "Dranei", "Worgen", "Pandaren",
@@ -48,4 +48,4 @@ const store = {
 }
 
 
-export default store;
+export default dataVanila;

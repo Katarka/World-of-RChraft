@@ -1,9 +1,9 @@
 import React, {useState} from "react";
-import style from './BurningCrusade.module.css'
-import store from "../../store/storeBc";
+import style from './Classic.module.css'
+import store from "../../data/dataClassic";
 import getRandomValueFromArray from "../../function/random";
 
-const BurningCrusade = () => {
+const Classic = () => {
     const faction = getRandomValueFromArray(store.faction)
     const race = getRandomValueFromArray(store.race[faction])
     const classRace = getRandomValueFromArray(store.class[race])
@@ -23,7 +23,7 @@ const BurningCrusade = () => {
         setState("Let's start")
     }
     return (
-        <div className={style.bc}>
+        <div className={style.classic}>
             <div className={style.text}>
                 <h1>{getState}</h1>
             </div>
@@ -35,4 +35,4 @@ const BurningCrusade = () => {
     )
 }
 
-export default BurningCrusade
+export default Classic

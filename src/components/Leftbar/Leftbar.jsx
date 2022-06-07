@@ -1,8 +1,8 @@
 import React from "react";
-import style from "./Navbar.module.css"
+import style from "./Leftbar.module.css"
 import {NavLink} from "react-router-dom";
 
-const navbar = () => {
+const Leftbar = () => {
     return (
         <nav className={style.nav}>
                 <div className={style.item}>
@@ -22,12 +22,12 @@ const navbar = () => {
                 </div>
                 <div className={style.item}>
                     <NavLink to='/pand' activeClassName={style.active}>
-                        <button className={style.button}>Pandaria</button>
+                        <button className={style.button}>Mists of Pandaria</button>
                         </NavLink>
                 </div>
                 <div className={style.item}>
                     <NavLink to='/drenour' activeClassName={style.active}>
-                        <button className={style.button}>Drenour</button>
+                        <button className={style.button}>Warlords of Draenor</button>
                     </NavLink>
                 </div>
                 <div className={style.item}>
@@ -40,8 +40,13 @@ const navbar = () => {
                         <button className={style.button}>BFA</button>
                     </NavLink>
                 </div>
+            <div className={style.item}>
+                <NavLink to='/shadowlands' activeClassName={style.active}>
+                    <button className={style.button}>Shadowlands</button>
+                </NavLink>
+            </div>
         </nav>
     )
 }
 
-export default navbar
+export default Leftbar
