@@ -1,50 +1,67 @@
 import React from "react";
-import style from "./Leftbar.module.css"
-import {NavLink} from "react-router-dom";
+import cn from "classnames";
+import { NavLink } from "react-router-dom";
+
+import style from "./Leftbar.module.scss"
 
 const Leftbar = () => {
     return (
         <nav className={style.nav}>
-                <div className={style.item}>
-                    <NavLink to='/classic'>
-                        <button className={style.button}>Classic</button>
-                    </NavLink>
-                </div>
-                <div className={style.item}>
-                    <NavLink to='/bc'>
-                        <button className={style.button}>Burning Crusader</button>
-                    </NavLink>
-                </div>
-                <div className={style.item}>
-                    <NavLink to='/wotlk' activeClassName={style.active}>
-                        <button className={style.button}>Lich King</button>
-                    </NavLink>
-                </div>
-                <div className={style.item}>
-                    <NavLink to='/pand' activeClassName={style.active}>
-                        <button className={style.button}>Mists of Pandaria</button>
-                        </NavLink>
-                </div>
-                <div className={style.item}>
-                    <NavLink to='/drenour' activeClassName={style.active}>
-                        <button className={style.button}>Warlords of Draenor</button>
-                    </NavLink>
-                </div>
-                <div className={style.item}>
-                    <NavLink to='/legion' activeClassName={style.active}>
-                        <button className={style.button}>Legion</button>
-                        </NavLink>
-                </div>
-                <div className={style.item}>
-                    <NavLink to='/bfa' activeClassName={style.active}>
-                        <button className={style.button}>BFA</button>
-                    </NavLink>
-                </div>
-            <div className={style.item}>
-                <NavLink to='/shadowlands' activeClassName={style.active}>
-                    <button className={style.button}>Shadowlands</button>
-                </NavLink>
-            </div>
+            <NavLink 
+                to='/classic'
+                className={({isActive}) => (!isActive ? style.item : cn(style.item + ' ' + style.active))}
+            >   
+                Classic
+            </NavLink>
+
+            <NavLink 
+                to='/bc'
+                className={({isActive}) => (!isActive ? style.item : cn(style.item + ' ' + style.active))}
+            >
+                The Burning Crusade
+            </NavLink>
+
+            <NavLink 
+                to='/wotlk' 
+                className={({isActive}) => (!isActive ? style.item : cn(style.item + ' ' + style.active))}
+            >
+                Wrath of the Lich King
+            </NavLink>
+
+            <NavLink 
+                to='/pand' 
+                className={({isActive}) => (!isActive ? style.item : cn(style.item + ' ' + style.active))}
+            >
+                Mists of Pandaria
+            </NavLink>
+
+            <NavLink 
+                to='/drenour' 
+                className={({isActive}) => (!isActive ? style.item : cn(style.item + ' ' + style.active))}
+            >
+                Warlords of Draenor
+            </NavLink>
+
+            <NavLink 
+                to='/legion' 
+                className={({isActive}) => (!isActive ? style.item : cn(style.item + ' ' + style.active))}
+            >
+                Legion
+            </NavLink>
+
+            <NavLink 
+                to='/bfa' 
+                className={({isActive}) => (!isActive ? style.item : cn(style.item + ' ' + style.active))}
+            >
+                Battle for Azeroth
+            </NavLink>
+
+            <NavLink 
+                to='/shadowlands' 
+                className={({isActive}) => (!isActive ? style.item : cn(style.item + ' ' + style.active))}
+            >
+                Shadowlands
+            </NavLink>
         </nav>
     )
 }
