@@ -1,20 +1,17 @@
 import React, {useState} from "react";
 import style from './Classic.module.css'
-import store from "../../data/dataClassic";
 import getRandomValueFromArray from "../../function/random";
 
-const Classic = () => {
-    const faction = getRandomValueFromArray(store.faction)
-    const race = getRandomValueFromArray(store.race[faction])
-    const classRace = getRandomValueFromArray(store.class[race])
-    const spec = getRandomValueFromArray(store.spec[classRace])
+const Classic = (props) => {
+
     const [getState, setState] = useState("Let's start")
-    const handleClick = () => {
+
+    const handleClick = (faction, race, classRace, spec) => {
         const newRandom = [
-            faction,
-            race,
-            classRace,
-            spec
+            faction = props.getRandom(props.data.faction),
+            race = props.getRandom(props.data.race[faction]),
+            classRace = props.getRandom(props.data.class[race]),
+            spec = props.getRandom(props.data.spec[classRace])
         ]
         let setNewRandom = newRandom.map((newRandom) => <pre>{newRandom}</pre>)
         setState(setNewRandom)

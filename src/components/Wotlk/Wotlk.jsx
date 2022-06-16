@@ -1,20 +1,17 @@
 import React, {useState} from "react";
 import style from './Wotlk.module.css'
 import getRandomValueFromArray from "../../function/random";
-import store from "../../data/dataWotlk";
 
-const Wotlk = () => {
-    const faction = getRandomValueFromArray(store.faction)
-    const race = getRandomValueFromArray(store.race[faction])
-    const classRace = getRandomValueFromArray(store.class[race])
-    const spec = getRandomValueFromArray(store.spec[classRace])
+const Wotlk = (props) => {
+
     const [getState, setState] = useState("Let's start")
-    const handleClick = () => {
+
+    const handleClick = (faction, race, classRace, spec) => {
         const newRandom = [
-            faction,
-            race,
-            classRace,
-            spec
+            faction = props.getRandom(props.data.faction),
+            race = props.getRandom(props.data.race[faction]),
+            classRace = props.getRandom(props.data.class[race]),
+            spec = props.getRandom(props.data.spec[classRace])
         ]
         let setNewRandom = newRandom.map((newRandom) => <pre>{newRandom}</pre>)
         setState(setNewRandom)
@@ -24,13 +21,13 @@ const Wotlk = () => {
     }
     return (
         <div className={style.wotlk}>
-                <div className={style.text}>
-                    <h1>{getState}</h1>
+            <div className={style.text}>
+                <h1>{getState}</h1>
             </div>
-                <div className={style.buttonPosition}>
-                    <button className={style.button} onClick={handleClick}>Go</button>
-                    <button className={style.button} onClick={handleClickReset}>Reset</button>
-                </div>
+            <div className={style.buttonPosition}>
+                <button className={style.button} onClick={handleClick}>Go</button>
+                <button className={style.button} onClick={handleClickReset}>Reset</button>
+            </div>
         </div>
     )
 }

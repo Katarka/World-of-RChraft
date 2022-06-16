@@ -1,6 +1,6 @@
 import getRandomValueFromArray from "../function/random";
 
-const store = {
+const dataWotlk = {
     faction: ["Alliance", "Horde"],
     race: {
         "Alliance": ["Dwarf", "Gnome", "Human", "Night Elf"],
@@ -38,4 +38,4 @@ const store = {
 //     spec = getRandomValueFromArray(data.spec[classRace])
 // ]
 
-export default store
+export default dataWotlk
