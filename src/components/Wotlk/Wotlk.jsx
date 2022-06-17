@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import style from './Wotlk.module.css'
-import getRandomValueFromArray from "../../function/random";
 
 const Wotlk = (props) => {
 
