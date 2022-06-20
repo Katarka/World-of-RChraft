@@ -1,19 +1,27 @@
 import React, {useState} from "react";
 import style from './Wotlk.module.css'
 
+// const initialState = {
+//     currentRandomIndex: 0,
+//     newRandom: [],
+// };
+//
+// const reducer = (state, action) => {
+//     if (action.type === "NEXT_RANDOM") {
+//         return {
+//             ...state,
+//             currentRandomIndex: state.currentRandomIndex + 1,
+//         };
+//     }
+//     return state;
+// };
+
 const Wotlk = (props) => {
 
     const [getState, setState] = useState("Let's start")
 
-    const handleClick = (faction, race, classRace, spec) => {
-        const newRandom = [
-            faction = props.getRandom(props.data.faction),
-            race = props.getRandom(props.data.race[faction]),
-            classRace = props.getRandom(props.data.class[race]),
-            spec = props.getRandom(props.data.spec[classRace])
-        ]
-        let setNewRandom = newRandom.map((newRandom) => <pre>{newRandom}</pre>)
-        setState(setNewRandom)
+    const handleClick = () => {
+        setState(props.setNewRandom)
     }
     const handleClickReset = () => {
         setState("Let's start")

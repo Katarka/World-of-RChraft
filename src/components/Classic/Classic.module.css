@@ -62,6 +62,7 @@
     border-radius: 10px;
     user-select: none;
     /*transform: translate(0px, 100px);*/
+    border: 10px outset #8304ba;
 }
 
 .text pre {

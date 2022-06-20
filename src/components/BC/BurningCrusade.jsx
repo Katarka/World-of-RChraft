@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import style from './BurningCrusade.module.css'
-import getRandomValueFromArray from "../../function/random";
 
 const BurningCrusade = (props) => {
 

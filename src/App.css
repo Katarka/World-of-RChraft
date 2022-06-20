@@ -5,9 +5,10 @@
 
 .app-wrapper-content {
     flex: 1;
-    overflow: auto;
-    background: url("/src/assets/or.jpg");
-    background-size: cover;
+    /*overflow: auto;*/
+    background: url("/src/assets/or.jpg") center;
+    /*background-size: cover;*/
+    background-size: contain;
 }
 
 .container__sidebar {

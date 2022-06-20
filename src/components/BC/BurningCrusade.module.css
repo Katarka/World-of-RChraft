@@ -61,6 +61,7 @@
     width: 20%;
     border-radius: 10px;
     user-select: none;
+    border: 10px outset #940909;
 }
 
 .text pre {

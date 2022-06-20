@@ -1,12 +1,13 @@
 import React, {useState} from "react";
 import style from "./Rightbar.module.css"
 
-
 const Rightbar = (props) => {
-    const [getState, setState] = useState("History")
+    const [getState, setState] = useState(props.setNewRandom)
+    const addNewRandom = () => {
+    }
     return(
         <div className={style.header}>
-            <div>{getState}</div>
+                <pre>{getState}</pre>
         </div>
     )
 }
