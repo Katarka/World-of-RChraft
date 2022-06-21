@@ -15,18 +15,20 @@ const reducer = (state, action) => {
         return {
             ...state,
             newRandomClassic: state.newRandomClassic = setNewRandomClassic(),
+            rightBarHistory: state.rightBarHistory.concat([state.newRandomClassic])
         };
     }
     if (action.type === "NEXT_RANDOM_BC") {
         return {
             ...state,
             newRandomBC: state.newRandomBC = setNewRandomBC(),
+            rightBarHistory: state.rightBarHistory.concat([state.newRandomBC])
         };
     }
     if (action.type === "NEXT_RANDOM_WOTLK") {
         return {
             ...state,
-            newRandomWotlk: state.newRandomWotlk = newRandom(),
+            newRandomWotlk: state.newRandomWotlk = setNewRandomWotlk(),
             rightBarHistory: state.rightBarHistory.concat([state.newRandomWotlk])
         };
     }
@@ -45,7 +47,7 @@ const reducer = (state, action) => {
     if (action.type === "DEFAULT_RANDOM_WOTLK") {
         return {
             ...state,
-            newRandomWotlk: state.newRandom = "Let's Start again"
+            newRandomWotlk: state.newRandom = "Let's Start again",
         };
     }
     return state;
