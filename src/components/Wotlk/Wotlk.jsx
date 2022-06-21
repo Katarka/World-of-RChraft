@@ -3,6 +3,7 @@ import style from './Wotlk.module.css'
 
 const Wotlk = ({WorContext}) => {
     const [wotlkState, dispatch] = useContext(WorContext)
+    console.log(wotlkState.newRandomWotlk)
     return (
         <div className={style.wotlk}>
             <div className={style.text}>
