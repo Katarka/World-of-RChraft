@@ -1,8 +1,7 @@
-import React, {useContext, useState} from "react";
+import React, {useContext} from "react";
 import style from './Classic.module.css'
-import {WorContext} from "../../contex/wor";
 
-const Classic = () => {
+const Classic = ({WorContext}) => {
     const [classicState, dispatch] = useContext(WorContext)
     return (
         <div className={style.classic}>
@@ -11,7 +10,7 @@ const Classic = () => {
             </div>
             <div className={style.buttonPosition}>
                 <button className={style.button} onClick={() => dispatch({type: "NEXT_RANDOM_CLASSIC"})}>Go</button>
-                <button className={style.button} onClick={() => dispatch({type: "DEFAULT_RANDOM"})}>Reset</button>
+                <button className={style.button} onClick={() => dispatch({type: "DEFAULT_RANDOM_CLASSIC"})}>Reset</button>
             </div>
         </div>
     )

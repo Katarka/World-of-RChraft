@@ -29,14 +29,12 @@ const dataWotlk = {
     }
 }
 
-const newRandom = (faction, race, classRace, spec) => [
+export const newRandom = (faction, race, classRace, spec) => [
     faction = getRandomValueFromArray(dataWotlk.faction),
     race = getRandomValueFromArray(dataWotlk.race[faction]),
     classRace = getRandomValueFromArray(dataWotlk.class[race]),
-    spec = getRandomValueFromArray(dataWotlk.spec[classRace]),
+    spec = getRandomValueFromArray(dataWotlk.spec[classRace])
 ]
 
-export const setNewRandomWotlk = () => newRandom().map((newRandom) => <pre>{newRandom}</pre>)
+export const setNewRandomWotlk = () => newRandom().map((newRandom) => <h1>{newRandom}</h1>)
 
-
-export default dataWotlk

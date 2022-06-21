@@ -1,40 +1,52 @@
 import {createContext, useReducer} from "react";
-import {setNewRandomWotlk} from "../data/dataWotlk";
+import {newRandom, setNewRandomWotlk} from "../data/dataWotlk";
 import {setNewRandomBC} from "../data/dataBc";
 import {setNewRandomClassic} from "../data/dataClassic";
 
 const initialState = {
     newRandomClassic: ["Let's Start!"],
     newRandomBC: ["Let's Start!"],
-    newRandomWotlk: ["Let's Start!"]
+    newRandomWotlk: ["Let's Start!"],
+    rightBarHistory: []
 };
 
 const reducer = (state, action) => {
+    if (action.type === "NEXT_RANDOM_CLASSIC") {
+        return {
+            ...state,
+            newRandomClassic: state.newRandomClassic = setNewRandomClassic(),
+        };
+    }
+    if (action.type === "NEXT_RANDOM_BC") {
+        return {
+            ...state,
+            newRandomBC: state.newRandomBC = setNewRandomBC(),
+        };
+    }
     if (action.type === "NEXT_RANDOM_WOTLK") {
         return {
             ...state,
-            newRandomWotlk: setNewRandomWotlk(),
+            newRandomWotlk: state.newRandomWotlk = newRandom(),
+            rightBarHistory: state.rightBarHistory + state.newRandomWotlk
         };
     }
-    if (action.type === "NEXT_RANDOM_BC"){
+    if (action.type === "DEFAULT_RANDOM_CLASSIC") {
         return {
             ...state,
-            newRandomBC: setNewRandomBC(),
+            newRandomClassic: state.newRandom = "Let's Start again"
         };
     }
-    if (action.type === "NEXT_RANDOM_CLASSIC"){
+    if (action.type === "DEFAULT_RANDOM_BC") {
         return {
             ...state,
-            newRandomClassic: setNewRandomClassic(),
+            newRandomBC: state.newRandom = "Let's Start again"
         };
     }
-    if (action.type === "DEFAULT_RANDOM"){
-        return{
+    if (action.type === "DEFAULT_RANDOM_WOTLK") {
+        return {
             ...state,
-            newRandomClassic: state.newRandom = "Let's Start again",
-            newRandomBC: state.newRandom = "Let's Start again",
             newRandomWotlk: state.newRandom = "Let's Start again"
-        }
+        };
     }
     return state;
 };

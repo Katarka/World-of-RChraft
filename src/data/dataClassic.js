@@ -39,5 +39,3 @@ const newRandom = (faction, race, classRace, spec) => [
 ]
 
 export const setNewRandomClassic = () => newRandom().map((newRandom) => <pre>{newRandom}</pre>)
-
-export default dataClassic;

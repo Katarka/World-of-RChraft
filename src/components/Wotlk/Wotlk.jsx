@@ -1,8 +1,7 @@
 import React, {useContext} from "react";
 import style from './Wotlk.module.css'
-import {WorContext} from "../../contex/wor";
 
-const Wotlk = () => {
+const Wotlk = ({WorContext}) => {
     const [wotlkState, dispatch] = useContext(WorContext)
     return (
         <div className={style.wotlk}>
@@ -11,7 +10,7 @@ const Wotlk = () => {
             </div>
             <div className={style.buttonPosition}>
                 <button className={style.button} onClick={() => dispatch({type: "NEXT_RANDOM_WOTLK"})}>Go</button>
-                <button className={style.button} onClick={() => dispatch({type: "DEFAULT_RANDOM"})}>Reset</button>
+                <button className={style.button} onClick={() => dispatch({type: "DEFAULT_RANDOM_WOTLK"})}>Reset</button>
             </div>
         </div>
     )

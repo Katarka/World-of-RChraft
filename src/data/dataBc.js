@@ -40,6 +40,3 @@ const newRandom = (faction, race, classRace, spec) => [
 ]
 
 export const setNewRandomBC = () => newRandom().map((newRandom) => <pre>{newRandom}</pre>)
-
-
-export default dataBC;

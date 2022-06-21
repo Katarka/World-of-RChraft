@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import {BrowserRouter} from "react-router-dom";
-import {WorProvider} from "./contex/wor";
+import {WorContext, WorProvider} from "./contex/wor";
 
 ReactDOM.render(
     <BrowserRouter>
         <React.StrictMode>
             <WorProvider>
-                <App/>
+                <App WorContext={WorContext}/>
             </WorProvider>
         </React.StrictMode>
     </BrowserRouter>,
