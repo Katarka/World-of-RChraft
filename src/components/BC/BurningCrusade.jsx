@@ -1,31 +1,17 @@
-import React, {useState} from "react";
+import React, {useContext, useState} from "react";
 import style from './BurningCrusade.module.css'
+import {WorContext} from "../../contex/wor";
 
 const BurningCrusade = (props) => {
-
-    const [getState, setState] = useState("Let's start")
-
-    const handleClick = (faction, race, classRace, spec) => {
-        const newRandom = [
-            faction = props.getRandom(props.data.faction),
-            race = props.getRandom(props.data.race[faction]),
-            classRace = props.getRandom(props.data.class[race]),
-            spec = props.getRandom(props.data.spec[classRace])
-        ]
-        let setNewRandom = newRandom.map((newRandom) => <pre>{newRandom}</pre>)
-        setState(setNewRandom)
-    }
-    const handleClickReset = () => {
-        setState("Let's start")
-    }
+    const [BCState, dispatch] = useContext(WorContext)
     return (
         <div className={style.bc}>
             <div className={style.text}>
-                <h1>{getState}</h1>
+                <h1>{BCState.newRandomBC}</h1>
             </div>
             <div className={style.buttonPosition}>
-                <button className={style.button} onClick={handleClick}>Go</button>
-                <button className={style.button} onClick={handleClickReset}>Reset</button>
+                <button className={style.button} onClick={() => dispatch({type: "NEXT_RANDOM_BC"})}>Go</button>
+                <button className={style.button} onClick={() => dispatch({type: "DEFAULT_RANDOM"})}>Reset</button>
             </div>
         </div>
     )

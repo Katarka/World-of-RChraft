@@ -6,9 +6,10 @@ import BurningCrusade from "./components/BC/BurningCrusade";
 import {Route, Routes} from "react-router-dom";
 import Wotlk from "./components/Wotlk/Wotlk";
 import Rightbar from "./components/Rightbar/Rightbar";
-import {setNewRandom} from "./data/dataWotlk";
+import {setNewRandomWotlk} from "./data/dataWotlk";
+import {setNewRandomBC} from "./data/dataBc";
 
-function App(props) {
+function App() {
     return (
         <div className='app-wrapper'>
             <div className='container__sidebar'>
@@ -16,13 +17,13 @@ function App(props) {
             </div>
             <div className='app-wrapper-content'>
                 <Routes>
-                    <Route exact path='/classic' element={<Classic data={props.dataClassic} getRandom={props.random}/>}/>
-                    <Route exact path='/bc' element={<BurningCrusade data={props.dataBc} getRandom={props.random}/>}/>
-                    <Route exact path='/wotlk' element={<Wotlk setNewRandom={setNewRandom}/>}/>
+                    <Route exact path='/classic' element={<Classic setNewRandom={setNewRandomWotlk}/>}/>
+                    <Route exact path='/bc' element={<BurningCrusade setNewRandom={setNewRandomBC}/>}/>
+                    <Route exact path='/wotlk' element={<Wotlk setNewRandom={setNewRandomWotlk}/>}/>
                 </Routes>
             </div>
             <div className='container__header'>
-                <Rightbar setNewRandom={setNewRandom}/>
+                <Rightbar/>
             </div>
         </div>
     );

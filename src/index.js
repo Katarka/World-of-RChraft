@@ -3,18 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import {BrowserRouter} from "react-router-dom";
-import dataWotlk from "./data/dataWotlk";
-import dataBc from "./data/dataBc";
-import dataClassic from "./data/dataClassic";
-import getRandomValueFromArray from "./function/random";
-import {WotlkProvider} from "./contex/wotlk";
+import {WorProvider} from "./contex/wor";
 
 ReactDOM.render(
     <BrowserRouter>
         <React.StrictMode>
-            <WotlkProvider>
-                <App dataWotlk={dataWotlk} dataBc={dataBc} dataClassic={dataClassic} random={getRandomValueFromArray}/>
-            </WotlkProvider>
+            <WorProvider>
+                <App/>
+            </WorProvider>
         </React.StrictMode>
     </BrowserRouter>,
     document.getElementById('root')

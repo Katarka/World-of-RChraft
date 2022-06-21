@@ -1,4 +1,7 @@
-const store = {
+import getRandomValueFromArray from "../function/random";
+import dataWotlk from "./dataWotlk";
+
+const dataClassic = {
         faction: ["Alliance", "Horde"],
         race: {
             "Alliance": ["Dwarf", "Gnome", "Human", "Night Elf"],
@@ -28,5 +31,13 @@ const store = {
         }
 }
 
+const newRandom = (faction, race, classRace, spec) => [
+    faction = getRandomValueFromArray(dataClassic.faction),
+    race = getRandomValueFromArray(dataClassic.race[faction]),
+    classRace = getRandomValueFromArray(dataClassic.class[race]),
+    spec = getRandomValueFromArray(dataClassic.spec[classRace]),
+]
 
-export default store;
+export const setNewRandomClassic = () => newRandom().map((newRandom) => <pre>{newRandom}</pre>)
+
+export default dataClassic;
