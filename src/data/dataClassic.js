@@ -1,5 +1,4 @@
 import getRandomValueFromArray from "../function/random";
-import dataWotlk from "./dataWotlk";
 
 const dataClassic = {
         faction: ["Alliance", "Horde"],
@@ -8,17 +7,16 @@ const dataClassic = {
             "Horde": ["Orc", "Troll", "Tauren", "Undead"]
         },
         class: {
-            "Dwarf": ["Death Knight", "Hunter", "Paladin", "Priest", "Rogue", "Warrior"],
-            "Gnome": ["Death Knight", "Mage", "Rogue", "Warlock", "Warrior"],
-            "Human": ["Death Knight", "Mage", "Paladin", "Priest", "Rogue", "Warlock", "Warrior"],
-            "Night Elf": ["Death Knight", "Druid", "Hunter", "Priest", "Rogue", "Warrior"],
-            "Undead": ["Death Knight", "Mage", "Priest", "Rogue", "Warlock", "Warrior"],
-            "Orc": ["Death Knight", "Hunter", "Rogue", "Shaman", "Warlock", "Warrior"],
-            "Tauren": ["Death Knight", "Druid", "Hunter", "Shaman", "Warrior"],
-            "Troll": ["Death Knight","Hunter", "Mage", "Priest", "Rogue", "Shaman", "Warrior"],
+            "Dwarf": ["Hunter", "Paladin", "Priest", "Rogue", "Warrior"],
+            "Gnome": ["Mage", "Rogue", "Warlock", "Warrior"],
+            "Human": ["Mage", "Paladin", "Priest", "Rogue", "Warlock", "Warrior"],
+            "Night Elf": ["Druid", "Hunter", "Priest", "Rogue", "Warrior"],
+            "Undead": ["Mage", "Priest", "Rogue", "Warlock", "Warrior"],
+            "Orc": ["Hunter", "Rogue", "Shaman", "Warlock", "Warrior"],
+            "Tauren": ["Druid", "Hunter", "Shaman", "Warrior"],
+            "Troll": ["Hunter", "Mage", "Priest", "Rogue", "Shaman", "Warrior"],
         },
         spec: {
-            "Death Knight": ["Blood", "Frost", "Unholy"],
             "Druid": ["Balance", "Feral", "Guardian", "Restoration"],
             "Hunter": ["Beast Mastery", "Marksmanship", "Survival"],
             "Mage": ["Arcane", "Fire", "Frost"],
