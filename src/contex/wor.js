@@ -1,5 +1,5 @@
 import {createContext, useReducer} from "react";
-import {newRandom, setNewRandomWotlk} from "../data/dataWotlk";
+import {setNewRandomWotlk} from "../data/dataWotlk";
 import {setNewRandomBC} from "../data/dataBc";
 import {setNewRandomClassic} from "../data/dataClassic";
 
@@ -7,7 +7,7 @@ const initialState = {
     newRandomClassic: ["Let's Start!"],
     newRandomBC: ["Let's Start!"],
     newRandomWotlk: ["Let's Start!"],
-    rightBarHistory: []
+    rightBarHistory: [],
 };
 
 const reducer = (state, action) => {
@@ -15,41 +15,41 @@ const reducer = (state, action) => {
         return {
             ...state,
             newRandomClassic: state.newRandomClassic = setNewRandomClassic(),
-            rightBarHistory: state.rightBarHistory.concat([state.newRandomClassic])
+            rightBarHistory: state.rightBarHistory.concat([state.newRandomClassic]),
         };
     }
     if (action.type === "NEXT_RANDOM_BC") {
         return {
             ...state,
             newRandomBC: state.newRandomBC = setNewRandomBC(),
-            rightBarHistory: state.rightBarHistory.concat([state.newRandomBC])
+            rightBarHistory: state.rightBarHistory.concat([state.newRandomBC]),
         };
     }
     if (action.type === "NEXT_RANDOM_WOTLK") {
         return {
             ...state,
             newRandomWotlk: state.newRandomWotlk = setNewRandomWotlk(),
-            rightBarHistory: state.rightBarHistory.concat([state.newRandomWotlk])
+            rightBarHistory: state.rightBarHistory.concat([state.newRandomWotlk]),
         };
     }
-    if (action.type === "DEFAULT_RANDOM_CLASSIC") {
-        return {
-            ...state,
-            newRandomClassic: state.newRandom = "Let's Start again"
-        };
-    }
-    if (action.type === "DEFAULT_RANDOM_BC") {
-        return {
-            ...state,
-            newRandomBC: state.newRandom = "Let's Start again"
-        };
-    }
-    if (action.type === "DEFAULT_RANDOM_WOTLK") {
-        return {
-            ...state,
-            newRandomWotlk: state.newRandom = "Let's Start again",
-        };
-    }
+    // if (action.type === "DEFAULT_RANDOM_CLASSIC") {
+    //     return {
+    //         ...state,
+    //         newRandomClassic: state.newRandom = "Let's Start again"
+    //     };
+    // }
+    // if (action.type === "DEFAULT_RANDOM_BC") {
+    //     return {
+    //         ...state,
+    //         newRandomBC: state.newRandom = "Let's Start again"
+    //     };
+    // }
+    // if (action.type === "DEFAULT_RANDOM_WOTLK") {
+    //     return {
+    //         ...state,
+    //         newRandomWotlk: state.newRandom = "Let's Start again",
+    //     };
+    // }
     return state;
 };
 

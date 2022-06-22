@@ -1,11 +1,7 @@
 .wotlk {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
     justify-items: center;
     align-items: center;
-    background: url("/src/assets/wotlk.jpg");
-    background-size: 100% 100%;
     width: 100%;
     height: 100vh;
     animation: wotlkAnim 1s ease 0s 1 normal forwards;
@@ -60,7 +56,6 @@
     width: 20%;
     border-radius: 20px;
     user-select: none;
-    font-size: 2vh;
     border: 10px outset #bf690d;
     /*transform: rotateX(27deg) rotateY(32deg) rotateZ(0deg);*/
 }

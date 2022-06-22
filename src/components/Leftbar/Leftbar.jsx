@@ -6,7 +6,6 @@ import style from "./Leftbar.module.scss"
 const Leftbar = () => {
     return (
         <nav className={style.nav}>
-
             <NavLink to='/classic'
                 className={({isActive}) => (!isActive ? style.item : cn(style.item + ' ' + style.active))}>
                 Classic
