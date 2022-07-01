@@ -8,12 +8,10 @@ const Wotlk = ({WorContext}) => {
         <div className={style.wotlk}>
             <div className={style.text}>
                 <h1>{wotlkState.newRandomWotlk}</h1>
-                <button className={style.button} onClick={() => dispatch({type: "NEXT_RANDOM_WOTLK"})}>Go</button>
                 {/*<button className={style.button} onClick={() => dispatch({type: "DEFAULT_RANDOM_WOTLK"})}>Reset</button>*/}
             </div>
-            {/*<div className={style.buttonPosition}>*/}
-            {/*    */}
-            {/*</div>*/}
+            <button className={style.button} onClick={() => dispatch({type: "NEXT_RANDOM_WOTLK"})}>Go</button>
+            <div className={style.icon}>Wrath of the Lich King</div>
         </div>
     )
 }

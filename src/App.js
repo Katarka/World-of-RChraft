@@ -10,17 +10,17 @@ import Rightbar from "./components/Rightbar/Rightbar";
 function App(props) {
     return (
         <div className='app-wrapper'>
-            <div className='container__sidebar'>
+            <div className='container__header'>
                 <Navbar/>
             </div>
             <div className='app-wrapper-content'>
                 <Routes>
                     <Route exact path='/classic' element={<Classic WorContext={props.WorContext}/>}/>
-                    <Route exact path='/bc' element={<BurningCrusade WorContext={props.WorContext}/>}/>
-                    <Route exact path='/wotlk' element={<Wotlk WorContext={props.WorContext}/>}/>
+                    <Route path='/bc' element={<BurningCrusade WorContext={props.WorContext}/>}/>
+                    <Route path='/wotlk' element={<Wotlk WorContext={props.WorContext}/>}/>
                 </Routes>
             </div>
-            <div className='container__header'>
+            <div className='container__sidebar'>
                 <Rightbar WorContext={props.WorContext}/>
             </div>
         </div>

@@ -1,11 +1,8 @@
 .app-wrapper {
-    /*margin: 0 auto;*/
     display: flex;
-    background: url("/src/assets/or.jpg") center center/cover no-repeat;
 }
 
 .app-wrapper-content {
-    display: flex;
     flex: 1;
     /*overflow: auto;*/
 }
