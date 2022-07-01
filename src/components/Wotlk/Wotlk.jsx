@@ -6,12 +6,14 @@ const Wotlk = ({WorContext}) => {
     console.log(wotlkState.newRandomWotlk)
     return (
         <div className={style.wotlk}>
-            <div className={style.text}>
-                <h1>{wotlkState.newRandomWotlk}</h1>
-                {/*<button className={style.button} onClick={() => dispatch({type: "DEFAULT_RANDOM_WOTLK"})}>Reset</button>*/}
+            <div>
+                <div className={style.text}>
+                    <h1>{wotlkState.newRandomWotlk}</h1>
+                    {/*<button className={style.button} onClick={() => dispatch({type: "DEFAULT_RANDOM_WOTLK"})}>Reset</button>*/}
+                </div>
+                <button className={style.button} onClick={() => dispatch({type: "NEXT_RANDOM_WOTLK"})}>Go</button>
             </div>
-            <button className={style.button} onClick={() => dispatch({type: "NEXT_RANDOM_WOTLK"})}>Go</button>
-            <div className={style.icon}>Wrath of the Lich King</div>
+            <img src='https://wow.zamimg.com/uploads/blog/images/27174-wrath-of-the-lich-king-logo-added-in-classic-era-update.png'/>
         </div>
     )
 }
