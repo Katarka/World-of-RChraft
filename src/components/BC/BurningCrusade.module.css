@@ -9,10 +9,6 @@
     animation: bcAnim 1s ease 0s 1 normal forwards;
 }
 
-.wotlk img {
-    width: 300px;
-}
-
 @keyframes bcAnim {
     0% {
         opacity: 0;
@@ -48,14 +44,12 @@
 }
 
 .text {
-    display: flex;
-    justify-items: center;
-    align-items: center;
     text-align: center;
     width: 30vh;
     height: 30vh;
-    border-radius: 10px;
+    border-radius: 20px;
     user-select: none;
+    /*transform: rotateX(27deg) rotateY(32deg) rotateZ(0deg);*/
 }
 
 .text pre {
@@ -66,7 +60,8 @@
 }
 
 .text h1 {
-    width: 30vh;
+    justify-content: center;
+    width: 100%;
     color: #940909;
     text-shadow: 2px 2px 2px #000;
     font-family: LifeCraft;

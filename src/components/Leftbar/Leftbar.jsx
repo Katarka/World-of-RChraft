@@ -6,42 +6,47 @@ import style from "./Leftbar.module.scss"
 const Leftbar = () => {
     return (
         <nav className={style.nav}>
-            <NavLink to='/classic'
+            <NavLink to='/randomizer/classic'
                 className={({isActive}) => (!isActive ? style.item : cn(style.item + ' ' + style.active))}>
                 Classic
             </NavLink>
 
-            <NavLink to='/bc'
+            <NavLink to='/randomizer/bc'
                 className={({isActive}) => (!isActive ? style.item : cn(style.item + ' ' + style.active))}>
                 The Burning Crusade
             </NavLink>
 
-            <NavLink to='/wotlk'
+            <NavLink to='/randomizer/wotlk'
                 className={({isActive}) => (!isActive ? style.item : cn(style.item + ' ' + style.active))}>
                 Wrath of the Lich King
             </NavLink>
 
-            <NavLink to='/pand'
+            <NavLink to='/randomizer/cataclysm'
+                     className={({isActive}) => (!isActive ? style.item : cn(style.item + ' ' + style.active))}>
+                Cataclysm
+            </NavLink>
+
+            <NavLink to='/randomizer/pand'
                 className={({isActive}) => (!isActive ? style.item : cn(style.item + ' ' + style.active))}>
                 Mists of Pandaria
             </NavLink>
 
-            <NavLink to='/drenour'
+            <NavLink to='/randomizer/drenour'
                 className={({isActive}) => (!isActive ? style.item : cn(style.item + ' ' + style.active))}>
                 Warlords of Draenor
             </NavLink>
 
-            <NavLink to='/legion'
+            <NavLink to='/randomizer/legion'
                 className={({isActive}) => (!isActive ? style.item : cn(style.item + ' ' + style.active))}>
                 Legion
             </NavLink>
 
-            <NavLink to='/bfa'
+            <NavLink to='/randomizer/bfa'
                 className={({isActive}) => (!isActive ? style.item : cn(style.item + ' ' + style.active))}>
                 Battle for Azeroth
             </NavLink>
 
-            <NavLink to='/shadowlands'
+            <NavLink to='/randomizer/shadowlands'
                 className={({isActive}) => (!isActive ? style.item : cn(style.item + ' ' + style.active))}>
                 Shadowlands
             </NavLink>

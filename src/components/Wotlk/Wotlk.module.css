@@ -9,10 +9,6 @@
     animation: wotlkAnim 1s ease 0s 1 normal forwards;
 }
 
-.wotlk img {
-    width: 300px;
-}
-
 @keyframes wotlkAnim {
     0% {
         opacity: 0;
@@ -43,7 +39,7 @@
 
 .text h1 {
     justify-content: center;
-    width: 30vh;
+    width: 100%;
     color: #bf690d;
     text-shadow: 2px 2px 2px #000;
     font-family: LifeCraft;
@@ -70,13 +66,6 @@
     background-position: right center; /* change the direction of the change here */
     color: #fff;
     text-decoration: none;
-}
-
-.icon {
-    font-size: 3vh;
-    font-family: LifeCraft;
-    text-shadow: 2px 2px 2px #000;
-    color: #bf690d;
 }
 
 @font-face {
