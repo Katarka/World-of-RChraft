@@ -1,7 +1,6 @@
 import React from "react";
-import getRandomValueFromArray from "../function/random";
 
-const dataBC = {
+export const dataBC = {
         faction: ["Alliance", "Horde"],
         race: {
             "Alliance": ["Dwarf", "Gnome", "Human", "Night Elf", "Dranei"],
@@ -32,11 +31,7 @@ const dataBC = {
         }
 }
 
-const newRandom = (faction, race, classRace, spec) => [
-    faction = getRandomValueFromArray(dataBC.faction),
-    race = getRandomValueFromArray(dataBC.race[faction]),
-    classRace = getRandomValueFromArray(dataBC.class[race]),
-    spec = getRandomValueFromArray(dataBC.spec[classRace]),
-]
 
-export const setNewRandomBC = () => newRandom().map((newRandom) => <pre>{newRandom}</pre>)
+
+
+

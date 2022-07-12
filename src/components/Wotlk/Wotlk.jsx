@@ -15,7 +15,7 @@ const Wotlk = ({WorContext}) => {
                 <div className={style.content}>
                     <div className={style.backText}>
                         <div>
-                            <h1 className={style.h1}>{wotlkState.newRandomWotlk}</h1>
+                            <div className={style.h1}>{wotlkState.newRandomWotlk}</div>
                         </div>
                         <button className={style.button} onClick={() => dispatch({type: "NEXT_RANDOM_WOTLK"})}>Go</button>
                     </div>
