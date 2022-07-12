@@ -10,6 +10,7 @@ import Wotlk from "./components/Wotlk/Wotlk";
 import Classic from "./components/Classic/Classic";
 import BurningCrusade from "./components/BC/BurningCrusade";
 import Rightbar from "./components/Rightbar/Rightbar";
+import styled from "styled-components";
 
 function App({WorContext}) {
     return (

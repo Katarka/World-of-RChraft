@@ -7,31 +7,31 @@ import lc from "../../assets/img/lc.jpg"
 const Slider = () => {
     return (
         <Carousel>
-            <Carousel.Item style={{'height': '700px'}}>
+            <Carousel.Item style={{'height': '600px'}}>
                 <img
                     className="d-block w-100" src={classic} alt="First slide"
                 />
                 <Carousel.Caption>
                     <h3>World of RChar</h3>
-                    <p>Randomaizer in Classic</p>
+                    <p>Randomizer in Classic</p>
                 </Carousel.Caption>
             </Carousel.Item>
-            <Carousel.Item style={{'height': '700px'}}>
+            <Carousel.Item style={{'height': '600px'}}>
                 <img
                     className="d-block w-100" src={bc} alt="2th slide"
                 />
                 <Carousel.Caption>
                     <h3>World of RChar</h3>
-                    <p>Randomaizer in Burning Crusade</p>
+                    <p>Randomizer in Burning Crusade</p>
                 </Carousel.Caption>
             </Carousel.Item>
-            <Carousel.Item style={{'height': '700px'}}>
+            <Carousel.Item style={{'height': '600px'}}>
                 <img
                     className="d-block w-100" src={lc} alt="3th slide"
                 />
                 <Carousel.Caption>
                     <h3>World of RChar</h3>
-                    <p>Randomaizer in Wrath of the Lich King</p>
+                    <p>Randomizer in Wrath of the Lich King</p>
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>
