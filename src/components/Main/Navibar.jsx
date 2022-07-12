@@ -1,6 +1,8 @@
 import React, {useState} from "react";
 import {Button, Container, Form, Modal, Nav, Navbar} from "react-bootstrap";
 import {Link} from "react-router-dom";
+import { useTheme } from "../../contex/ThemeContext";
+
 import styled from "styled-components";
 
 const Styles = styled.div`
@@ -12,6 +14,18 @@ const Styles = styled.div`
   }
 `
 
+const ThemeButton = ({
+    theme,
+    text
+}) => {
+    const isTheme = useTheme();
+
+    return (
+        <>
+            <button onClick={() => isTheme.change(theme)}>{text}</button>
+        </>
+    )
+}
 
 const Navibar = () => {
 
@@ -37,6 +51,9 @@ const Navibar = () => {
                             {/*<Button variant="primary" className="me-2" onClick={handleShow}>Log in</Button>*/}
                             {/*<Button variant="primary" className="me-2" onClick={handleShow}>Sign out</Button>*/}
                         </Nav>
+                        <Navbar.Text>
+                            Choose theme: <ThemeButton theme='light' text='Light'/><ThemeButton theme='dark' text='Dark'/>
+                        </Navbar.Text>
                     </Navbar.Collapse>
                     </Container>
                 </Navbar>
