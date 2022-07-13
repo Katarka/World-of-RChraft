@@ -20,7 +20,7 @@ const Classic = ({WorContext}) => {
                 </div>
                 <img className={style.img} src={elf}/>
                     <div>
-                        <Rightbar WorContext={WorContext}/>
+                        {/*<Rightbar WorContext={WorContext}/>*/}
                     </div>
                 </div>
                 {/*<button className={style.button} onClick={() => dispatch({type: "DEFAULT_RANDOM_CLASSIC"})}>Reset</button>*/}

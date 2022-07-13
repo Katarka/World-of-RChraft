@@ -26,14 +26,16 @@
 .h1 {
     order: 0;
     flex-grow: 0;
-    font-family: 'Roboto';
+    font-family: 'Roboto', serif;
     font-style: italic;
     font-weight: 600;
     font-size: 20px;
-    line-height: 24px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: #FFFFFF;
+    white-space: pre;
+    text-align: center;
+    line-height: 5vh;
 }
 
 pre {
@@ -67,8 +69,9 @@ pre {
 
 .img {
     flex: 2;
-    width: 450px;
-    height: 620px;
+    max-width: 450px;
+    max-height: 620px;
+    margin-left: 20vh;
 }
 
 .welcom {

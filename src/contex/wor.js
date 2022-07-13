@@ -57,7 +57,7 @@ const reducer = (state, action) => {
                 spec = getRandomValueFromArray(dataWotlk.spec[classRace])
             ]
             return (
-                newRandom().map(newRandom => <pre>{newRandom}</pre>)
+                newRandom().map(newRandom => newRandom).join('\n')
             )
         }
         return {
