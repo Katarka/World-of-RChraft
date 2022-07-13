@@ -1,7 +1,7 @@
 import React from "react";
-import styles from '../../src/components/styles/styles.module.css'
-import Leftbar from "./Leftbar/Leftbar";
-import Footer from "./Main/Footer";
+import styles from '../../styles/styles.module.css'
+import Leftbar from "../RandomizePage/NavibarRanomize/Leftbar";
+import Footer from "./Footer";
 
 const WelcomToRandomize = () => {
     return (

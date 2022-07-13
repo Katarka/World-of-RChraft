@@ -1,7 +1,7 @@
 import React, {useContext} from "react";
-import style from '../styles/styles.module.css';
-import Leftbar from "../Leftbar/Leftbar";
-import elf from "../../assets/svg/elf.svg"
+import style from '../../../styles/styles.module.css';
+import Leftbar from "../NavibarRanomize/Leftbar";
+import elf from "../../../assets/svg/elf.svg"
 import Rightbar from "../Rightbar/Rightbar";
 
 const Classic = ({WorContext}) => {

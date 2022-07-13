@@ -1,17 +1,17 @@
 import React from "react";
 import {Route, Routes} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Navibar from "./components/Main/Navibar";
-import Home from "./components/Main/Home";
-import Randomizer from "./components/Main/Randomizer";
-import About from "./components/Main/About";
-import Wotlk from "./components/Wotlk/Wotlk";
-import Classic from "./components/Classic/Classic";
-import BurningCrusade from "./components/BC/BurningCrusade";
-import Rightbar from "./components/Rightbar/Rightbar";
+import Navibar from "../HomePage/Navibar";
+import Home from "../HomePage/Home";
+import Randomizer from "../HomePage/Randomizer";
+import About from "../HomePage/About";
+import Wotlk from "../RandomizePage/WotlkPage/Wotlk";
+import Classic from "../RandomizePage/ClassicPage/Classic";
+import BurningCrusade from "../RandomizePage/BcPage/BurningCrusade";
+import Rightbar from "../RandomizePage/Rightbar/Rightbar";
 import styled from "styled-components";
 
-import './styles/styles.scss';
+import '../../styles/styles.scss';
 
 function App({WorContext}) {
     return (

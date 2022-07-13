@@ -1,5 +1,5 @@
 import React from "react";
-import WelcomToRandomize from "../WelcomToRandomize";
+import WelcomToRandomize from "./WelcomToRandomize";
 
 
 const Randomizer = ({WorContext}) => {

@@ -2,15 +2,15 @@ import React from "react";
 import cn from "classnames";
 import {NavLink} from "react-router-dom";
 import style from "./Leftbar.module.scss";
-import cl from "../../assets/svg/classic-nav.svg";
-import bc from "../../assets/svg/bc-nav.svg";
-import cata from "../../assets/svg/cata-nav.svg";
-import pand from "../../assets/svg/pand-nav.svg";
-import dren from "../../assets/svg/dren-nav.svg";
-import leg from "../../assets/svg/leg-nav.svg";
-import bfa from "../../assets/svg/bfa-nav.svg";
-import sl from "../../assets/svg/sl-nav.svg";
-import logo from "../../assets/svg/logoHead.svg";
+import cl from "../../../assets/svg/classic-nav.svg";
+import bc from "../../../assets/svg/bc-nav.svg";
+import cata from "../../../assets/svg/cata-nav.svg";
+import pand from "../../../assets/svg/pand-nav.svg";
+import dren from "../../../assets/svg/dren-nav.svg";
+import leg from "../../../assets/svg/leg-nav.svg";
+import bfa from "../../../assets/svg/bfa-nav.svg";
+import sl from "../../../assets/svg/sl-nav.svg";
+import logo from "../../../assets/svg/logoHead.svg";
 
 const Leftbar = () => {
     return (

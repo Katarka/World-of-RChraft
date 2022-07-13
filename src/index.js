@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import App from './containers/App/App';
 import {HashRouter} from "react-router-dom";
 import {WorContext, WorProvider} from "./context/wor";
 import {ThemeProvider} from './context/ThemeContext';
