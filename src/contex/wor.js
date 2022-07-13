@@ -62,7 +62,7 @@ const reducer = (state, action) => {
         }
         return {
             ...state,
-            newRandomWotlk: setNewRandomWotlk(),
+            newRandomWotlk: state.newRandomWotlk = setNewRandomWotlk(),
             rightBarHistory: state.rightBarHistory.concat([state.newRandomWotlk]),
         };
     }
