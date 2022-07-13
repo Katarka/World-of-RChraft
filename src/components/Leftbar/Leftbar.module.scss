@@ -1,15 +1,10 @@
 .nav {
-    /* меню */
-
-    /* Auto layout */
-
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     justify-items: center;
     gap: 2vh;
-
 }
 
 .logo {
@@ -25,33 +20,15 @@
     justify-content: center;
     align-items: center;
 
-    /* Inside auto layout */
-
     &:hover {
-        //box-sizing: border-box;
-        //
-        //width: 68px;
-        //height: 68px;
-        //left: 576px;
-        //top: 179px;
-        //
-        //background: #D9D9D9;
-        //border-radius: 50px;
-        //border: 0.871795px solid #FFD12F;
-        //filter: blur(9px);
-        //transition: 0.7s;
-        border: 0px solid #000000;
+        border: 10px solid #000000;
         border-radius: 50px;
         box-shadow:0 0 30px rgba(13, 208, 236, 0.5);
-        width: 65px;
-        height: 65px;
     }
     &.active {
-        border: 0px solid #000000;
+        border: 5px solid #EFEFBEFF;
         border-radius: 50px;
         box-shadow:0 0 30px rgb(239, 239, 190);
-        width: 65px;
-        height: 65px;
     }
 }
 

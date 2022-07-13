@@ -59,7 +59,7 @@ pre {
     height: 65px;
 
     background: linear-gradient(249.53deg, #D936F3 -13.73%, #FFD12F 82.04%, #FFD43D 104.15%);
-    box-shadow: 0px 4px 30px rgba(252, 247, 125, 0.4);
+    box-shadow: 0 4px 30px rgba(252, 247, 125, 0.4);
     border-radius: 50px;
 
     /* Inside auto layout */

@@ -11,58 +11,37 @@ const initialState = {
     rightBarHistory: [],
 };
 
+const setNewRandom = ([data]) => {
+    const newRandom = (faction, race, classRace, spec) => [
+        faction = getRandomValueFromArray(data.faction),
+        race = getRandomValueFromArray(data.race[faction]),
+        classRace = getRandomValueFromArray(data.class[race]),
+        spec = getRandomValueFromArray(data.spec[classRace]),
+    ]
+    return (
+        newRandom().map(newRandom => newRandom).join('\n')
+    )
+}
+
 const reducer = (state, action) => {
     if (action.type === "NEXT_RANDOM_CLASSIC") {
-        const setNewRandomClassic = () => {
-            const newRandom = (faction, race, classRace, spec) => [
-                faction = getRandomValueFromArray(dataClassic.faction),
-                race = getRandomValueFromArray(dataClassic.race[faction]),
-                classRace = getRandomValueFromArray(dataClassic.class[race]),
-                spec = getRandomValueFromArray(dataClassic.spec[classRace]),
-            ]
-            return (
-                newRandom().map(newRandom => newRandom).join('\n')
-            )
-        }
         return {
             ...state,
-            newRandomClassic: setNewRandomClassic(),
+            newRandomClassic: setNewRandom([dataClassic]),
             rightBarHistory: state.rightBarHistory.concat([state.newRandomClassic]),
         };
     }
     if (action.type === "NEXT_RANDOM_BC") {
-        const setNewRandomBC = () => {
-            const newRandom = (faction, race, classRace, spec) => [
-                faction = getRandomValueFromArray(dataBC.faction),
-                race = getRandomValueFromArray(dataBC.race[faction]),
-                classRace = getRandomValueFromArray(dataBC.class[race]),
-                spec = getRandomValueFromArray(dataBC.spec[classRace]),
-            ]
-            return (
-                newRandom().map(newRandom => newRandom).join('\n')
-            )
-        }
         return {
             ...state,
-            newRandomBC: setNewRandomBC(),
+            newRandomBC: setNewRandom([dataBC]),
             rightBarHistory: state.rightBarHistory.concat([state.newRandomBC]),
         };
     }
     if (action.type === "NEXT_RANDOM_WOTLK") {
-        const setNewRandomWotlk = () => {
-            const newRandom = (faction, race, classRace, spec) => [
-                faction = getRandomValueFromArray(dataWotlk.faction),
-                race = getRandomValueFromArray(dataWotlk.race[faction]),
-                classRace = getRandomValueFromArray(dataWotlk.class[race]),
-                spec = getRandomValueFromArray(dataWotlk.spec[classRace])
-            ]
-            return (
-                newRandom().map(newRandom => newRandom).join('\n')
-            )
-        }
         return {
             ...state,
-            newRandomWotlk: state.newRandomWotlk = setNewRandomWotlk(),
+            newRandomWotlk: setNewRandom([dataWotlk]),
             rightBarHistory: state.rightBarHistory.concat([state.newRandomWotlk]),
         };
     }
