@@ -3,19 +3,17 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-
-    height: 100vh;
+    max-height: 70vh;
     color: white;
+    background: rgba(255, 255, 255, 0.17);
+    border-radius: 20px;
     overflow: auto;
 }
 
 .historyItem {
-    min-width: 150px;
-    border: 1px solid black;
+    width: 25vh;
     text-align: center;
-    margin-bottom: 5px;
-    border-radius: 5px;
-    background: #484848;
+    border: 1px solid black;
     opacity: 0.7;
 }
 

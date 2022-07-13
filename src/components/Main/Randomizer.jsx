@@ -1,10 +1,12 @@
 import React from "react";
-import Leftbar from "../Leftbar/Leftbar";
+import WelcomToRandomize from "../WelcomToRandomize";
 
-const Randomizer = () => {
+
+const Randomizer = ({WorContext}) => {
+
     return (
         <>
-            <Leftbar/>
+            <WelcomToRandomize/>
         </>
     )
 }

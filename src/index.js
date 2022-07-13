@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
-import {BrowserRouter} from "react-router-dom";
-import {WorContext, WorProvider} from "./contex/wor";
-import {ThemeProvider} from './contex/ThemeContext'
+import {HashRouter} from "react-router-dom";
+import {WorContext, WorProvider} from "./context/wor";
+import {ThemeProvider} from './context/ThemeContext';
+
+import './index.css';
 
 ReactDOM.render(
-    <BrowserRouter>
+    <HashRouter>
         <React.StrictMode>
             <ThemeProvider>
             <WorProvider>
@@ -15,7 +16,7 @@ ReactDOM.render(
             </WorProvider>
             </ThemeProvider>
         </React.StrictMode>
-    </BrowserRouter>,
+    </HashRouter>,
     document.getElementById('root')
 );
 

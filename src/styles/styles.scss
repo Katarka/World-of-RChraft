@@ -1,0 +1,14 @@
+:root {
+    /* ============================ */
+    /*            Theme            */
+    /* ============================ */
+    --theme-light-font-color: #fff;
+    --theme-dark-font-color: #000;
+
+    --theme-default-font-color: var(--theme-light-font-color);
+
+    --theme-light-background: linear-gradient(to left bottom, #ffffff, #f0eefe, #dedffe, #c9d0ff, #b0c2ff, #9db6ff, #88aaff, #709eff, #618fff, #5580ff, #4e6fff, #4d5dfd);
+    --theme-dark-background: ;
+
+    --theme-default-background: var(--theme-light-background);
+}

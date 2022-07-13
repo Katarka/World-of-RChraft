@@ -1,7 +1,8 @@
 import {createContext, useReducer} from "react";
-import {setNewRandomWotlk} from "../data/dataWotlk";
-import {setNewRandomBC} from "../data/dataBc";
-import {setNewRandomClassic} from "../data/dataClassic";
+import {dataWotlk} from "../data/dataWotlk";
+import {dataBC} from "../data/dataBc";
+import {dataClassic} from "../data/dataClassic";
+import getRandomValueFromArray from "../function/random";
 
 const initialState = {
     newRandomClassic: ["Let's Start!"],
@@ -10,25 +11,37 @@ const initialState = {
     rightBarHistory: [],
 };
 
+const setNewRandom = ([data]) => {
+    const newRandom = (faction, race, classRace, spec) => [
+        faction = getRandomValueFromArray(data.faction),
+        race = getRandomValueFromArray(data.race[faction]),
+        classRace = getRandomValueFromArray(data.class[race]),
+        spec = getRandomValueFromArray(data.spec[classRace]),
+    ]
+    return (
+        newRandom().map(newRandom => newRandom).join('\n')
+    )
+}
+
 const reducer = (state, action) => {
     if (action.type === "NEXT_RANDOM_CLASSIC") {
         return {
             ...state,
-            newRandomClassic: state.newRandomClassic = setNewRandomClassic(),
+            newRandomClassic: setNewRandom([dataClassic]),
             rightBarHistory: state.rightBarHistory.concat([state.newRandomClassic]),
         };
     }
     if (action.type === "NEXT_RANDOM_BC") {
         return {
             ...state,
-            newRandomBC: state.newRandomBC = setNewRandomBC(),
+            newRandomBC: setNewRandom([dataBC]),
             rightBarHistory: state.rightBarHistory.concat([state.newRandomBC]),
         };
     }
     if (action.type === "NEXT_RANDOM_WOTLK") {
         return {
             ...state,
-            newRandomWotlk: state.newRandomWotlk = setNewRandomWotlk(),
+            newRandomWotlk: setNewRandom([dataWotlk]),
             rightBarHistory: state.rightBarHistory.concat([state.newRandomWotlk]),
         };
     }

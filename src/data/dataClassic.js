@@ -1,6 +1,4 @@
-import getRandomValueFromArray from "../function/random";
-
-const dataClassic = {
+export const dataClassic = {
         faction: ["Alliance", "Horde"],
         race: {
             "Alliance": ["Dwarf", "Gnome", "Human", "Night Elf"],
@@ -29,11 +27,5 @@ const dataClassic = {
         }
 }
 
-const newRandom = (faction, race, classRace, spec) => [
-    faction = getRandomValueFromArray(dataClassic.faction),
-    race = getRandomValueFromArray(dataClassic.race[faction]),
-    classRace = getRandomValueFromArray(dataClassic.class[race]),
-    spec = getRandomValueFromArray(dataClassic.spec[classRace]),
-]
 
-export const setNewRandomClassic = () => newRandom().map((newRandom) => <pre>{newRandom}</pre>)
+

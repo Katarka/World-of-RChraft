@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {Button, Container, Form, Modal, Nav, Navbar} from "react-bootstrap";
 import {Link} from "react-router-dom";
-import { useTheme } from "../../contex/ThemeContext";
+import { useTheme } from "../../context/ThemeContext";
 
 import styled from "styled-components";
 
