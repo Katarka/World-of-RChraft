@@ -1,26 +1,28 @@
 .classic {
     display: flex;
     flex-direction: column;
-    min-height: 90vh;
-    background-image: linear-gradient(to right top, #841bed, #6f17c8, #5a13a4, #470f82, #340a61, #2d0b53, #260b45, #200b38, #221037, #241537, #261a36, #281e35);
+    min-height: auto;
+    background: var(--theme-default-background);
 }
 
 .content {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
+    margin: 5vh;
 }
 
 .backText {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex-grow: unset;
     background: rgba(255, 255, 255, 0.17);
+    justify-content: end;
+    align-items: center;
     border-radius: 20px;
-    margin: 20vh;
-    width: 250px;
-    height: 350px;
+    width: 25vh;
+    height: 30vh;
 }
 
 .h1 {
@@ -29,34 +31,19 @@
     font-family: 'Roboto', serif;
     font-style: italic;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 1.25rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: var(--theme-default-font-color);
     white-space: pre;
     text-align: center;
     line-height: 5vh;
 }
 
-pre {
-    order: 0;
-    margin-left: 10px;
-    flex-grow: 0;
-    font-family: 'Roboto';
-    font-style: italic;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 24px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: #FFFFFF;
-}
-
 .button {
-    justify-content: end;
-    align-items: center;
-    width: 212px;
-    height: 65px;
+
+    width: 21vh;
+    height: 6vh;
 
     background: linear-gradient(249.53deg, #D936F3 -13.73%, #FFD12F 82.04%, #FFD43D 104.15%);
     box-shadow: 0 4px 30px rgba(252, 247, 125, 0.4);
@@ -68,18 +55,20 @@ pre {
 }
 
 .img {
-    flex: 2;
-    max-width: 450px;
-    max-height: 620px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 45vh;
+    max-height: 62vh;
     margin-left: 20vh;
 }
 
 .welcom {
     display: flex;
-    margin: 35vh;
+    margin: 32vh;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: var(--theme-default-font-color);
 }
 
 ::-webkit-scrollbar {

@@ -1,16 +1,14 @@
 import React, {useContext} from "react";
-import style from '../../../styles/styles.module.css';
+import style from '../../../styles/stylesRandomize.module.css';
 import Rightbar from "../Rightbar/Rightbar";
 import Leftbar from "../NavibarRanomize/Leftbar";
 import elf from "../../../assets/svg/elf.svg";
 
 const Wotlk = ({WorContext}) => {
     const [wotlkState, dispatch] = useContext(WorContext)
-    console.log(wotlkState.newRandomWotlk)
-
+    delay = setTimeout()
     return (
         <>
-
             <div className={style.classic}>
                 <Leftbar/>
                 <div className={style.content}>
@@ -18,7 +16,8 @@ const Wotlk = ({WorContext}) => {
                         <div>
                             <div className={style.h1}>{wotlkState.newRandomWotlk}</div>
                         </div>
-                        <button className={style.button} onClick={() => dispatch({type: "NEXT_RANDOM_WOTLK"})}>Go</button>
+                        <button className={style.button} onClick={() => dispatch({type: "NEXT_RANDOM_WOTLK"})}>Go
+                        </button>
                     </div>
                     <img className={style.img} src={elf}/>
                     <div>
@@ -27,7 +26,6 @@ const Wotlk = ({WorContext}) => {
                 </div>
                 {/*<button className={style.button} onClick={() => dispatch({type: "DEFAULT_RANDOM_CLASSIC"})}>Reset</button>*/}
             </div>
-
         </>
     )
 }

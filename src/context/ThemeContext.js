@@ -14,7 +14,6 @@ export const ThemeProvider = ({ children, ...props}) => {
 
     const change = name => {
         setTheme(name);
-
         changeCssVaribles(name)
     }
 

@@ -1,5 +1,5 @@
 import React, {useContext} from "react";
-import style from '../../../styles/styles.module.css';
+import style from '../../../styles/stylesRandomize.module.css';
 import Leftbar from "../NavibarRanomize/Leftbar";
 import Rightbar from "../Rightbar/Rightbar";
 import elf from "../../../assets/svg/elf.svg";

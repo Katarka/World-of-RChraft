@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {Button, Container, Form, Modal, Nav, Navbar} from "react-bootstrap";
 import {Link} from "react-router-dom";
-import { useTheme } from "../../context/ThemeContext";
+import {THEME_DARK, THEME_LIGHT, useTheme} from "../../context/ThemeContext";
 
 import styled from "styled-components";
 
@@ -14,26 +14,23 @@ const Styles = styled.div`
   }
 `
 
-const ThemeButton = ({
-    theme,
-    text
-}) => {
-    const isTheme = useTheme();
-
-    return (
-        <>
-            <button onClick={() => isTheme.change(theme)}>{text}</button>
-        </>
-    )
-}
-
 const Navibar = () => {
+    const ThemeButton = ({
+                             theme,
+                             text
+                         }) => {
+        const isTheme = useTheme();
 
+        return (
+            <>
+                <button onClick={() => isTheme.change(theme)}>{text}</button>
+            </>
+        )
+    }
     // const [show, setShow] = useState(false)
     //
     // const handleClose = () => setShow(false)
     // const handleShow = () => setShow(true)
-
     return (
         <>
             <Styles>
@@ -52,7 +49,8 @@ const Navibar = () => {
                             {/*<Button variant="primary" className="me-2" onClick={handleShow}>Sign out</Button>*/}
                         </Nav>
                         <Navbar.Text>
-                            Choose theme: <ThemeButton theme='light' text='Light'/><ThemeButton theme='dark' text='Dark'/>
+                            Choose theme: <ThemeButton theme={THEME_LIGHT} text='Light' onClick={ThemeButton}/>|
+                          <ThemeButton theme={THEME_DARK} text='Dark' onClick={ThemeButton}/>
                         </Navbar.Text>
                     </Navbar.Collapse>
                     </Container>

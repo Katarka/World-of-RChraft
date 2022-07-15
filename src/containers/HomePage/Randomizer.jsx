@@ -1,12 +1,18 @@
 import React from "react";
-import WelcomToRandomize from "./WelcomToRandomize";
+import styles from "../../styles/stylesRandomize.module.css";
+import Leftbar from "../RandomizePage/NavibarRanomize/Leftbar";
 
 
-const Randomizer = ({WorContext}) => {
+const Randomizer = () => {
 
     return (
         <>
-            <WelcomToRandomize/>
+            <div className={styles.classic}>
+                <Leftbar/>
+                <div className={styles.welcom}>
+                <h1>Найди своего персонажа</h1>
+                    </div>
+            </div>
         </>
     )
 }

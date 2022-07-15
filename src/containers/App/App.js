@@ -8,10 +8,8 @@ import About from "../HomePage/About";
 import Wotlk from "../RandomizePage/WotlkPage/Wotlk";
 import Classic from "../RandomizePage/ClassicPage/Classic";
 import BurningCrusade from "../RandomizePage/BcPage/BurningCrusade";
-import Rightbar from "../RandomizePage/Rightbar/Rightbar";
-import styled from "styled-components";
-
 import '../../styles/styles.scss';
+import Footer from "../HomePage/Footer";
 
 function App({WorContext}) {
     return (
@@ -27,6 +25,7 @@ function App({WorContext}) {
                 </>
                 <Route path="/about" element={<About/>}/>
             </Routes>
+            <Footer/>
         </>
     );
 }
