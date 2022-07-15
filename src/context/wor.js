@@ -19,7 +19,7 @@ const setNewRandom = ([data]) => {
         spec = getRandomValueFromArray(data.spec[classRace]),
     ]
     return (
-        newRandom().map(newRandom => newRandom).join('\n')
+        newRandom().map(newRandom => newRandom)
     )
 }
 

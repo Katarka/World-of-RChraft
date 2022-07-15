@@ -63,6 +63,11 @@
     margin-left: 20vh;
 }
 
+.imgLogo{
+    height: 12vh;
+    width: 10vh;
+}
+
 .welcom {
     display: flex;
     margin: 32vh;
