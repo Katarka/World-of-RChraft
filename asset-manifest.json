@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/World-of-RChraft/static/css/main.07d4101d.chunk.css",
-    "main.js": "/World-of-RChraft/static/js/main.cc98f0c4.chunk.js",
-    "main.js.map": "/World-of-RChraft/static/js/main.cc98f0c4.chunk.js.map",
+    "main.js": "/World-of-RChraft/static/js/main.af7a9daf.chunk.js",
+    "main.js.map": "/World-of-RChraft/static/js/main.af7a9daf.chunk.js.map",
     "runtime-main.js": "/World-of-RChraft/static/js/runtime-main.1568fd1a.js",
     "runtime-main.js.map": "/World-of-RChraft/static/js/runtime-main.1568fd1a.js.map",
     "static/css/2.d8cb5cde.chunk.css": "/World-of-RChraft/static/css/2.d8cb5cde.chunk.css",
-    "static/js/2.203166a3.chunk.js": "/World-of-RChraft/static/js/2.203166a3.chunk.js",
-    "static/js/2.203166a3.chunk.js.map": "/World-of-RChraft/static/js/2.203166a3.chunk.js.map",
+    "static/js/2.9dcc9c50.chunk.js": "/World-of-RChraft/static/js/2.9dcc9c50.chunk.js",
+    "static/js/2.9dcc9c50.chunk.js.map": "/World-of-RChraft/static/js/2.9dcc9c50.chunk.js.map",
     "index.html": "/World-of-RChraft/index.html",
     "static/css/2.d8cb5cde.chunk.css.map": "/World-of-RChraft/static/css/2.d8cb5cde.chunk.css.map",
     "static/css/main.07d4101d.chunk.css.map": "/World-of-RChraft/static/css/main.07d4101d.chunk.css.map",
-    "static/js/2.203166a3.chunk.js.LICENSE.txt": "/World-of-RChraft/static/js/2.203166a3.chunk.js.LICENSE.txt",
+    "static/js/2.9dcc9c50.chunk.js.LICENSE.txt": "/World-of-RChraft/static/js/2.9dcc9c50.chunk.js.LICENSE.txt",
     "static/media/ALogo.dfe74170.png": "/World-of-RChraft/static/media/ALogo.dfe74170.png",
     "static/media/HLogo.b91d4871.png": "/World-of-RChraft/static/media/HLogo.b91d4871.png",
     "static/media/azeroth.4cb4d112.jpg": "/World-of-RChraft/static/media/azeroth.4cb4d112.jpg",
@@ -33,8 +33,8 @@
   "entrypoints": [
     "static/js/runtime-main.1568fd1a.js",
     "static/css/2.d8cb5cde.chunk.css",
-    "static/js/2.203166a3.chunk.js",
+    "static/js/2.9dcc9c50.chunk.js",
     "static/css/main.07d4101d.chunk.css",
-    "static/js/main.cc98f0c4.chunk.js"
+    "static/js/main.af7a9daf.chunk.js"
   ]
 }
