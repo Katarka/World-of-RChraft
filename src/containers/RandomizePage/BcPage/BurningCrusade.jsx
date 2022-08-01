@@ -3,17 +3,13 @@ import style from '../../../styles/stylesRandomize.module.css';
 import Leftbar from "../NavibarRanomize/Leftbar";
 import Rightbar from "../Rightbar/Rightbar";
 import elf from "../../../assets/svg/elf.svg";
-import Hlogo from '../../../assets/img/HLogo.png'
-import Alogo from '../../../assets/img/ALogo.png'
+import {logoA, logoB} from "../../../context/wor";
 
-let logoA = <img className={style.imgLogo} src={Alogo}/>
-let logoB = <img className={style.imgLogo} src={Hlogo}/>
 
 const BurningCrusade = ({WorContext}) => {
     const [BCState, dispatch] = useContext(WorContext)
     return (
         <>
-
             <div className={style.classic}>
                 <Leftbar/>
                 <div className={style.content}>

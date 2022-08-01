@@ -6,7 +6,6 @@ import bc from "../../assets/img/bc.jpg"
 import lc from "../../assets/img/lc.jpg"
 import logo from "../../assets/img/logo-wow.jpg"
 import Jumbotron from "./Jumbotron";
-import Footer from "./Footer";
 
 const Home = () => (
     <>

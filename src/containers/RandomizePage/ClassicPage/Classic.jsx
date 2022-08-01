@@ -3,11 +3,7 @@ import style from '../../../styles/stylesRandomize.module.css';
 import Leftbar from "../NavibarRanomize/Leftbar";
 import elf from "../../../assets/svg/elf.svg"
 import Rightbar from "../Rightbar/Rightbar";
-import Hlogo from '../../../assets/img/HLogo.png'
-import Alogo from '../../../assets/img/ALogo.png'
-
-let logoA = <img className={style.imgLogo} src={Alogo}/>
-let logoB = <img className={style.imgLogo} src={Hlogo}/>
+import {logoA, logoB} from "../../../context/wor";
 
 const Classic = ({WorContext}) => {
     const [classicState, dispatch] = useContext(WorContext)

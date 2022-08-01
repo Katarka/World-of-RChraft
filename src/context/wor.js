@@ -3,6 +3,12 @@ import {dataWotlk} from "../data/dataWotlk";
 import {dataBC} from "../data/dataBc";
 import {dataClassic} from "../data/dataClassic";
 import getRandomValueFromArray from "../function/random";
+import style from "../styles/stylesRandomize.module.css";
+import Alogo from "../assets/img/ALogo.png";
+import Hlogo from "../assets/img/HLogo.png";
+
+export const logoA = <img className={style.imgLogo} src={Alogo}/>
+export const logoB = <img className={style.imgLogo} src={Hlogo}/>
 
 const initialState = {
     newRandomClassic: ["Let's Start!"],
