@@ -15,18 +15,6 @@ const Styles = styled.div`
 `
 
 const Navibar = () => {
-    const ThemeButton = ({
-                             theme,
-                             text
-                         }) => {
-        const isTheme = useTheme();
-
-        return (
-            <>
-                <button onClick={() => isTheme.change(theme)}>{text}</button>
-            </>
-        )
-    }
     // const [show, setShow] = useState(false)
     //
     // const handleClose = () => setShow(false)
@@ -41,17 +29,15 @@ const Navibar = () => {
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
                             <Nav.Link><Link to="/">Home</Link></Nav.Link>
+                            <Nav.Link><Link to="/blog">Blog</Link></Nav.Link>
                             <Nav.Link><Link to="/randomizer">Randomizer</Link></Nav.Link>
+                            <Nav.Link><Link to="/questions">Questions</Link></Nav.Link>
                             <Nav.Link><Link to="/about">About</Link></Nav.Link>
                         </Nav>
                         <Nav>
                             {/*<Button variant="primary" className="me-2" onClick={handleShow}>Log in</Button>*/}
                             {/*<Button variant="primary" className="me-2" onClick={handleShow}>Sign out</Button>*/}
                         </Nav>
-                        <Navbar.Text>
-                            Choose theme: <ThemeButton theme={THEME_LIGHT} text='Light' onClick={ThemeButton}/>|
-                          <ThemeButton theme={THEME_DARK} text='Dark' onClick={ThemeButton}/>
-                        </Navbar.Text>
                     </Navbar.Collapse>
                     </Container>
                 </Navbar>

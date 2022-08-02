@@ -11,12 +11,31 @@ import leg from "../../../assets/svg/leg-nav.svg";
 import bfa from "../../../assets/svg/bfa-nav.svg";
 import sl from "../../../assets/svg/sl-nav.svg";
 import logo from "../../../assets/svg/logoHead.svg";
+import {THEME_DARK, THEME_LIGHT, useTheme} from "../../../context/ThemeContext";
 
 const Leftbar = () => {
+
+        const ThemeButton = ({
+                                 theme,
+                                 text
+                             }) => {
+            const isTheme = useTheme();
+
+            return (
+                <>
+                    <button onClick={() => isTheme.change(theme)}>{text}</button>
+                </>
+            )
+        }
+
     return (
         <>
         <span className={style.logo}>
             <img src={logo}/>
+            <>
+                <ThemeButton theme={THEME_LIGHT} text='Light' onClick={ThemeButton}/>
+                <ThemeButton theme={THEME_DARK} text='Dark' onClick={ThemeButton}/>
+                </>
         </span>
             <nav className={style.nav}>
                 <NavLink to='/randomizer/classic' className={({isActive}) => (!isActive ? style.item : cn(style.item + ' ' + style.active))}>
@@ -62,6 +81,7 @@ const Leftbar = () => {
                          className={({isActive}) => (!isActive ? style.item : cn(style.item + ' ' + style.active))}>
                     <img src={sl}/>
                 </NavLink>
+
             </nav>
         </>
     )

@@ -10,6 +10,8 @@ import Classic from "../RandomizePage/ClassicPage/Classic";
 import BurningCrusade from "../RandomizePage/BcPage/BurningCrusade";
 import '../../styles/styles.scss';
 import Footer from "../HomePage/Footer";
+import Blog from "../HomePage/Blog";
+import Questions from "../HomePage/Qustions";
 
 function App({WorContext}) {
     return (
@@ -17,12 +19,14 @@ function App({WorContext}) {
             <Navibar/>
             <Routes>
                 <Route exact path="/" element={<Home/>}/>
+                <Route path="/blog" element={<Blog/>}/>
                 <Route path="/randomizer" element={<Randomizer WorContext={WorContext}/>}/>
                 <>
                     <Route path='/randomizer/classic' element={<Classic WorContext={WorContext}/>}/>
                     <Route path='/randomizer/bc' element={<BurningCrusade WorContext={WorContext}/>}/>
                     <Route path='/randomizer/wotlk' element={<Wotlk WorContext={WorContext}/>}/>
                 </>
+                <Route path="/questions" element={<Questions/>}/>
                 <Route path="/about" element={<About/>}/>
             </Routes>
             <Footer/>
