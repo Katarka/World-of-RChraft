@@ -35,8 +35,8 @@ const Navibar = () => {
                             <Nav.Link><Link to="/about">About</Link></Nav.Link>
                         </Nav>
                         <Nav>
-                            {/*<Button variant="primary" className="me-2" onClick={handleShow}>Log in</Button>*/}
-                            {/*<Button variant="primary" className="me-2" onClick={handleShow}>Sign out</Button>*/}
+                            <Button variant="primary" className="me-2" onClick={handleShow}>Log in</Button>
+                            <Button variant="primary" className="me-2" onClick={handleShow}>Sign out</Button>
                         </Nav>
                     </Navbar.Collapse>
                     </Container>
