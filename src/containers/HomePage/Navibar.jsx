@@ -60,6 +60,7 @@ const Navibar = () => {
                         <Form.Group controlId="fromBasicCheckbox">
                             <Form.Check type="checkbox" label="Remember me"/>
                         </Form.Group>
+                        <Button variant="primary" className="me-2">Log in</Button>
                     </Form>
                 </Modal.Body>
             </Modal>
