@@ -2,28 +2,30 @@ import React, {useContext} from "react";
 import style from '../../../styles/stylesRandomize.module.css';
 import Leftbar from "../NavibarRanomize/Leftbar";
 import elf from "../../../assets/svg/elf.svg"
-import Rightbar from "../Rightbar/Rightbar";
-import {logoA, logoB} from "../../../context/wor";
+import {logoA, logoB} from "../../../redux/redux-store";
+import {nextRandomClassic} from "../../../redux/randomizeReducer";
+import {useDispatch, useSelector} from "react-redux";
 
-const Classic = ({WorContext}) => {
-    const [classicState, dispatch] = useContext(WorContext)
+const Classic = () => {
+    const state = useSelector(state => state.newRandomClassic)
+    const dispatch = useDispatch()
+
     return (
         <>
-
             <div className={style.classic}>
                 <Leftbar/>
                 <div className={style.content}>
                 <div className={style.backText}>
                     <div>
-                        <h1 className={style.h1}>{classicState.newRandomClassic.join('\n')}</h1>
+                        <h1 className={style.h1}>{state.newRandomClassic.join('\n')}</h1>
                     </div>
-                    <button className={style.button} onClick={() => dispatch({type: "NEXT_RANDOM_CLASSIC"})}>Go</button>
+                    <button className={style.button} onClick={() => dispatch(nextRandomClassic)}>Go</button>
                 </div>
                 <img className={style.img} src={elf}/>
                     <div>
                         {/*<Rightbar WorContext={WorContext}/>*/}
-                        {classicState.newRandomClassic[0] === 'Alliance' ? logoA : ''}
-                        {classicState.newRandomClassic[0] === 'Horde' ? logoB : ''}
+                        {state.newRandomClassic[0] === 'Alliance' ? logoA : ''}
+                        {state.newRandomClassic[0] === 'Horde' ? logoB : ''}
                     </div>
                 </div>
                 {/*<button className={style.button} onClick={() => dispatch({type: "DEFAULT_RANDOM_CLASSIC"})}>Reset</button>*/}

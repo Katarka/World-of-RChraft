@@ -13,18 +13,18 @@ import Footer from "../HomePage/Footer";
 import Blog from "../HomePage/Blog";
 import Questions from "../HomePage/Qustions";
 
-function App({WorContext}) {
+function App() {
     return (
         <>
             <Navibar/>
             <Routes>
                 <Route exact path="/" element={<Home/>}/>
                 <Route path="/blog" element={<Blog/>}/>
-                <Route path="/randomizer" element={<Randomizer WorContext={WorContext}/>}/>
+                <Route path="/randomizer" element={<Randomizer/>}/>
                 <>
-                    <Route path='/randomizer/classic' element={<Classic WorContext={WorContext}/>}/>
-                    <Route path='/randomizer/bc' element={<BurningCrusade WorContext={WorContext}/>}/>
-                    <Route path='/randomizer/wotlk' element={<Wotlk WorContext={WorContext}/>}/>
+                    <Route path='/randomizer/classic' element={<Classic/>}/>
+                    <Route path='/randomizer/bc' element={<BurningCrusade/>}/>
+                    <Route path='/randomizer/wotlk' element={<Wotlk/>}/>
                 </>
                 <Route path="/questions" element={<Questions/>}/>
                 <Route path="/about" element={<About/>}/>

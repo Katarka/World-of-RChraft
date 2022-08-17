@@ -3,7 +3,7 @@ import style from '../../../styles/stylesRandomize.module.css';
 import Leftbar from "../NavibarRanomize/Leftbar";
 import Rightbar from "../Rightbar/Rightbar";
 import elf from "../../../assets/svg/elf.svg";
-import {logoA, logoB} from "../../../context/wor";
+import {logoA, logoB} from "../../../redux/redux-store";
 
 
 const BurningCrusade = ({WorContext}) => {

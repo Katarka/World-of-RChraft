@@ -3,7 +3,7 @@ import style from '../../../styles/stylesRandomize.module.css';
 import Rightbar from '../Rightbar/Rightbar';
 import Leftbar from '../NavibarRanomize/Leftbar';
 import elf from '../../../assets/svg/elf.svg';
-import {logoA, logoB} from "../../../context/wor";
+import {logoA, logoB} from "../../../redux/redux-store";
 
 const Wotlk = ({WorContext}) => {
     const [wotlkState, dispatch] = useContext(WorContext)
