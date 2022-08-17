@@ -34,7 +34,7 @@ const randomReducer = (state = initialState, action) => {
                 newRandomClassic: setNewRandom([dataClassic]),
                 rightBarHistory: state.rightBarHistory.concat([state.newRandomClassic]),
             }
-        case NEXT_RANDOM_WOTLK:
+        case NEXT_RANDOM_BC:
             return {
                 ...state,
                 newRandomBC: setNewRandom([dataBC]),
@@ -52,8 +52,8 @@ const randomReducer = (state = initialState, action) => {
 };
 
 export const nextRandomClassic = () => ({type: NEXT_RANDOM_CLASSIC});
-export const nextRandomBC = (newRandomBC) => ({type: NEXT_RANDOM_BC, newRandomBC});
-export const nextRandomWotlk = (newRandomWotlk) => ({type: NEXT_RANDOM_WOTLK, newRandomWotlk});
+export const nextRandomBC = () => ({type: NEXT_RANDOM_BC});
+export const nextRandomWotlk = () => ({type: NEXT_RANDOM_WOTLK});
 
 export default randomReducer;
     // if (action.type === "DEFAULT_RANDOM_CLASSIC") {
