@@ -51,7 +51,7 @@ const randomReducer = (state = initialState, action) => {
     }
 };
 
-export const nextRandomClassic = (newRandomClassic) => ({type: NEXT_RANDOM_CLASSIC, newRandomClassic});
+export const nextRandomClassic = () => ({type: NEXT_RANDOM_CLASSIC});
 export const nextRandomBC = (newRandomBC) => ({type: NEXT_RANDOM_BC, newRandomBC});
 export const nextRandomWotlk = (newRandomWotlk) => ({type: NEXT_RANDOM_WOTLK, newRandomWotlk});
 
