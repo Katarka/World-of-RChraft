@@ -2,18 +2,18 @@ import React from "react";
 import style from '../../../styles/stylesRandomize.module.css';
 import Leftbar from '../NavibarRanomize/Leftbar';
 import elf from '../../../assets/svg/elf.svg';
-import {logoA, logoB} from "../../../redux/redux-store";
+import {changeLogo} from "../../../styles/changeImageRandom";
 import {useDispatch, useSelector} from "react-redux";
 import {nextRandomWotlk} from "../../../redux/randomizeReducer";
 
-const Wotlk = ({WorContext}) => {
+
+const Wotlk = () => {
     const newRandomWotlk = useSelector(state => state.random.newRandomWotlk)
     const dispatch = useDispatch()
     return (
         <>
             <div className={style.classic}>
                 <Leftbar/>
-
                 <div className={style.content}>
                     <div className={style.backText}>
                         <div>
@@ -25,8 +25,7 @@ const Wotlk = ({WorContext}) => {
                     <img className={style.img} src={elf}/>
                     <div>
                         {/*<Rightbar WorContext={WorContext}/>*/}
-                        {newRandomWotlk[0] === 'Alliance' ? logoA : ''}
-                        {newRandomWotlk[0] === 'Horde' ? logoB : ''}
+                        {changeLogo([newRandomWotlk])}
                     </div>
                 </div>
                 {/*<button className={style.button} onClick={() => dispatch({type: "DEFAULT_RANDOM_CLASSIC"})}>Reset</button>*/}

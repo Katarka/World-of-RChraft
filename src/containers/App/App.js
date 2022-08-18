@@ -12,6 +12,7 @@ import '../../styles/styles.scss';
 import Footer from "../HomePage/Footer";
 import Blog from "../HomePage/Blog";
 import Questions from "../HomePage/Qustions";
+import Cata from "../RandomizePage/CataPage/Cata";
 
 function App() {
     return (
@@ -25,7 +26,8 @@ function App() {
                     <Route path='/randomizer/classic' element={<Classic/>}/>
                     <Route path='/randomizer/bc' element={<BurningCrusade/>}/>
                     <Route path='/randomizer/wotlk' element={<Wotlk/>}/>
-                </>
+                    <Route path='/randomizer/cataclysm' element={<Cata/>}/>
+                 </>
                 <Route path="/questions" element={<Questions/>}/>
                 <Route path="/about" element={<About/>}/>
             </Routes>

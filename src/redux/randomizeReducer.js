@@ -1,28 +1,19 @@
 import {dataClassic} from "../data/dataClassic";
 import {dataBC} from "../data/dataBc";
 import {dataWotlk} from "../data/dataWotlk";
-import getRandomValueFromArray from "../function/random";
+import setNewRandom from "../function/random";
+import {dataCata} from "../data/dataCata";
 
 const NEXT_RANDOM_CLASSIC = 'NEXT_RANDOM_CLASSIC';
 const NEXT_RANDOM_BC = 'NEXT_RANDOM_BC';
 const NEXT_RANDOM_WOTLK = 'NEXT_RANDOM_WOTLK';
-
-const setNewRandom = ([data]) => {
-    const newRandom = (faction, race, classRace, spec) => [
-        faction = getRandomValueFromArray(data.faction),
-        race = getRandomValueFromArray(data.race[faction]),
-        classRace = getRandomValueFromArray(data.class[race]),
-        spec = getRandomValueFromArray(data.spec[classRace]),
-    ]
-    return (
-        newRandom().map(newRandom => newRandom)
-    )
-}
+const NEXT_RANDOM_CATA = 'NEXT_RANDOM_CATA';
 
 const initialState = {
     newRandomClassic: ["Let's Start!"],
     newRandomBC: ["Let's Start!"],
     newRandomWotlk: ["Let's Start!"],
+    newRandomCata: ["Let's Start!"],
     rightBarHistory: [],
 };
 
@@ -46,6 +37,12 @@ const randomReducer = (state = initialState, action) => {
                 newRandomWotlk: setNewRandom([dataWotlk]),
                 rightBarHistory: state.rightBarHistory.concat([state.newRandomWotlk]),
             }
+        case NEXT_RANDOM_CATA:
+            return {
+                ...state,
+                newRandomCata: setNewRandom([dataCata]),
+                rightBarHistory: state.rightBarHistory.concat([state.newRandomCata]),
+            }
         default:
             return state;
     }
@@ -54,6 +51,7 @@ const randomReducer = (state = initialState, action) => {
 export const nextRandomClassic = () => ({type: NEXT_RANDOM_CLASSIC});
 export const nextRandomBC = () => ({type: NEXT_RANDOM_BC});
 export const nextRandomWotlk = () => ({type: NEXT_RANDOM_WOTLK});
+export const nextRandomCata = () => ({type: NEXT_RANDOM_CATA});
 
 export default randomReducer;
     // if (action.type === "DEFAULT_RANDOM_CLASSIC") {

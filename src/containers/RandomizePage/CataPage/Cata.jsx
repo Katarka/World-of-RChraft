@@ -1,14 +1,14 @@
 import React from "react";
 import style from '../../../styles/stylesRandomize.module.css';
-import Leftbar from "../NavibarRanomize/Leftbar";
-import elf from "../../../assets/svg/elf.svg";
-import {useDispatch, useSelector} from "react-redux";
-import {nextRandomBC} from "../../../redux/randomizeReducer";
+import Leftbar from '../NavibarRanomize/Leftbar';
+import elf from '../../../assets/svg/elf.svg';
 import {changeLogo} from "../../../styles/changeImageRandom";
+import {useDispatch, useSelector} from "react-redux";
+import {nextRandomCata} from "../../../redux/randomizeReducer";
 
 
-const BurningCrusade = () => {
-    const newRandomBC = useSelector(state => state.random.newRandomBC)
+const Cata = () => {
+    const newRandomCata = useSelector(state => state.random.newRandomCata)
     const dispatch = useDispatch()
     return (
         <>
@@ -17,15 +17,15 @@ const BurningCrusade = () => {
                 <div className={style.content}>
                     <div className={style.backText}>
                         <div>
-                            <h1 className={style.h1}>{newRandomBC.join('\n')}</h1>
+                            <h1 className={style.h1}>{newRandomCata.join('\n')}</h1>
                         </div>
-                        <button className={style.button} onClick={() => dispatch(nextRandomBC())}>Go
+                        <button className={style.button} onClick={() => dispatch(nextRandomCata())}>Go
                         </button>
                     </div>
                     <img className={style.img} src={elf}/>
                     <div>
                         {/*<Rightbar WorContext={WorContext}/>*/}
-                        {changeLogo([newRandomBC])}
+                        {changeLogo([newRandomCata])}
                     </div>
                 </div>
                 {/*<button className={style.button} onClick={() => dispatch({type: "DEFAULT_RANDOM_CLASSIC"})}>Reset</button>*/}
@@ -34,4 +34,4 @@ const BurningCrusade = () => {
     )
 }
 
-export default BurningCrusade
+export default Cata
