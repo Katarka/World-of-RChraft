@@ -2,13 +2,13 @@ import React from "react";
 import style from '../../../styles/stylesRandomize.module.css';
 import Leftbar from "../NavibarRanomize/Leftbar";
 import elf from "../../../assets/svg/elf.svg"
-import {nextRandomClassic} from "../../../redux/randomizeReducer";
+import {nextRandomClassic} from "../../../toolkitRedux/toolkitReducer";
 import {useDispatch, useSelector} from "react-redux";
 import {changeLogo} from "../../../styles/changeImageRandom";
 
 
 const Classic = () => {
-    const newRandomClassic = useSelector(state => state.random.newRandomClassic)
+    const newRandomClassic = useSelector(state => state.toolkit.newRandomClassic)
     const dispatch = useDispatch()
     return (
         <>

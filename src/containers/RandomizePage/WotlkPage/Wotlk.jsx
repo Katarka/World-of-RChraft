@@ -4,11 +4,11 @@ import Leftbar from '../NavibarRanomize/Leftbar';
 import elf from '../../../assets/svg/elf.svg';
 import {changeLogo} from "../../../styles/changeImageRandom";
 import {useDispatch, useSelector} from "react-redux";
-import {nextRandomWotlk} from "../../../redux/randomizeReducer";
+import {nextRandomWotlk} from "../../../toolkitRedux/toolkitReducer";
 
 
 const Wotlk = () => {
-    const newRandomWotlk = useSelector(state => state.random.newRandomWotlk)
+    const newRandomWotlk = useSelector(state => state.toolkit.newRandomWotlk)
     const dispatch = useDispatch()
     return (
         <>

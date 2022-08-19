@@ -3,12 +3,12 @@ import style from '../../../styles/stylesRandomize.module.css';
 import Leftbar from "../NavibarRanomize/Leftbar";
 import elf from "../../../assets/svg/elf.svg";
 import {useDispatch, useSelector} from "react-redux";
-import {nextRandomBC} from "../../../redux/randomizeReducer";
+import {nextRandomBC} from "../../../toolkitRedux/toolkitReducer";
 import {changeLogo} from "../../../styles/changeImageRandom";
 
 
 const BurningCrusade = () => {
-    const newRandomBC = useSelector(state => state.random.newRandomBC)
+    const newRandomBC = useSelector(state => state.toolkit.newRandomBC)
     const dispatch = useDispatch()
     return (
         <>

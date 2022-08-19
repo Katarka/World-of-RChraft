@@ -4,11 +4,11 @@ import Leftbar from '../NavibarRanomize/Leftbar';
 import elf from '../../../assets/svg/elf.svg';
 import {changeLogo} from "../../../styles/changeImageRandom";
 import {useDispatch, useSelector} from "react-redux";
-import {nextRandomCata} from "../../../redux/randomizeReducer";
+import {nextRandomCata} from "../../../toolkitRedux/toolkitReducer";
 
 
 const Cata = () => {
-    const newRandomCata = useSelector(state => state.random.newRandomCata)
+    const newRandomCata = useSelector(state => state.toolkit.newRandomCata)
     const dispatch = useDispatch()
     return (
         <>
