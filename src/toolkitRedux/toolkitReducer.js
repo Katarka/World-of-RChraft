@@ -1,5 +1,5 @@
 import {createAction, createReducer} from "@reduxjs/toolkit";
-import setNewRandom from "../function/random";
+import setNewRandom from "../function/randomizeFuction";
 import {dataClassic} from "../data/dataClassic";
 import {dataBC} from "../data/dataBc";
 import {dataWotlk} from "../data/dataWotlk";
