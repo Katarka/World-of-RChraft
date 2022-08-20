@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { changeLogo } from "../../../styles/changeImageRandom";
 import NavigationRandom from "../../../components/RandomizerPage/NavigationRandom";
 import elf from "../../../assets/svg/elf.svg"
 import { Race, PlayableClass, Faction } from '../../../assets/imageRandomize'
 import style from './ClassicPage.module.css';
-import {nextRandomClassic} from "../../../toolkitRedux/toolkitReducer";
+import { nextRandomClassic } from "../../../toolkitRedux";
 
 const Classic = () => {
     const [faction, setFaction] = useState('');
@@ -112,8 +111,6 @@ const Classic = () => {
                     </div>
                     <div>
                         {/*<Rightbar WorContext={WorContext}/>*/}
-                        {/* {changeLogo([newRandomClassic])} */}
-                        
                     </div>
                 </div>
                 {/*<button className={style.button} onClick={() => dispatch({type: "DEFAULT_RANDOM_CLASSIC"})}>Reset</button>*/}
