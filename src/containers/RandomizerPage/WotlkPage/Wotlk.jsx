@@ -2,7 +2,6 @@ import React from "react";
 import style from '../../../styles/stylesRandomize.module.css';
 import Leftbar from '../../../components/RandomizerPage/NavigationRandom/NavigationRandom';
 import elf from '../../../assets/svg/elf.svg';
-import {changeLogo} from "../../../styles/changeImageRandom";
 import {useDispatch, useSelector} from "react-redux";
 import {nextRandomWotlk} from "../../../toolkitRedux/toolkitReducer";
 
@@ -25,7 +24,6 @@ const Wotlk = () => {
                     <img className={style.img} src={elf} alt='#'/>
                     <div>
                         {/*<Rightbar WorContext={WorContext}/>*/}
-                        {changeLogo([newRandomWotlk])}
                     </div>
                 </div>
                 {/*<button className={style.button} onClick={() => dispatch({type: "DEFAULT_RANDOM_CLASSIC"})}>Reset</button>*/}

@@ -4,8 +4,6 @@ import Leftbar from "../../../components/RandomizerPage/NavigationRandom/Navigat
 import elf from "../../../assets/svg/elf.svg";
 import {useDispatch, useSelector} from "react-redux";
 import {nextRandomBC} from "../../../toolkitRedux/toolkitReducer";
-import {changeLogo} from "../../../styles/changeImageRandom";
-
 
 const BurningCrusade = () => {
     const newRandomBC = useSelector(state => state.toolkit.newRandomBC)
@@ -25,7 +23,6 @@ const BurningCrusade = () => {
                     <img className={style.img} src={elf} alt='#'/>
                     <div>
                         {/*<Rightbar WorContext={WorContext}/>*/}
-                        {changeLogo([newRandomBC])}
                     </div>
                 </div>
                 {/*<button className={style.button} onClick={() => dispatch({type: "DEFAULT_RANDOM_CLASSIC"})}>Reset</button>*/}
