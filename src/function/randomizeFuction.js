@@ -1,15 +1,19 @@
 const getRandomValueFromArray = arr => arr[Math.floor(Math.random() * arr.length)]
 
 const setNewRandom = ([data]) => {
-    const newRandom = (faction, race, classRace, spec) => [
-        faction = getRandomValueFromArray(data.faction),
-        race = getRandomValueFromArray(data.race[faction]),
-        classRace = getRandomValueFromArray(data.class[race]),
-        spec = getRandomValueFromArray(data.spec[classRace]),
-    ]
-    return (
-        newRandom().map(newRandom => newRandom)
-    )
+    let faction = getRandomValueFromArray(data.faction);
+    let race = getRandomValueFromArray(data.race[faction]);
+    let classRace = getRandomValueFromArray(data.class[race]);
+    let spec = getRandomValueFromArray(data.spec[classRace]);
+
+    let res = {
+        faction: faction,
+        race: race,
+        classRace: classRace,
+        spec: spec,
+    }
+
+    return res
 }
 
 export default setNewRandom
