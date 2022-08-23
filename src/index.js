@@ -4,6 +4,7 @@ import { HashRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { ThemeProvider } from './context/ThemeContext';
 import App from './containers/App';
+import './styles/styles.css'
 import './index.css';
 import {store} from "./toolkitRedux/redux-store";
 

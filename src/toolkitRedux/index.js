@@ -1,1 +1,1 @@
-export * from './toolkitReducer'
+export * from './reducers/randomReducer'

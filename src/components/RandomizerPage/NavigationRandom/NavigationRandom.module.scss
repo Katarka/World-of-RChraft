@@ -13,6 +13,7 @@
 }
 
 .item {
+    
     display: flex;
     flex-direction: row;
     width: 75px;
@@ -20,15 +21,17 @@
     justify-content: center;
     align-items: center;
 
+    border-radius: 50%;
+
+    object-fit: cover;
+    object-position: center center;
+    cursor: pointer;
+
     &:hover {
-        border: 10px solid #000000;
-        border-radius: 50px;
-        box-shadow:0 0 30px rgba(13, 208, 236, 0.5);
+        filter: drop-shadow(0 0 10px rgb(0,0,0 , 0.8));
     }
     &.active {
-        border: 5px solid #EFEFBEFF;
-        border-radius: 50px;
-        box-shadow:0 0 30px rgb(239, 239, 190);
+        filter: drop-shadow(0 0 10px rgb(255, 153, 0));
     }
 }
 

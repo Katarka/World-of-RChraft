@@ -3,7 +3,7 @@ import style from '../../../styles/stylesRandomize.module.css';
 import Leftbar from '../../../components/RandomizerPage/NavigationRandom/NavigationRandom';
 import elf from '../../../assets/svg/elf.svg';
 import {useDispatch, useSelector} from "react-redux";
-import {nextRandomWotlk} from "../../../toolkitRedux/toolkitReducer";
+import {nextRandomWotlk} from "../../../toolkitRedux/reducers/randomReducer";
 
 
 const Wotlk = () => {

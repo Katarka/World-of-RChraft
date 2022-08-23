@@ -1,9 +1,9 @@
-import {createAction, createReducer} from "@reduxjs/toolkit";
-import setNewRandom from "../function/randomizeFuction";
-import {dataClassic} from "../data/dataClassic";
-import {dataBC} from "../data/dataBc";
-import {dataWotlk} from "../data/dataWotlk";
-import {dataCata} from "../data/dataCata";
+import { createAction, createReducer } from "@reduxjs/toolkit";
+import setNewRandom from "../../function/randomizeFuction";
+import { dataClassic } from "../../data/dataClassic";
+import { dataBC } from "../../data/dataBc";
+import { dataWotlk } from "../../data/dataWotlk";
+import { dataCata } from "../../data/dataCata";
 
 const initialState = {
     newRandomClassic: ["Let's Start!"],

@@ -14,6 +14,6 @@ export const changeCssVaribles = theme => {
         root.style.setProperty(
             `--theme-default-${element}`,
             `var(--theme-${theme}-${element})`
-        );
+        );     
     })
 }
