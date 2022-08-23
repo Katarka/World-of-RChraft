@@ -16,7 +16,12 @@ const initialState = {
 export const nextRandomClassic = createAction('NEXT_RANDOM_CLASSIC');
 export const nextRandomBC = createAction('NEXT_RANDOM_BC');
 export const nextRandomWotlk = createAction('NEXT_RANDOM_WOTLK');
-export const nextRandomCata = createAction('NEXT_RANDOM_CATA');
+export const nextRandomCataclysm = createAction('NEXT_RANDOM_CATACLYSM');
+export const nextRandomPandaria = createAction('NEXT_RANDOM_PANDARIA');
+export const nextRandomDreunor = createAction('NEXT_RANDOM_DREUNOR');
+export const nextRandomLegion = createAction('NEXT_RANDOM_LEGION');
+export const nextRandomBFA = createAction('NEXT_RANDOM_BFA');
+export const nextRandomShadowLands = createAction('NEXT_RANDOM_SHADOWLANDS');
 
 export default createReducer(initialState, {
     [nextRandomClassic]: function (state) {
@@ -28,7 +33,7 @@ export default createReducer(initialState, {
     [nextRandomWotlk]: function (state) {
         state.newRandomWotlk = setNewRandom([dataWotlk])
     },
-    [nextRandomCata]: function (state) {
+    [nextRandomCataclysm]: function (state) {
         state.newRandomCata = setNewRandom([dataCata])
     },
 })
