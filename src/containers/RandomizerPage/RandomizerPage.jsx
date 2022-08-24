@@ -14,7 +14,7 @@ const RandomizerPage = ({addon}) => {
     // const [race, setRace] = useState('');
     // const [playebleClass, setPlayebleClass] = useState('');
     // const [spec, setSpec] = useState('');
-    let [currentState, setCurrentState] = useState('')
+    const [currentState, setCurrentState] = useState('')
 
 
     const newRandomClassic = useSelector(state => state.randomsReducer.newRandomClassic)

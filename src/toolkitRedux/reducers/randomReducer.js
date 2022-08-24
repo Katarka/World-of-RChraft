@@ -27,12 +27,7 @@ export const downRandom = createAction('DOWN_RANDOM')
 
 export default createReducer(initialState, {
     [nextRandomClassic]: function (state) {
-        state.newRandomClassic = {
-            faction: setNewRandom([dataClassic]).faction,
-            race: setNewRandom([dataClassic]).race,
-            classRace: setNewRandom([dataClassic]).classRace,
-            spec: setNewRandom([dataClassic]).spec
-        }
+        state.newRandomClassic = state.newRandomBC = setNewRandom([dataClassic])
     },
     [nextRandomBC]: function (state) {
         state.newRandomBC = setNewRandom([dataBC])
