@@ -25,9 +25,10 @@ import {
     Sl,
 } from "../../../toolkitRedux/reducers/addonReducer";
 import { useEffect } from "react";
+import {downRandom} from "../../../toolkitRedux";
 
 const NavigationRandom = () => {
-    const [addon, setAddon] = useState({});
+    const [addon, setAddon] = useState('Classic');
 
     const addonState = useSelector(state => state.addonReducer.addon)
 
@@ -35,6 +36,7 @@ const NavigationRandom = () => {
 
     const changeAddon = (disp) => {
         dispatch(disp())
+        // dispatch(downRandom())
     }
 
     
@@ -76,7 +78,8 @@ const NavigationRandom = () => {
                     alt="#"
                     onClick={() => changeAddon(Bc)}
                     className={cn(addon === 'Bc' ? style.item + ' ' + style.active : style.item)}
-                />                <img
+                />
+                <img
                     src={cl}
                     alt="#"
                     onClick={() => changeAddon(Wotlk)}

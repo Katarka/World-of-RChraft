@@ -1,7 +1,7 @@
 import { createAction, createReducer } from "@reduxjs/toolkit";
 
 const initialState = {
-    addon: 'Classic'
+    addon: ''
 };
 
 export const Classic = createAction('CLASSIC');
