@@ -42,16 +42,16 @@ const RandomizerPage = ({addon}) => {
         switch (addon) {
             case 'Classic':
                 return setCurrentState(newRandomClassic)
-                break
+
             case 'Bc':
                 return setCurrentState(newRandomBc)
-                break
+
             case 'Lich':
                 return setCurrentState(newRandomWotlk)
-                break
+
             case 'Cata':
                 return setCurrentState(newRandomCata)
-                break
+
         }
     }, [newRandomClassic, newRandomBc, newRandomWotlk, newRandomCata])
     debugger
