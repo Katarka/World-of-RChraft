@@ -6,7 +6,7 @@ import { dataWotlk } from "../../data/dataWotlk";
 import { dataCata } from "../../data/dataCata";
 
 const initialState = {
-    newRandomClassic: ["Let's Start!"],
+    newRandomClassic: {},
     newRandomBC: ["Let's Start!"],
     newRandomWotlk: ["Let's Start!"],
     newRandomCata: ["Let's Start!"],
@@ -27,7 +27,12 @@ export const downRandom = createAction('DOWN_RANDOM')
 
 export default createReducer(initialState, {
     [nextRandomClassic]: function (state) {
-        state.newRandomClassic = setNewRandom([dataClassic])
+        state.newRandomClassic = {
+            faction: setNewRandom([dataClassic]).faction,
+            race: setNewRandom([dataClassic]).race,
+            classRace: setNewRandom([dataClassic]).classRace,
+            spec: setNewRandom([dataClassic]).spec
+        }
     },
     [nextRandomBC]: function (state) {
         state.newRandomBC = setNewRandom([dataBC])

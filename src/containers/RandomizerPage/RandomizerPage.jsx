@@ -6,13 +6,15 @@ import NavigationRandom from "../../components/RandomizerPage/NavigationRandom";
 import RandomImg from "../../components/RandomizerPage/RandomImg";
 
 import styles from "./RandomizerPage.module.css";
+import {PlayableClass} from "../../assets/imageRandomize";
 
 
 const RandomizerPage = ({addon}) => {
-    const [faction, setFaction] = useState('');
-    const [race, setRace] = useState('');
-    const [playebleClass, setPlayebleClass] = useState('');
-    const [spec, setSpec] = useState('');
+    // const [faction, setFaction] = useState();
+    // const [race, setRace] = useState('');
+    // const [playebleClass, setPlayebleClass] = useState('');
+    // const [spec, setSpec] = useState('');
+    let [currentState, setCurrentState] = useState('')
 
 
     const newRandomClassic = useSelector(state => state.randomsReducer.newRandomClassic)
@@ -37,31 +39,19 @@ const RandomizerPage = ({addon}) => {
     }
 
     useEffect(() => {
-            switch (addon) {
-                case 'Classic':
-                    setFaction(newRandomClassic.faction);
-                    setRace(newRandomClassic.race);
-                    setPlayebleClass(newRandomClassic.classRace);
-                    setSpec(newRandomClassic.spec);
-                    break
-                case 'Bc':
-                    setFaction(newRandomBc.faction);
-                    setRace(newRandomBc.race);
-                    setPlayebleClass(newRandomBc.classRace);
-                    setSpec(newRandomBc.spec);
-                    break
-                case 'Lich':
-                    setFaction(newRandomWotlk.faction);
-                    setRace(newRandomWotlk.race);
-                    setPlayebleClass(newRandomWotlk.classRace);
-                    setSpec(newRandomWotlk.spec);
-                    break
-                case 'Cata':
-                    setFaction(newRandomCata.faction);
-                    setRace(newRandomCata.race);
-                    setPlayebleClass(newRandomCata.classRace);
-                    setSpec(newRandomCata.spec);
-                    break
+        switch (addon) {
+            case 'Classic':
+                return setCurrentState(newRandomClassic)
+                break
+            case 'Bc':
+                return setCurrentState(newRandomBc)
+                break
+            case 'Lich':
+                return setCurrentState(newRandomWotlk)
+                break
+            case 'Cata':
+                return setCurrentState(newRandomCata)
+                break
         }
     }, [newRandomClassic, newRandomBc, newRandomWotlk, newRandomCata])
     debugger
@@ -73,14 +63,16 @@ const RandomizerPage = ({addon}) => {
                 <div className={styles.content}>
                     <div className={styles.backText}>
                         <div className={styles.blockRandomValue}>
-                            <p>{faction}</p>
-                            <p>{race}</p>
-                            <p>{playebleClass ? playebleClass : 'Let`s Start!'}</p>
-                            <p>{spec}</p>
+                            <div className={styles.h1}>
+                                <p>{currentState.faction}</p>
+                                <p>{currentState.race}</p>
+                                <p>{currentState.classRace ? currentState.classRace : 'Let`s Start!'}</p>
+                                <p>{currentState.spec}</p>
+                            </div>
                         </div>
                         <button className={styles.button} onClick={requestRandom}>Go</button>
                     </div>
-                    <RandomImg faction={faction} race={race} playebleClass={playebleClass} spec={spec}/>
+                    <RandomImg faction={currentState.faction} race={currentState.race} playebleClass={currentState.classRace} spec={currentState.spec}/>
                     <div>
                         {/*<Rightbar WorContext={WorContext}/>*/}
                     </div>
