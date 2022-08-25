@@ -6,8 +6,6 @@ import NavigationRandom from "../../components/RandomizerPage/NavigationRandom";
 import RandomImg from "../../components/RandomizerPage/RandomImg";
 
 import styles from "./RandomizerPage.module.css";
-import {PlayableClass} from "../../assets/imageRandomize";
-
 
 const RandomizerPage = ({addon}) => {
     // const [faction, setFaction] = useState();
@@ -54,7 +52,7 @@ const RandomizerPage = ({addon}) => {
 
         }
     }, [newRandomClassic, newRandomBc, newRandomWotlk, newRandomCata])
-    debugger
+    
     return (
         <>
             <div className={styles.classic}>

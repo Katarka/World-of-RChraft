@@ -33,12 +33,11 @@
 .h1 {
     order: 0;
     flex-grow: 0;
-    font-family: 'Roboto', serif;
-    font-style: italic;
+    font-family: Semplicita Pro,Open Sans,Arial,Helvetica,sans-serif;
     font-weight: 600;
     font-size: 1.25rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    /* text-transform: uppercase; */
     color: var(--theme-default-font-color);
     white-space: pre;
     text-align: center;

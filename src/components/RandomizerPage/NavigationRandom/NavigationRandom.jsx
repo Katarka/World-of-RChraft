@@ -3,14 +3,15 @@ import cn from "classnames";
 import { useDispatch, useSelector } from "react-redux";
 
 import style from "./NavigationRandom.module.scss";
-import cl from "../../../assets/svg/classic-nav.svg";
+import cl from "../../../assets/svg/classic-nav-new.png";
 import bc from "../../../assets/svg/bc-nav.svg";
+import wotlk from "../../../assets/svg/wotlk-nav-new2.png"
 import cata from "../../../assets/svg/cata-nav.svg";
 import pand from "../../../assets/svg/pand-nav.svg";
 import dren from "../../../assets/svg/dren-nav.svg";
 import leg from "../../../assets/svg/leg-nav.svg";
 import bfa from "../../../assets/svg/bfa-nav.svg";
-import sl from "../../../assets/svg/sl-nav.svg";
+import sl from "../../../assets/svg/sl-nav-new.png";
 import logo from "../../../assets/svg/logoHead.svg";
 import { THEME_DARK, THEME_LIGHT, useTheme } from "../../../context/ThemeContext";
 import { 
@@ -41,7 +42,7 @@ const NavigationRandom = () => {
 
     
     useEffect(() => {
-        setAddon(addonState)
+        setAddon(addonState);
     },[addonState])
 
     const ThemeButton = ({
@@ -80,7 +81,7 @@ const NavigationRandom = () => {
                     className={cn(addon === 'Bc' ? style.item + ' ' + style.active : style.item)}
                 />
                 <img
-                    src={cl}
+                    src={wotlk}
                     alt="#"
                     onClick={() => changeAddon(Wotlk)}
                     className={cn(addon === 'Lich' ? style.item + ' ' + style.active : style.item)}
