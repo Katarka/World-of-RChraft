@@ -14,12 +14,12 @@
 .bigImg {
     position: relative;
     border: 2px solid #fff;
-    max-width: 37.1vh;
+    max-width: 35vh;
     background: url(../../../assets/imageRandomize/background.jpg);
 }
 
 .img {
-    margin-left: -4.2vh;
+    margin-left: -4vh;
     max-width: 45vh;
     max-height: 62vh;
 }
