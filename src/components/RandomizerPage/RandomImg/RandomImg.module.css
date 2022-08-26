@@ -1,26 +1,38 @@
 .imagesBlock {
+    margin: 0px 0 0px 20vh;
     display: flex;
 }
 
 .imagesCol {
+    margin-left: 2vh;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: space-around;
 }
 
+.bigImg {
+    position: relative;
+    border: 2px solid #fff;
+    max-width: 37.1vh;
+    background: url(../../../assets/imageRandomize/background.jpg);
+}
+
 .img {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
+    margin-left: -4.2vh;
     max-width: 45vh;
     max-height: 62vh;
-    margin-left: 20vh;
 }
 
 .factionLogo {
-    height: 12vh;
-    width: 10vh;
+    position: absolute;
+    bottom: -33px;
+    left: 36%;
+    height: 10vh;
+}
+
+.raceLogo {
+    width: 20vh;
 }
 
 .classLogo {
