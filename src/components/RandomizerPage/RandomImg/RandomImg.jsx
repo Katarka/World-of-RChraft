@@ -75,8 +75,10 @@ const RandomImg = ({
 
     return (
         <div className={styles.imagesBlock}>
-            <div className={styles.bigImg}>
-                <img className={styles.img} src={raceImg} alt="race" />
+            <div className={cn(styles.bigImg, faction === 'Horde'? styles.horde : styles.alliance)}>
+                <div className={styles.wrapperImg}>
+                    <div className={styles.img} style={{backgroundImage: `url(${raceImg})`}}></div>
+                </div>
                 <img className={styles.factionLogo} src={factionImg} alt="faction" />
             </div>
 

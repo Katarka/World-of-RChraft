@@ -13,20 +13,46 @@
 
 .bigImg {
     position: relative;
-    border: 2px solid #fff;
-    max-width: 35vh;
+    border: 3px solid #fff;
+    width: 35vh;
     background: url(../../../assets/imageRandomize/background.jpg);
 }
 
+.bigImg.alliance {
+    border: 3px solid rgb(39, 39, 199);
+}
+
+.bigImg.horde {
+    border: 3px solid rgb(189, 11, 11);
+}
+ .bigImg::before {
+    content: "";
+    display: block;
+    padding-top: 155.333333%
+ }
+
+.wrapperImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
 .img {
-    margin-left: -4vh;
-    max-width: 45vh;
-    max-height: 62vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: 50%;
 }
 
 .factionLogo {
     position: absolute;
-    bottom: -33px;
+    bottom: -9%;
     left: 36%;
     height: 10vh;
 }
