@@ -27,7 +27,7 @@ export const downRandom = createAction('DOWN_RANDOM')
 
 export default createReducer(initialState, {
     [nextRandomClassic]: function (state) {
-        state.newRandomClassic = state.newRandomBC = setNewRandom([dataClassic])
+        state.newRandomClassic = setNewRandom([dataClassic])
     },
     [nextRandomBC]: function (state) {
         state.newRandomBC = setNewRandom([dataBC])
