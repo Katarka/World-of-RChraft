@@ -1,7 +1,7 @@
 export const dataBC = {
         faction: ["Alliance", "Horde"],
         race: {
-            "Alliance": ["Dwarf", "Gnome", "Human", "Night Elf", "Dranei"],
+            "Alliance": ["Dwarf", "Gnome", "Human", "Night Elf", "Draenei"],
             "Horde": ["Orc", "Troll", "Tauren", "Undead", "Blood Elf"]
         },
         class: {
@@ -14,7 +14,7 @@ export const dataBC = {
             "Tauren": ["Druid", "Hunter", "Shaman", "Warrior"],
             "Troll": ["Hunter", "Mage", "Priest", "Rogue", "Shaman", "Warrior"],
             "Blood Elf": ["Hunter", "Mage", "Paladin", "Priest", "Rogue", "Warlock", "Warrior"],
-            "Dranei": ["Hunter", "Mage", "Paladin", "Priest", "Shaman", "Warrior"]
+            "Draenei": ["Hunter", "Mage", "Paladin", "Priest", "Shaman", "Warrior"]
         },
         spec: {
             "Druid": ["Balance", "Feral", "Guardian", "Restoration"],

@@ -26,7 +26,7 @@ import {
     Sl,
 } from "../../../toolkitRedux/reducers/addonReducer";
 import { useEffect } from "react";
-import {downRandom} from "../../../toolkitRedux";
+import { downRandom } from "../../../toolkitRedux";
 
 const NavigationRandom = () => {
     const [addon, setAddon] = useState('Classic');
