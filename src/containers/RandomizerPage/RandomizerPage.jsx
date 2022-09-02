@@ -14,7 +14,7 @@ const RandomizerPage = ({addon}) => {
     // const [spec, setSpec] = useState('');
     const [currentState, setCurrentState] = useState('')
 
-
+    const currentPatch = useSelector(state => state.addonReducer.addon)
     const newRandomClassic = useSelector(state => state.randomsReducer.newRandomClassic)
     const newRandomBc = useSelector(state => state.randomsReducer.newRandomBC)
     const newRandomWotlk = useSelector(state => state.randomsReducer.newRandomWotlk)
@@ -51,7 +51,7 @@ const RandomizerPage = ({addon}) => {
                 return setCurrentState(newRandomCata)
 
         }
-    }, [newRandomClassic, newRandomBc, newRandomWotlk, newRandomCata])
+    }, [newRandomClassic, newRandomBc, newRandomWotlk, newRandomCata, currentPatch])
     
     return (
         <>

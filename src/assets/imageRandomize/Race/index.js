@@ -3,10 +3,14 @@ import Human from './human.png';
 import Dwarf from './dwarf.png';
 import NightElf from './nightelf.png';
 import Gnome from './gnome.png';
+import Draenei from './draenei.png';
+
 import Orc from './orc.png';
 import Tauren from './tauren.png';
 import Troll from './troll.png';
 import Undead from './undead.png';
+import BloodElf from './bloodelf.png';
+
 
 export const Race = [
     {
@@ -30,6 +34,11 @@ export const Race = [
         img: Gnome,
     },
     {
+        faction: 'Alliance',
+        text: 'Draenei',
+        img: Draenei,
+    },
+    {
         faction: 'Horde',
         text: 'Orc',
         img: Orc,
@@ -48,5 +57,10 @@ export const Race = [
         faction: 'Horde',
         text: 'Undead',
         img: Undead,
+    },
+    {
+        faction: 'Horde',
+        text: 'BloodElf',
+        img: BloodElf,
     },
 ];
