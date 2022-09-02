@@ -44,7 +44,8 @@ const RandomImg = ({
             element.key = element.text
             // console.log(element,'element in filter');
             let raceConcat = race !== undefined ? race.split(' ').join('') : '';
-            let res = element.text === raceConcat ? element : ''
+            let res = element.text === raceConcat ? element : '';
+            // console.log(res);
             return res
         })
         const FilteredRaceImg = RaceLogo.filter(el => {
