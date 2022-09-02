@@ -8,12 +8,7 @@ import RandomImg from "../../components/RandomizerPage/RandomImg";
 import styles from "./RandomizerPage.module.css";
 
 const RandomizerPage = ({addon}) => {
-    // const [faction, setFaction] = useState();
-    // const [race, setRace] = useState('');
-    // const [playebleClass, setPlayebleClass] = useState('');
-    // const [spec, setSpec] = useState('');
     const [currentState, setCurrentState] = useState('')
-
     const currentPatch = useSelector(state => state.addonReducer.addon)
     const newRandomClassic = useSelector(state => state.randomsReducer.newRandomClassic)
     const newRandomBc = useSelector(state => state.randomsReducer.newRandomBC)
@@ -40,16 +35,12 @@ const RandomizerPage = ({addon}) => {
         switch (addon) {
             case 'Classic':
                 return setCurrentState(newRandomClassic)
-
             case 'Bc':
                 return setCurrentState(newRandomBc)
-
             case 'Lich':
                 return setCurrentState(newRandomWotlk)
-
             case 'Cata':
                 return setCurrentState(newRandomCata)
-
         }
     }, [newRandomClassic, newRandomBc, newRandomWotlk, newRandomCata, currentPatch])
     
