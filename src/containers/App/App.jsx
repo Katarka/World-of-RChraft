@@ -7,7 +7,7 @@ import Home from "../HomePage/HomePage";
 import RandomizerPage from "../RandomizerPage";
 import About from "../../components/HomePage/About";
 import Footer from "../../components/Footer";
-import Blog from "../BlogPage";
+import BlogPage from "../BlogPage";
 
 import Questions from "../../components/HomePage/Questions";
 
@@ -18,7 +18,7 @@ function App() {
             <Navibar />
             <Routes>
                 <Route exact path="/" element={<Home />} />
-                <Route path="/blog" element={<Blog />} />
+                <Route path="/blog" element={<BlogPage />} />
                 <Route path="/randomizer" element={
                     <RandomizerPage addon={useSelector(state => state.addonReducer.addon)}/>
                 } />
