@@ -3,17 +3,23 @@ import ReactDOM from 'react-dom';
 import { HashRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { ThemeProvider } from './context/ThemeContext';
+import { ApolloProvider } from '@apollo/client';
+
 import App from './containers/App';
-import './styles/styles.css'
+import { store } from "./toolkitRedux/redux-store";
+import client from './apollo/client';
+
 import './index.css';
-import {store} from "./toolkitRedux/redux-store";
+import './styles/styles.css';
 
 ReactDOM.render(
     <HashRouter>
         <React.StrictMode>
             <Provider store={store}>
                 <ThemeProvider>
-                    <App/>
+                    <ApolloProvider client={client}>
+                        <App />
+                    </ApolloProvider>
                 </ThemeProvider>
             </Provider>
         </React.StrictMode>

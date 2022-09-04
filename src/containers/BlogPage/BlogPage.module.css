@@ -9,6 +9,12 @@
     margin: 0 auto;
 }
 
+.loader {
+    padding-top: 50px;
+    text-align: center;
+    color: #fff;
+}
+
 .BlogMainTitle {
     padding: 10px 0;
     text-align: center;
@@ -22,8 +28,8 @@
     border: 1px solid gray;
     border-radius: 5px;
     padding: 20px;
-    margin: 20px;
     color: #fff;
+    margin: 20px;
 }
 
 .blogItemTopRow {
