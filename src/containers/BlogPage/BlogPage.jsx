@@ -22,8 +22,7 @@ const BlogPage = () => {
                 {data.paginatedPosts.entries.map(el => {
                     console.log(el)
                     return (
-                        <>
-                            
+                        <>                            
                             <div className={styles.blogItemWrapper} id={el.id}>
                                 <div className={styles.blogItemTopRow}>
                                     <h2 className={styles.blogItemTitle}>{el.title}</h2>

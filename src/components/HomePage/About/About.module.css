@@ -1,6 +1,6 @@
 .blogPage {
-    background: url('../../assets/backgroundS.jpg');
-    height: 100vh;
+    background: url('../../../assets/backgroundS.jpg');
+    min-height: 90vh;
 }
 
 .wrapper {
@@ -9,18 +9,14 @@
     margin: 0 auto;
 }
 
-.loader {
-    padding-top: 50px;
-    text-align: center;
-    color: #fff;
-}
-
 .BlogMainTitle {
     padding: 10px 0;
     text-align: center;
     width: 100%;
     color: #fff;
 }
+
+
 
 .blogItemWrapper {
     border: 1px solid gray;
@@ -45,21 +41,6 @@
     width: 100%;
     height: 100%;
     border-bottom: 1px solid gray;
-}
-
-.blogItemDate {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid gray;
-    border-radius: 5px;
-    padding: 5px 10px;
-}
-.dateNum {
-    font-size: 25px;
-}
-
-.dateMon {
-    text-transform: uppercase;
 }
 
 .blogItemText{

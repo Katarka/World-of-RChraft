@@ -1,11 +1,12 @@
 import React, {useState, useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 
-import {nextRandomClassic, nextRandomBC, nextRandomWotlk, nextRandomCataclysm} from "../../toolkitRedux";
+import {nextRandomClassic, nextRandomBC, nextRandomWotlk, nextRandomCataclysm, nextRandomPandaria} from "../../toolkitRedux";
 import NavigationRandom from "../../components/RandomizerPage/NavigationRandom";
 import RandomImg from "../../components/RandomizerPage/RandomImg";
 
 import styles from "./RandomizerPage.module.css";
+import FilterRandom from "../../components/RandomizerPage/FilterRandom/FilterRandom";
 
 const RandomizerPage = ({addon}) => {
     const [currentState, setCurrentState] = useState('')
@@ -14,6 +15,7 @@ const RandomizerPage = ({addon}) => {
     const newRandomBc = useSelector(state => state.randomsReducer.newRandomBC)
     const newRandomWotlk = useSelector(state => state.randomsReducer.newRandomWotlk)
     const newRandomCata = useSelector(state => state.randomsReducer.newRandomCata)
+    const newRandomPand = useSelector(state => state.randomsReducer.newRandomPand)
 
     const dispatch = useDispatch()
 
@@ -27,6 +29,8 @@ const RandomizerPage = ({addon}) => {
                 return dispatch(nextRandomWotlk());
             case 'Cata':
                 return dispatch(nextRandomCataclysm());
+            case 'Pand':
+                return dispatch(nextRandomPandaria());
             default:
         }
     }
@@ -41,15 +45,17 @@ const RandomizerPage = ({addon}) => {
                 return setCurrentState(newRandomWotlk)
             case 'Cata':
                 return setCurrentState(newRandomCata)
+            case 'Pand':
+                return setCurrentState(newRandomPand)
         }
-    }, [newRandomClassic, newRandomBc, newRandomWotlk, newRandomCata, currentPatch])
+    }, [newRandomClassic, newRandomBc, newRandomWotlk, newRandomCata, newRandomPand, currentPatch])
     
     return (
         <>
             <div className={styles.classic}>
                 <NavigationRandom/>
-
-                <div className={styles.content}>
+                <FilterRandom/>
+                <div className={styles.content}>            
                     <div className={styles.backText}>
                         <div className={styles.blockRandomValue}>
                             <div className={styles.h1}>
