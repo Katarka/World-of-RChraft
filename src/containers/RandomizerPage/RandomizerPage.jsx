@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 
-import {nextRandomClassic, nextRandomBC, nextRandomWotlk, nextRandomCataclysm, nextRandomPandaria, nextRandomDraenor, nextRandomLegion, nextRandomBFA, nextRandomShadowLands} from "../../toolkitRedux";
+import {nextRandomClassic, nextRandomBC, nextRandomWotlk, nextRandomCataclysm, nextRandomPandaria, 
+    nextRandomDraenor, nextRandomLegion, nextRandomBFA, nextRandomShadowLands} from "../../toolkitRedux";
 import NavigationRandom from "../../components/RandomizerPage/NavigationRandom";
 import RandomImg from "../../components/RandomizerPage/RandomImg";
 
@@ -47,7 +48,7 @@ const RandomizerPage = ({addon}) => {
             default:
         }
     }
-
+    
     useEffect(() => {
         switch (addon) {
             case 'Classic':
@@ -71,6 +72,7 @@ const RandomizerPage = ({addon}) => {
         }
     }, [newRandomClassic, newRandomBc, newRandomWotlk, newRandomCata, newRandomPand, 
         newRandomDraenor, newRandomLegion, newRandomBfa, newRandomSl, currentPatch])
+
     
     return (
         <>
@@ -99,6 +101,5 @@ const RandomizerPage = ({addon}) => {
         </>
     )
 }
-
 
 export default RandomizerPage

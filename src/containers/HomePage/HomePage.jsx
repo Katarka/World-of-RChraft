@@ -50,7 +50,7 @@ const Home = () => (
         <Container style={{marginBottom: '30px'}}>
             <Row>
                 <Col md={7}>
-                    <img src={logo} height={400} alt='#'/>
+                    <img src={logo} height={200} alt='#'/>
                 </Col>
                 <Col md={5}>
                     <h2>Hello guys</h2>
