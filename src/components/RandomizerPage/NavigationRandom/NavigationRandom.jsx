@@ -62,10 +62,10 @@ const NavigationRandom = () => {
         <>
             <span className={style.logo}>
                 <img src={logo} alt='#' />
-                <>
+                {/* <>
                     <ThemeButton theme={THEME_LIGHT} text='Light' onClick={ThemeButton} />
                     <ThemeButton theme={THEME_DARK} text='Dark' onClick={ThemeButton} />
-                </>
+                </> */}
             </span>
             <nav className={style.nav}>
                 <img

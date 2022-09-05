@@ -39,8 +39,9 @@
     font-weight: 600;
     font-size: 1.25rem;
     letter-spacing: 0.05em;
-    /* text-transform: uppercase; */
-    color: var(--theme-default-font-color);
+    text-transform: uppercase;
+    /* color: var(--theme-default-font-color); */
+    color: #f9f9fd;
     white-space: pre;
     text-align: center;
     line-height: 5vh;
