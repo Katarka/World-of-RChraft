@@ -1,6 +1,9 @@
 .blogPage {
     background: url('../../assets/backgroundS.jpg');
-    height: 100vh;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
 }
 
 .wrapper {
@@ -14,7 +17,10 @@
     text-align: center;
     color: #fff;
     background: url('../../assets/backgroundS.jpg');
-    height: 100vh;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
 }
 
 .BlogMainTitle {

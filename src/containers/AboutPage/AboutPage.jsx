@@ -1,8 +1,8 @@
 import React from "react";
-import styles from '../../HomePage/About/About.module.css';
+import styles from './AboutPage.module.css';
 
 
-const About = () => (
+const AboutPage = () => (
     <div className={styles.blogPage}>
             <div className={styles.wrapper}>
             <h1 className={styles.BlogMainTitle}>О проекте</h1>                 
@@ -20,4 +20,4 @@ const About = () => (
 )
 
 
-export default About
+export default AboutPage

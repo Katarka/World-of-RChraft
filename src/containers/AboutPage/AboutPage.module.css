@@ -1,6 +1,9 @@
 .blogPage {
-    background: url('../../../assets/backgroundS.jpg');
-    min-height: 90vh;
+    background: url('../../assets/backgroundS.jpg');
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
 }
 
 .wrapper {

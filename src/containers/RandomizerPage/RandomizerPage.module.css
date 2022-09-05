@@ -1,10 +1,14 @@
 .classic {
     display: flex;
     flex-direction: column;
-    min-height: 90vh;
-    max-height: 100vh;
+    /* min-height: 90vh;
+    max-height: 100vh; */
     /*background: var(--theme-default-background);*/
     background-image: url("../../assets/backgroundS.jpg");
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
 }
 
 .content {
