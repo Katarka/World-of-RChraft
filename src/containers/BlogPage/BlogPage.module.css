@@ -13,6 +13,8 @@
     padding-top: 50px;
     text-align: center;
     color: #fff;
+    background: url('../../assets/backgroundS.jpg');
+    height: 100vh;
 }
 
 .BlogMainTitle {
