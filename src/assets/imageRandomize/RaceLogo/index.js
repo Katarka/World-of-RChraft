@@ -1,4 +1,6 @@
 // import RaceLogo image
+import Void from './../void.png'; // заглушка идет всегда 1м элементом массива
+
 import Human from './human_logo.png';
 import Dwarf from './dwarf_logo.png';
 import NightElf from './nightelf_logo.png';
@@ -12,6 +14,10 @@ import Undead from './undead_logo.png';
 import BloodElf from './bloodelf_logo.png';
 
 export const RaceLogo = [
+    {
+        text: 'Void',
+        img: Void
+    },
     {
         faction: 'Alliance',
         text: 'Human',

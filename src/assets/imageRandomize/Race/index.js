@@ -1,4 +1,6 @@
 // import Race image
+import Chromie from './chromie.png'; // заглушка идет всегда 1м элементом массива
+
 import Human from './human.png';
 import Dwarf from './dwarf.png';
 import NightElf from './nightelf.png';
@@ -13,6 +15,11 @@ import BloodElf from './bloodelf.png';
 
 
 export const Race = [
+    {
+        faction: 'Alliance',
+        text: 'Human',
+        img: Chromie,
+    },
     {
         faction: 'Alliance',
         text: 'Human',

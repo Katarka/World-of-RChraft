@@ -17,6 +17,7 @@
     width: 35vh;
     background: url(../../../assets/imageRandomize/background.jpg);
     z-index: 0;
+    border: 3px solid gray;
 }
 
 .bigImg.alliance {

@@ -31,6 +31,9 @@ const RandomImg = ({
         if (FilteredFaction[0] !== undefined) {
             setFactionImg(FilteredFaction[0].img)
         }
+        if (FilteredFaction[0] == undefined) {
+            setFactionImg(Faction[0].img)
+        }
 
 
         // console.log(factionImg, 'log after ?');
@@ -58,6 +61,10 @@ const RandomImg = ({
             setRaceImg(FilteredRace[0].img)
             setRaceLogoImg(FilteredRaceImg[0].img)
         }
+        if (FilteredRace[0] == undefined) {
+            setRaceImg(Race[0].img)
+            setRaceLogoImg(RaceLogo[0].img)
+        }
     }, [race])
 
     useEffect(() => {
@@ -72,11 +79,14 @@ const RandomImg = ({
         if (FilteredClass[0] !== undefined) {
             setPlayebleClassImg(FilteredClass[0].img)
         }
+        if (FilteredClass[0] == undefined) {
+            setPlayebleClassImg(PlayableClass[0].img)
+        }
     }, [playebleClass])
 
     return (
         <div className={styles.imagesBlock}>
-            <div className={cn(styles.bigImg, faction === 'Horde'? styles.horde : styles.alliance)}>
+            <div className={cn(styles.bigImg, faction === 'Horde' ? styles.horde : '', faction === 'Alliance' ? styles.alliance : '')}>
                 <div className={styles.wrapperImg}>
                     <div className={styles.img} style={{backgroundImage: `url(${raceImg})`}}></div>
                 </div>

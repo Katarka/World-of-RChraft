@@ -1,4 +1,6 @@
 // import PlayebleClass image
+import Void from './../void.png'; // заглушка идет всегда 1м элементом массива
+
 import Warrior from './warrior_logo.png';
 import Hunter from './hunter_logo.png';
 import Paladin from './paladin_logo.png';
@@ -10,6 +12,10 @@ import Druid from './druid_logo.png';
 import Shaman from './shaman_logo.png';
 
 export const PlayableClass = [
+    {
+        text: 'Void',
+        img: Void
+    },
     {
         text: 'Warrior',
         img: Warrior
