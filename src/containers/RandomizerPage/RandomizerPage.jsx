@@ -10,6 +10,7 @@ import styles from "./RandomizerPage.module.css";
 import FilterRandom from "../../components/RandomizerPage/FilterRandom/FilterRandom";
 
 const RandomizerPage = ({addon}) => {
+    
     const [currentState, setCurrentState] = useState('')
 
     const currentPatch = useSelector(state => state.addonReducer.addon)

@@ -1,7 +1,7 @@
 import { ApolloClient, InMemoryCache } from "@apollo/client";
 
 const client = new ApolloClient({
-    uri: 'https://starwars.brightlab.solutions/api/graphql',
+    uri: 'http://localhost:4000/api/graphql',
     cache: new InMemoryCache(),
 });
 

@@ -13,9 +13,9 @@ const FilterRandom = () => {
                 <Button variant="primary" className="me-2" onClick={handleShow}>Filter</Button>
             </div>
             <Modal show={show} onHide={handleClose}>
-                <div class="modal-header">
-                    <h5 class="modal-title">Выбери что подходит</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick={handleClose}></button>
+                <div className="modal-header">
+                    <h5 className="modal-title">Выбери что подходит</h5>
+                    <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick={handleClose}></button>
                 </div>
                 <Modal.Body>
                     <Form>
