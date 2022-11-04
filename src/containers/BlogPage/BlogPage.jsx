@@ -14,6 +14,14 @@ const BlogPage = () => {
     if (loading) {
         return <h2 className={styles.loader}>loading...</h2>
     }
+
+    if (error) {
+        return (
+        <div className="">
+            <h2 className='text-center pt-5'>Could not fetch. We are working at problem</h2>
+        </div>
+        )
+    }
     // useEffect(() => {
     //     console.log(data)
     // },[])
