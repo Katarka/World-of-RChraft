@@ -1,7 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import { useSelector } from "react-redux";
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Navibar from "../../components/Navibar";
 import HomePage from "../HomePage/HomePage";
