@@ -5,8 +5,8 @@ import { Link } from "react-router-dom"
 const Navibar = () => {
   return (
     <>
-      <nav className="flex bg-gray-900 py-4 items-center">
-        <div className="container mx-auto flex">
+      <nav className="flex bg-zinc-800 py-4 items-center">
+        <div className="container mx-auto flex px-4">
           <div className="text-gray-400 hover:text-gray-50 px-3">World-of-RChar</div>
           <ul className="flex">
             <li className="px-4">

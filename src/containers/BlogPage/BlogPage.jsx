@@ -5,6 +5,7 @@ import { DocumentRenderer } from '@keystone-6/document-renderer';
 import { FETCH_PAGINATED_POSTS } from "../../apollo/Posts";
 
 import styles from './BlogPage.module.css'
+import bgimage from '../../assets/backgroundS.jpg'
 
 const BlogPage = () => {
 
@@ -12,19 +13,17 @@ const BlogPage = () => {
     console.log(data);
 
     if (loading) {
-        return <h2 className={styles.loader}>loading...</h2>
+        return <h2 className={styles.loader}>Loading...</h2>
     }
 
     if (error) {
         return (
-        <div className="">
-            <h2 className='text-center pt-5'>Could not fetch. We are working at problem</h2>
+        <div style={{backgroundImage: `url(${bgimage})`}} className='w-full h-full object-cover object-center'>
+            <h2 className='text-center pt-12 text-white'>Could not fetch. We are working at problem</h2>
         </div>
         )
     }
-    // useEffect(() => {
-    //     console.log(data)
-    // },[])
+
     return (
         // <>
         //     <div className={styles.blogPage}>
@@ -58,7 +57,6 @@ const BlogPage = () => {
                                             </div>
                                         </div>
                                         <DocumentRenderer document={el.content.document} />
-                                        {/*<div dangerouslySetInnerHTML={{__html: el.summary}}></div>  */}
                                     </div>
                             )
                         }
