@@ -6,11 +6,12 @@ import Navibar from "../../components/Navibar";
 import HomePage from "../HomePage/HomePage";
 import RandomizerPage from "../RandomizerPage";
 import AboutPage from "../../containers/AboutPage";
-import Footer from "../../components/Footer";
+import FooterPage from "../../components/Footer/FooterPage";
 import BlogPage from "../BlogPage";
 import QuestionsPage from "../QuestionsPage";
 
 import styles from './App.module.css';
+
 
 
 function App() {
@@ -28,10 +29,8 @@ function App() {
                     <Route path="/about" element={<AboutPage />} />
                 </Routes>
             </div>
-
-            <Footer />
+            <FooterPage />
         </div>
-    );
-}
+    );}
 
 export default App;

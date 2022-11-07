@@ -12,6 +12,7 @@ import client from './apollo/client';
 import './index.css';
 import './styles/styles.css';
 
+
 ReactDOM.render(
     <HashRouter>
         <React.StrictMode>
