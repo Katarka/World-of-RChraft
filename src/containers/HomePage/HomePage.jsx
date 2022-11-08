@@ -4,7 +4,7 @@ import Slider from "../../components/HomePage/Slider/Slider";
 import TimelinePage from "../../components/HomePage/Timeine/TimelinePage";
 
 const Home = () => (
-    <div className="p-5">
+    <div>
         <Slider/>
         <CardPage/>
         <TimelinePage/>
