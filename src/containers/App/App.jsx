@@ -12,12 +12,15 @@ import QuestionsPage from "../QuestionsPage";
 
 import styles from './App.module.css';
 
+import SidebarComp from "../../components/Navibar/SidebarComp";
+
 
 
 function App() {
     return (
         <div className={styles.wrapper}>
-            <Navibar />
+            {/* <Navibar /> */}
+            <SidebarComp/>
             <div className={styles.contentWrapper}>
                 <Routes>
                     <Route exact path="/" element={<HomePage />} />
