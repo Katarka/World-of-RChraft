@@ -27,6 +27,7 @@ module.exports = {
         'slice9': "url('/src/assets/Slider/bcSlice9.png')",
         'slice10': "url('/src/assets/Slider/bcSlice10.png')",
         'homeBg': "url('/src/assets/homeBg.png')",
+        'homeBg2': "url('/src/assets/bgimg.jpg')",
         'footer-texture': "url('/img/footer-texture.png')",
       }
 },
