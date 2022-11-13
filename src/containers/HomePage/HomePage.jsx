@@ -6,7 +6,7 @@ import SidebarComp from "../../components/Navibar/SidebarComp";
 
 const Home = () => (
     <div>
-        <Slider/>
+        <Slider />
         <CardPage/>
         <TimelinePage/>
     </div>

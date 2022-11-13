@@ -1,26 +1,34 @@
-import { Button, Timeline } from "flowbite-react";
+import {Timeline} from "flowbite-react";
 import React from "react";
+import {dataTimelinePage} from "../../../data/dataTimelinePage";
 
 const TimelinePage = () => {
+    let dataTimeline = Object.values(dataTimelinePage)
+    console.log(dataTimeline)
     return (
-        <div className="h-screen w-auto p-24">
-            <Timeline>
-                <Timeline.Item>
-                    <Timeline.Point/>
-                    <Timeline.Content>
-                        <Timeline.Time>
-                            Ноябрь 2004
-                        </Timeline.Time>
-                        <Timeline.Title>
-                            World of Warcraft
-                        </Timeline.Title>
-                        <Timeline.Body>
-                            World of Warcraft — массовая многопользовательская ролевая онлайн-игра, разработанная и издаваемая компанией Blizzard Entertainment.
-                            Действие World of Warcraft происходит в фэнтезийной вселенной Warcraft.
-                        </Timeline.Body>
-                    </Timeline.Content>
-                </Timeline.Item>
-            </Timeline>
+        <div className="h-screen w-auto">
+            <div className="container mx-auto h-screen">
+                <div className="flex items-center gap-12 h-screen mx-auto justify-center">
+                    <Timeline>
+                        {dataTimeline.map(el => (
+                            <Timeline.Item>
+                                <Timeline.Point/>
+                                <Timeline.Content>
+                                    <Timeline.Time>
+                                        {el[0]}
+                                    </Timeline.Time>
+                                    <Timeline.Title>
+                                        {el[1]}
+                                    </Timeline.Title>
+                                    <Timeline.Body>
+                                        {el[2]}
+                                    </Timeline.Body>
+                                </Timeline.Content>
+                            </Timeline.Item>
+                        ))}
+                    </Timeline>
+                </div>
+            </div>
         </div>
     )
 }

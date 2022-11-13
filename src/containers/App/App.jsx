@@ -10,11 +10,10 @@ import FooterPage from "../../components/Footer/FooterPage";
 import BlogPage from "../BlogPage";
 import QuestionsPage from "../QuestionsPage";
 
+
 import styles from './App.module.css';
 
 import SidebarComp from "../../components/Navibar/SidebarComp";
-
-
 
 function App() {
     return (
@@ -23,7 +22,7 @@ function App() {
             <SidebarComp/>
             <div className={styles.contentWrapper}>
                 <Routes>
-                    <Route exact path="/" element={<HomePage />} />
+                    <Route exact path="/" element={<HomePage />}/>
                     <Route path="/blog" element={<BlogPage />} />
                     <Route path="/randomizer" element={
                         <RandomizerPage addon={useSelector(state => state.addonReducer.addon)} />

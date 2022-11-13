@@ -29,7 +29,10 @@ module.exports = {
         'homeBg': "url('/src/assets/homeBg.png')",
         'homeBg2': "url('/src/assets/bgimg.jpg')",
         'footer-texture': "url('/img/footer-texture.png')",
-      }
+      },
+        boxShadow: {
+          '3xl': '0 50px 60px -15px rgba(0, 0, 0, 0.3)',
+        }
 },
   },
   plugins: [

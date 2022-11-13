@@ -1,41 +1,22 @@
 import React from "react";
+import SliderCard from "../SliderCard/SliderCard";
 
 
 const Slider = () => {
     return (
         <div className="h-screen bg-homeBg2 bg-cover">
             <div className="container mx-auto h-screen">
-                <div className="flex items-center justify-center gap-12 h-screen w-[1000px] mx-auto overflow-x-auto">
-                    <div className="mt-0 h-128 min-w-[100px] bg-slice1 bg-cover">
-                        <div className="invisible">01</div>
-                    </div>
-                    <div className="mt-14 h-128 min-w-[100px] bg-slice2 bg-cover">
-                        <div className="invisible">02</div>
-                    </div>
-                    <div className="mt-28 h-128 min-w-[100px] bg-slice3 bg-cover">
-                        <div className="invisible">03</div>
-                    </div>
-                    <div className="mt-14 h-128 min-w-[100px] bg-slice4 bg-cover">
-                        <div className="invisible">04</div>
-                    </div>
-                    <div className="mt-0 h-128 min-w-[100px] bg-slice5 bg-cover">
-                        <div className="invisible">05</div>
-                    </div>
-                    <div className="mt-0 h-128 min-w-[100px] bg-slice1 bg-cover">
-                        <div className="invisible">01</div>
-                    </div>
-                    <div className="mt-14 h-128 min-w-[100px] bg-slice2 bg-cover">
-                        <div className="invisible">02</div>
-                    </div>
-                    <div className="mt-28 h-128 min-w-[100px] bg-slice3 bg-cover">
-                        <div className="invisible">03</div>
-                    </div>
-                    <div className="mt-14 h-128 min-w-[100px] bg-slice4 bg-cover">
-                        <div className="invisible">04</div>
-                    </div>
-                    <div className="mt-0 h-128 min-w-[100px] bg-slice5 bg-cover">
-                        <div className="invisible">05</div>
-                    </div>
+                <div className="snap-x flex items-center gap-12 h-screen w-1/2 mx-auto overflow-x-auto">
+                    <SliderCard stylesSlider="mt-0 bg-slice1"/>
+                    <SliderCard stylesSlider="mt-14 bg-slice2"/>
+                    <SliderCard stylesSlider="snap-center mt-28 bg-slice3"/>
+                    <SliderCard stylesSlider="mt-14 bg-slice4"/>
+                    <SliderCard stylesSlider="mt-0 bg-slice5"/>
+                    <SliderCard stylesSlider="mt-0 bg-slice6"/>
+                    <SliderCard stylesSlider="mt-14 bg-slice7"/>
+                    <SliderCard stylesSlider="snap-center mt-28 bg-slice8"/>
+                    <SliderCard stylesSlider="mt-14 bg-slice9"/>
+                    <SliderCard stylesSlider="mt-0 bg-slice10"/>
                 </div>
                 {/*512px & 96px*/}
                 {/*<div className="pt-14 m-6 h-128 w-24 bg-slice6">.</div>*/}

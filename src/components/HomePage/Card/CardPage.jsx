@@ -7,7 +7,8 @@ import lc from "../../../assets/img/lc.jpg"
 const CardPage = () => {
     return (
         <div className="h-screen w-auto">
-            <div className="flex flex-nowrap justify-center pt-60">
+            <div className="container mx-auto h-screen">
+            <div className="flex items-center gap-12 h-screen mx-auto justify-center">
                 <div className="max-w-sm p-10">
                     <Card imgSrc={classic}>
                         <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -48,6 +49,7 @@ const CardPage = () => {
                             <Button>Читать</Button>
                         </div>
                     </Card>
+                </div>
                 </div>
             </div>
         </div>
