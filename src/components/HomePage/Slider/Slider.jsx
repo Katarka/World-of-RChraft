@@ -6,8 +6,8 @@ const Slider = () => {
     return (
         <div className="h-screen bg-homeBg2 bg-cover">
             <div className="container mx-auto h-screen">
-                <div className="snap-x flex items-center gap-12 h-screen w-1/2 mx-auto overflow-x-auto">
-                    <SliderCard stylesSlider="mt-0 bg-slice1"/>
+                <div className="snap-x flex items-center gap-12 h-screen w-1/2 mx-auto overflow-x-auto ">
+                    <SliderCard stylesSlider="mt-0 bg-slice1 "/>
                     <SliderCard stylesSlider="mt-14 bg-slice2"/>
                     <SliderCard stylesSlider="snap-center mt-28 bg-slice3"/>
                     <SliderCard stylesSlider="mt-14 bg-slice4"/>
