@@ -26,26 +26,25 @@ const FilterRandom = () => {
                                 </button>
                             </div>
                             <div className="flex">
-                                <form className="flex flex-col shadow-md rounded px-8 pt-6 pb-8 w-full">
-                                    <button className="text-white bg-blue-500 active:bg-blue-700 hover:animate-spin font-bold uppercase text-sm px-6 py-3
-                                    rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1">1
-                                    </button>
-                                    <button className="text-white bg-red-500 active:bg-red-700 hover:animate-spin font-bold uppercase text-sm px-6 py-3
-                                    rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1">1
-                                    </button>
-                                    <button className="text-white bg-green-500 active:bg-green-700 hover:animate-spin font-bold uppercase text-sm px-6 py-3
-                                    rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1">1
-                                    </button>
-                                    <button className="text-white bg-green-500 active:bg-green-700 hover:animate-spin font-bold uppercase text-sm px-6 py-3
-                                    rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1">1
-                                    </button>
-                                    <button className="text-white bg-green-500 active:bg-green-700 hover:animate-spin font-bold uppercase text-sm px-6 py-3
-                                    rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1">1
-                                    </button>
+                                <form className="flex flex-col m-2 w-full">
+                                    <label className="text-sm font-medium text-gray-900 dark:text-white">Select faction</label>
+                                    <select className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                        <option selected>Faction</option>
+                                        <option value="All">All</option>
+                                        <option value="Alliance">Alliance</option>
+                                        <option value="Horde">Horde</option>
+                                    </select>
+                                    <label className="text-sm font-medium text-gray-900 dark:text-white">Select race</label>
+                                    <select className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                        <option selected>Race</option>
+                                        <option value="All">All</option>
+                                        <option value="Alliance">Alliance</option>
+                                        <option value="Horde">Horde</option>
+                                    </select>
                                 </form>
                             </div>
                             <div
-                                className="flex items-center justify-end m-5 border-t border-solid border-blueGray-200 rounded-b">
+                                className="flex items-center justify-end p-5 border-t border-solid border-blueGray-200 rounded-b">
                                 <button
                                     className="text-red-500 bg-purple-800 active:bg-purple-900 font-bold uppercase text-sm px-6 py-3
                                     rounded shadow hover:shadow-lg outline-none focus:outline-none mr-5"

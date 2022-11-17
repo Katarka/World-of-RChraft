@@ -6,7 +6,7 @@ import lc from "../../../assets/img/lc.jpg"
 
 const CardPage = () => {
     return (
-        <div className="h-screen w-auto">
+        <div className="h-screen w-auto bg-gradient-to-b from-cyan-200 via-purple-50 to-rose-300">
             <div className="container mx-auto h-screen">
             <div className="flex items-center gap-12 h-screen mx-auto justify-center">
                 <div className="max-w-sm p-10">
