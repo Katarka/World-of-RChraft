@@ -13,16 +13,15 @@ query Posts{
 }
 `
 
-// query PaginatedPosts {
-//     paginatedPosts {
-//         entries {
-//             id
-//             insertedAt
-//             summary
-//             title
-//         }
-//         pageNumber
-//         pageSize
-//         totalPages
-//     }
-// }
+export const FETCH_POST = gql`
+query Post($id:ID!){
+  post (where: {id:$id}){
+    id,
+    title,
+    publishedAt,
+    content {
+      document
+    }
+  }
+}
+`

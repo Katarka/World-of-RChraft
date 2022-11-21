@@ -7,7 +7,7 @@ const Slider = () => {
         <div className="h-screen bg-gradient-to-b from-cyan-500 to-cyan-200 bg-cover">
             <div className="container mx-auto h-36 flex flex-col items-center justify-center">
                 <span className="text-5xl font-sans font-bold">World of RChar</span>
-                <div className="text-sm font-thin font-bold">by One easy eye™</div>
+                <div className="text-sm font-thin">by One easy eye™</div>
             </div>
             <div className="container mx-auto h-screen">
                 <div className="snap-x flex items-center gap-12 w-1/2 mx-auto overflow-x-auto ">

@@ -7,13 +7,14 @@ import HomePage from "../HomePage/HomePage";
 import RandomizerPage from "../RandomizerPage";
 import AboutPage from "../../containers/AboutPage";
 import FooterPage from "../../components/Footer/FooterPage";
-import BlogPage from "../BlogPage";
+import BlogsPage from "../BlogsPage";
 import QuestionsPage from "../QuestionsPage";
 
 
 import styles from './App.module.css';
 
 import SidebarComp from "../../components/Navibar/SidebarComp";
+import BlogPage from "../BlogPage/BlogPage";
 
 function App() {
     return (
@@ -23,7 +24,8 @@ function App() {
             <div className={styles.contentWrapper}>
                 <Routes>
                     <Route exact path="/" element={<HomePage />}/>
-                    <Route path="/blog" element={<BlogPage />} />
+                    <Route path="/blog" element={<BlogsPage />} />
+                    <Route path="/blog/:id" element={<BlogPage />} />
                     <Route path="/randomizer" element={
                         <RandomizerPage addon={useSelector(state => state.addonReducer.addon)} />
                     } />
