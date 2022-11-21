@@ -2,7 +2,7 @@ import React, {useState} from "react";
 
 const FilterRandom = () => {
     const [showModal, setShowModal] = useState(false)
-    debugger
+  
     return (
         <div className="flex justify-center m-5">
             <button className="text-white bg-green-500 active:bg-green-700 hover:animate-spin font-bold uppercase text-sm px-6 py-3

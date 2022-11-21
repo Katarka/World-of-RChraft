@@ -74,7 +74,6 @@ const RandomizerPage = ({addon}) => {
     }, [newRandomClassic, newRandomBc, newRandomWotlk, newRandomCata, newRandomPand, 
         newRandomDraenor, newRandomLegion, newRandomBfa, newRandomSl, currentPatch])
 
-    
     return (
         <>
             <div className={styles.classic}>

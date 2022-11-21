@@ -13,7 +13,9 @@ import './index.css';
 import './styles/styles.css';
 
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById('root'))
+
+root.render(
     <HashRouter>
         <React.StrictMode>
             <Provider store={store}>
@@ -24,7 +26,6 @@ ReactDOM.render(
                 </ThemeProvider>
             </Provider>
         </React.StrictMode>
-    </HashRouter>,
-    document.getElementById('root')
+    </HashRouter>
 );
 

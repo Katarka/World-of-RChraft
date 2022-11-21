@@ -33,6 +33,6 @@ function App() {
             </div>
             <FooterPage />
         </div>
-    );}
+    )}
 
 export default App;
