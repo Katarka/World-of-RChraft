@@ -1,5 +1,6 @@
 import React from "react";
 import SliderCard from "../SliderCard/SliderCard";
+import kadgar from './../../../assets/kadgar.png'
 
 
 const Slider = () => {
@@ -11,16 +12,16 @@ const Slider = () => {
             </div>
             <div className="container mx-auto h-screen">
                 <div className="snap-x flex items-center gap-12 w-1/2 mx-auto overflow-x-auto ">
-                    <SliderCard stylesSlider="mt-0 bg-slice1 hover:bg-gradient-to-r from-violet-500 to-fuchsia-500"/>
-                    <SliderCard stylesSlider="mt-14 bg-slice2"/>
-                    <SliderCard stylesSlider="snap-center mt-28 bg-slice3"/>
-                    <SliderCard stylesSlider="mt-14 bg-slice4"/>
-                    <SliderCard stylesSlider="mt-0 bg-slice5"/>
-                    <SliderCard stylesSlider="mt-0 bg-slice6"/>
-                    <SliderCard stylesSlider="mt-14 bg-slice7"/>
-                    <SliderCard stylesSlider="snap-center mt-28 bg-slice8"/>
-                    <SliderCard stylesSlider="mt-14 bg-slice9"/>
-                    <SliderCard stylesSlider="mt-0 bg-slice10"/>
+                    <SliderCard stylesSlider="mt-0 bg-slice1 hover:bg-BgGif hover:bg-center"/>
+                    <SliderCard stylesSlider="mt-14 bg-slice2 hover:bg-BgGif hover:bg-contain"/>
+                    <SliderCard stylesSlider="snap-center mt-28 bg-slice3 hover:bg-BgGif hover:bg-contain"/>
+                    <SliderCard stylesSlider="mt-14 bg-slice4 hover:bg-BgGif hover:bg-contain"/>
+                    <SliderCard stylesSlider="mt-0 bg-slice5 hover:bg-BgGif hover:bg-contain"/>
+                    <SliderCard stylesSlider="mt-0 bg-slice6 hover:bg-BgGif hover:bg-contain"/>
+                    <SliderCard stylesSlider="mt-14 bg-slice7 hover:bg-BgGif hover:bg-contain"/>
+                    <SliderCard stylesSlider="snap-center mt-28 bg-slice8 hover:bg-BgGif hover:bg-contain"/>
+                    <SliderCard stylesSlider="mt-14 bg-slice9 hover:bg-BgGif hover:bg-contain"/>
+                    <SliderCard stylesSlider="mt-0 bg-slice10 hover:bg-BgGif hover:bg-contain"/>
                 </div>
                 {/*512px & 96px*/}
                 {/*<div className="pt-14 m-6 h-128 w-24 bg-slice6">.</div>*/}

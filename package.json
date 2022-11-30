@@ -5,7 +5,7 @@
   "homepage": "https://katarka.github.io/World-of-RChraft/",
   "dependencies": {
     "@apollo/client": "^3.7.1",
-    "@keystone-6/document-renderer": "^1.1.1",
+    "@keystone-6/document-renderer": "^1.1.2",
     "@reduxjs/toolkit": "^1.9.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -56,7 +56,7 @@
   "devDependencies": {
     "autoprefixer": "^10.4.13",
     "flowbite": "^1.5.4",
-    "flowbite-react": "^0.3.4",
+    "flowbite-react": "^0.3.5",
     "postcss": "^8.4.19",
     "tailwindcss": "^3.2.4"
   }
