@@ -1,40 +1,27 @@
-import React, { useEffect } from "react";
-import { useQuery } from "@apollo/client";
+import { useQuery } from '@apollo/client';
 import { DocumentRenderer } from '@keystone-6/document-renderer';
+import React from 'react';
+import { useParams } from 'react-router-dom';
+import { FETCH_POST } from '../../apollo/Posts';
 
-import { FETCH_PAGINATED_POSTS } from "../../apollo/Posts";
+import bgimage from '../../assets/backgroundS.jpg';
 
-import styles from './BlogPage.module.css'
-import bgimage from '../../assets/backgroundS.jpg'
+import styles from './BlogPage.module.css';
 
 const BlogPage = () => {
+    const { id } = useParams(); 
 
-    const { loading, error, data } = useQuery(FETCH_PAGINATED_POSTS)
-    // console.log(data);
+    const { loading, error, data } = useQuery(FETCH_POST, {
+        variables: {
+            id: id
+        }
+    })
+    console.log(data);
 
-    let parceFunc = (el) => {
-        let date = new Date(el);
-
-        const dateOptions = {
-            day: 'numeric',
-            month: 'long',
-            year: '2-digit',
-        };
-        const timeOptions = {
-            hour: '2-digit',
-            minute: '2-digit',
-        };
-
-        const dateFormatRU = new Intl.DateTimeFormat('ru', dateOptions);
-        const timeFormatRU = new Intl.DateTimeFormat('ru', timeOptions);
-
-        return (
-            <>            
-                <span className="whitespace-nowrap">{`${dateFormatRU.format(date)}`}</span><br />
-                <span className="whitespace-nowrap">{`${timeFormatRU.format(date)}`}</span>
-            </>
-
-        )
+    //функция для работы с текстом
+    const splitContentText = (text) => {
+        let slittedText = text.split('.');
+        return slittedText[0];
     }
 
     if (loading) {
@@ -50,55 +37,18 @@ const BlogPage = () => {
     }
 
     return (
-        // <>
-        //     <div className={styles.blogPage}>
-        //         <div className={styles.wrapper}>
-        //             <h1 className={styles.BlogMainTitle}>Блог великолепной, Шонни!</h1>
-        //             <div className={styles.blogItemWrapper}>
-        //                 <div className={styles.blogItemTopRow}>
-        //                     <h2 className={styles.blogItemTitle}>Title</h2>
-        //                     <div className={styles.blogItemDate}>
-        //                         <span className={styles.dateNum}>19</span>
-        //                         <span className={styles.dateMon}>dec</span>
-        //                     </div>
-        //                 </div>
-        //                 <p className={styles.blogItemText}></p>
-        //             </div>
-        //         </div>
-        //     </div>
-        // </>
         <div className={styles.blogPage}>
-            <div className={styles.wrapper}>
-                <h1 className={styles.BlogMainTitle}>Блог великолепной, Шонни!</h1>
-                {data.posts.map(el => {
-                    console.log(el)
-                    return (
-                        <div className={styles.blogItemWrapper} key={el.title} id={el.id}>
-                            <div className={styles.blogItemTopRow}>
-                                <h2 className={styles.blogItemTitle}>{el.title}</h2>
-                                <div className={styles.blogItemDate}>
-                                    <span className={styles.dateNum}>{parceFunc(el.publishedAt)}</span>
-                                </div>
-                            </div>
-                            <DocumentRenderer document={el.content.document} />
-                        </div>
-                    )
-                }
-                )}
+            <div className='container mx-auto'>
+                <div className={styles.blogItemWrapper} key={data.post.title} id={data.post.id}>
+                    <div className={styles.blogItemTopRow}>
+                        <h2 className={styles.blogItemTitle}>{data.post.title}</h2>
+
+                    </div>             
+                    <DocumentRenderer document={data.post.content.document} />
+                </div>
             </div>
         </div>
     )
 }
 
-export default BlogPage
-
-
-{/* <h1 className={styles.BlogMainTitle}>Блог великолепной, Шонни!</h1>
-
-<div className={styles.blogItemWrapper}>
-    <div className={styles.blogItemTopRow}>
-        <h2 className={styles.blogItemTitle}>Title</h2>
-        <div className={styles.blogItemDate}><span className={styles.dateNum}>19</span><span className={styles.dateMon}>dec</span></div>
-    </div>
-    <p className={styles.blogItemText}></p>
-</div> */}
+export default BlogPage;

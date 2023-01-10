@@ -12,7 +12,7 @@ import { dataSL } from "../../data/dataSL.js";
 
 
 const initialState = {
-    newRandomClassic: {},
+    newRandomClassic: ["Let's Start!"],
     newRandomBC: ["Let's Start!"],
     newRandomWotlk: ["Let's Start!"],
     newRandomCata: ["Let's Start!"],
