@@ -1,10 +1,14 @@
 .classic {
     display: flex;
     flex-direction: column;
-    min-height: 90vh;
-    max-height: 100vh;
+    /* min-height: 90vh;
+    max-height: 100vh; */
     /*background: var(--theme-default-background);*/
     background-image: url("../../assets/backgroundS.jpg");
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
 }
 
 .content {
@@ -39,8 +43,9 @@
     font-weight: 600;
     font-size: 1.25rem;
     letter-spacing: 0.05em;
-    /* text-transform: uppercase; */
-    color: var(--theme-default-font-color);
+    text-transform: uppercase;
+    /* color: var(--theme-default-font-color); */
+    color: #f9f9fd;
     white-space: pre;
     text-align: center;
     line-height: 5vh;

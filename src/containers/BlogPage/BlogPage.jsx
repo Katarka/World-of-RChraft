@@ -1,37 +1,54 @@
-import React from "react";
-import {Col, Container, Row} from "react-bootstrap";
-import logo from "../../assets/img/logo-wow.jpg";
+import { useQuery } from '@apollo/client';
+import { DocumentRenderer } from '@keystone-6/document-renderer';
+import React from 'react';
+import { useParams } from 'react-router-dom';
+import { FETCH_POST } from '../../apollo/Posts';
 
-const Blog = () => (
-    <>
-        <h1>Блог великолепной, Шонни!</h1>
-        <Container style={{marginBottom: '30px'}}>
-            <Row>
-                <Col md={7}>
-                    <img src={logo} height={300} alt='#'/>
-                </Col>
-                <Col md={5}>
-                    <h2>Hello guys</h2>
-                    <p>
-                        Text more...
-                    </p>
-                </Col>
-            </Row>
-        </Container>
-        <Container style={{marginBottom: '30px'}}>
-            <Row>
-                <Col md={7}>
-                    <h2>Hello guys</h2>
-                    <p>
-                        Text more...
-                    </p>
-                </Col>
-                <Col md={5}>
-                    <img src={logo} height={300} alt='#'/>
-                </Col>
-            </Row>
-        </Container>
-    </>
-)
+import bgimage from '../../assets/backgroundS.jpg';
 
-export default Blog
+import styles from './BlogPage.module.css';
+
+const BlogPage = () => {
+    const { id } = useParams(); 
+
+    const { loading, error, data } = useQuery(FETCH_POST, {
+        variables: {
+            id: id
+        }
+    })
+    console.log(data);
+
+    //функция для работы с текстом
+    const splitContentText = (text) => {
+        let slittedText = text.split('.');
+        return slittedText[0];
+    }
+
+    if (loading) {
+        return <h2 className={styles.loader}>Loading...</h2>
+    }
+
+    if (error) {
+        return (
+            <div style={{ backgroundImage: `url(${bgimage})` }} className='w-full h-full object-cover object-center'>
+                <h2 className='text-center pt-12 text-white'>Could not fetch. We are working at problem</h2>
+            </div>
+        )
+    }
+
+    return (
+        <div className={styles.blogPage}>
+            <div className='container mx-auto'>
+                <div className={styles.blogItemWrapper} key={data.post.title} id={data.post.id}>
+                    <div className={styles.blogItemTopRow}>
+                        <h2 className={styles.blogItemTitle}>{data.post.title}</h2>
+
+                    </div>             
+                    <DocumentRenderer document={data.post.content.document} />
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export default BlogPage;
