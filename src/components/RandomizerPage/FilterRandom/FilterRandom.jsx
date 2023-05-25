@@ -1,8 +1,11 @@
 import React, {useState} from "react";
+import {ToggleSwitch} from "flowbite-react";
 
 const FilterRandom = () => {
     const [showModal, setShowModal] = useState(false)
-  
+    const [switchCheck1, setSwitchCheck1] = useState(true)
+    const [switchCheck2, setSwitchCheck2] = useState(true)
+    debugger
     return (
         <div className="flex justify-center m-5">
             <button className="text-white bg-green-500 active:bg-green-700 hover:animate-spin font-bold uppercase text-sm px-6 py-3
@@ -35,12 +38,16 @@ const FilterRandom = () => {
                                         <option value="Horde">Horde</option>
                                     </select>
                                     <label className="text-sm font-medium text-gray-900 dark:text-white">Select race</label>
-                                    <select className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                        <option selected>Race</option>
-                                        <option value="All">All</option>
-                                        <option value="Alliance">Alliance</option>
-                                        <option value="Horde">Horde</option>
-                                    </select>
+                                        <div className="flex flex-col gap-4" id="toggle">
+                                            <ToggleSwitch checked={switchCheck1} label="Dwarf" onChange={() => (switchCheck1 ? setSwitchCheck1(false) : setSwitchCheck1(true))}/>
+                                            <ToggleSwitch checked={switchCheck2} label="Gnome" onChange={() => (switchCheck2 ? setSwitchCheck2(false) : setSwitchCheck2(true))}/>
+                                            <ToggleSwitch checked={false} disabled={true} label="Human" onChange=''/>
+                                            <ToggleSwitch checked={false} disabled={true} label="Night Elf" onChange=''/>
+                                            <ToggleSwitch checked={false} disabled={true} label="Undead" onChange=''/>
+                                            <ToggleSwitch checked={false} disabled={true} label="Orc" onChange=''/>
+                                            <ToggleSwitch checked={false} disabled={true} label="Tauren" onChange=''/>
+                                            <ToggleSwitch checked={false} disabled={true} label="Troll" onChange=''/>
+                                        </div>
                                 </form>
                             </div>
                             <div
