@@ -16,8 +16,8 @@ import BloodElf from './bloodelf.png';
 
 export const Race = [
     {
-        faction: 'Alliance',
-        text: 'Human',
+        faction: 'Chromie',
+        text: 'Chromie',
         img: Chromie,
     },
     {
